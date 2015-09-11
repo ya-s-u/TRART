@@ -16,6 +16,7 @@
 		47BD97351BA277A000096854 /* TRARTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD97341BA277A000096854 /* TRARTTests.swift */; };
 		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
+		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		C154B7778607281D564FC65E /* Pods_TRART.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRART.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91779C21E5C5E2FDE0A015 /* Pods-TRART.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF7737F1BA2D353008056A7 /* Track.swift */,
+				5AF773811BA2E302008056A7 /* Playlist.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
 				5AF773801BA2D353008056A7 /* Track.swift in Sources */,
+				5AF773821BA2E302008056A7 /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
