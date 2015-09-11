@@ -9,6 +9,7 @@ pod 'SwiftyJSON'
 pod 'Alamofire', '~> 1.3'
 pod 'RealmSwift'
 pod 'AMWaveTransition'
+pod 'PageMenu'
 end
 
 target 'TRARTTests' do

@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD971E1BA2779F00096854 /* AppDelegate.swift */; };
-		47BD97211BA2779F00096854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD97201BA2779F00096854 /* ViewController.swift */; };
 		47BD97241BA2779F00096854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97221BA2779F00096854 /* Main.storyboard */; };
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
 		47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97271BA2779F00096854 /* LaunchScreen.xib */; };
 		47BD97351BA277A000096854 /* TRARTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD97341BA277A000096854 /* TRARTTests.swift */; };
+		47CE091B1BA2D4C900168E4D /* MakeNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091A1BA2D4C900168E4D /* MakeNewViewController.swift */; };
+		47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */; };
+		47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE091E1BA2D57100168E4D /* MiniPlayer.xib */; };
+		47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09221BA2E71700168E4D /* TracksTableViewController.swift */; };
+		47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTableViewController.xib */; };
+		47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */; };
+		47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +36,19 @@
 		47BD97191BA2779F00096854 /* TRART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD971D1BA2779F00096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD971E1BA2779F00096854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47BD97201BA2779F00096854 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47BD97231BA2779F00096854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47BD97251BA2779F00096854 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47BD97281BA2779F00096854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		47BD972E1BA277A000096854 /* TRARTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRARTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD97331BA277A000096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD97341BA277A000096854 /* TRARTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRARTTests.swift; sourceTree = "<group>"; };
+		47CE091A1BA2D4C900168E4D /* MakeNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewViewController.swift; sourceTree = "<group>"; };
+		47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewNavigationController.swift; sourceTree = "<group>"; };
+		47CE091E1BA2D57100168E4D /* MiniPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
+		47CE09221BA2E71700168E4D /* TracksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
+		47CE09231BA2E71700168E4D /* TracksTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewController.xib; sourceTree = "<group>"; };
+		47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewCell.swift; sourceTree = "<group>"; };
+		47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewCell.xib; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		C154B7778607281D564FC65E /* Pods_TRART.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRART.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91779C21E5C5E2FDE0A015 /* Pods-TRART.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +167,10 @@
 		5AE0DCF41BA2B0DB00EE2A1B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				47BD97201BA2779F00096854 /* ViewController.swift */,
+				47CE091A1BA2D4C900168E4D /* MakeNewViewController.swift */,
+				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
+				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
+				47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				47BD97221BA2779F00096854 /* Main.storyboard */,
+				47CE091E1BA2D57100168E4D /* MiniPlayer.xib */,
+				47CE09231BA2E71700168E4D /* TracksTableViewController.xib */,
+				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -267,9 +285,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */,
 				47BD97241BA2779F00096854 /* Main.storyboard in Resources */,
+				47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */,
 				47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */,
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
+				47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47BD97211BA2779F00096854 /* ViewController.swift in Sources */,
+				47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */,
+				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
+				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
+				47CE091B1BA2D4C900168E4D /* MakeNewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
