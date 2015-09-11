@@ -1,0 +1,16 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+use_frameworks!
+target 'TRART' do
+pod 'KDEAudioPlayer'
+pod 'HanekeSwift'
+pod 'SVProgressHUD'
+pod 'SwiftyJSON'
+pod 'Alamofire'
+pod 'RealmSwift'
+pod 'AMWaveTransition'
+end
+
+target 'TRARTTests' do
+
+end

@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (2.0.0)
+  - AMWaveTransition (0.6.0)
+  - HanekeSwift (0.9.1)
+  - KDEAudioPlayer (0.2.6):
+    - ReachabilitySwift (~> 1.1)
+  - ReachabilitySwift (1.1)
+  - Realm (0.95.0):
+    - Realm/Headers (= 0.95.0)
+  - Realm/Headers (0.95.0)
+  - RealmSwift (0.95.0):
+    - Realm (= 0.95.0)
+  - SVProgressHUD (1.1.3)
+  - SwiftyJSON (2.2.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AMWaveTransition
+  - HanekeSwift
+  - KDEAudioPlayer
+  - RealmSwift
+  - SVProgressHUD
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2f13548b29d25a58ecd91c9225fb51493e2b782b
+  AMWaveTransition: a00588006f144d289a390aabcfa1fa1e16bb9296
+  HanekeSwift: 50d37bfbc4432edc649167e538c259feccb4a2bb
+  KDEAudioPlayer: 949a8fbc97bbd6fa1652e1bd21aa4b7c374caa46
+  ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
+  Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
+  RealmSwift: 35eeb642bf0b43dedfe363451ba3288d0e72ebb9
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
+
+COCOAPODS: 0.37.2
