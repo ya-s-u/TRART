@@ -93,8 +93,12 @@
 			isa = PBXGroup;
 			children = (
 				47BD971E1BA2779F00096854 /* AppDelegate.swift */,
-				47BD97201BA2779F00096854 /* ViewController.swift */,
-				47BD97221BA2779F00096854 /* Main.storyboard */,
+				5AE0DCF11BA2B0C100EE2A1B /* Utilities */,
+				5AE0DCF21BA2B0C900EE2A1B /* Services */,
+				5AE0DCF31BA2B0D300EE2A1B /* Models */,
+				5AE0DCF41BA2B0DB00EE2A1B /* Controllers */,
+				5AE0DCF51BA2B0E600EE2A1B /* Views */,
+				5AE0DCF61BA2B0EE00EE2A1B /* Layouts */,
 				47BD97251BA2779F00096854 /* Images.xcassets */,
 				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 				47BD971C1BA2779F00096854 /* Supporting Files */,
@@ -125,6 +129,50 @@
 				47BD97331BA277A000096854 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AE0DCF11BA2B0C100EE2A1B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		5AE0DCF21BA2B0C900EE2A1B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5AE0DCF31BA2B0D300EE2A1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5AE0DCF41BA2B0DB00EE2A1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47BD97201BA2779F00096854 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5AE0DCF51BA2B0E600EE2A1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5AE0DCF61BA2B0EE00EE2A1B /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				47BD97221BA2779F00096854 /* Main.storyboard */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 		D824F73F8DD0D501E535210D /* Pods */ = {
