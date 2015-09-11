@@ -14,6 +14,8 @@
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
 		47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97271BA2779F00096854 /* LaunchScreen.xib */; };
 		47BD97351BA277A000096854 /* TRARTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD97341BA277A000096854 /* TRARTTests.swift */; };
+		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
+		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		47BD97331BA277A000096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD97341BA277A000096854 /* TRARTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRARTTests.swift; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
+		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
+		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		C154B7778607281D564FC65E /* Pods_TRART.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRART.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91779C21E5C5E2FDE0A015 /* Pods-TRART.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +145,7 @@
 		5AE0DCF21BA2B0C900EE2A1B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 		5AE0DCF31BA2B0D300EE2A1B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5AF7737F1BA2D353008056A7 /* Track.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -336,7 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				47BD97211BA2779F00096854 /* ViewController.swift in Sources */,
+				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
+				5AF773801BA2D353008056A7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TRART/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -476,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TRART/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
