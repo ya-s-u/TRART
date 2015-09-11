@@ -41,9 +41,8 @@ class iTunesApiClient: API {
             
             if let dictionaries = object["results"] as? [NSDictionary] {
                 for dictionary in dictionaries {
-                        if let track = Track(dictionary: dictionary) {
-                            Tracks.append(track)
-                        }
+                    let track = Track(dictionary: dictionary)
+                    Tracks.append(track)
                 }
             }
             
