@@ -6,7 +6,7 @@ pod 'KDEAudioPlayer'
 pod 'HanekeSwift'
 pod 'SVProgressHUD'
 pod 'SwiftyJSON'
-pod 'Alamofire'
+pod 'Alamofire', '~> 1.3'
 pod 'RealmSwift'
 pod 'AMWaveTransition'
 end
