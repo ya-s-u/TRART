@@ -6,24 +6,24 @@ member : Fussa, Itsuki, Yasu, Eto
 
 ## 開発ツール一覧
 #### Slack
-TeamName : team-realm  
 コミュニケーション  
+TeamName : team-realm  
 #### GoogleDocs
-共有フォルダ : TechDesignCamp-realM  
 ドキュメント管理・共有  
+共有フォルダ : TechDesignCamp-realM    
 #### Trello
 ##### https://trello.com/b/VgcO33pI
+チケット管理  
 Team : realM  
 Board : TechDesignCamp2015  
-チケット管理
 
 ## Githubについて
 ### 命名ルール
 branch
-- server or client/作業名
+- 自由
 
 pull request
-- server or client/Trelloのチケット名
+- Trelloのチケット名
 
 commit
 - git commit -v
@@ -44,8 +44,7 @@ commit
 
 ### Cardについて
 - チケットには必ずLabelをつけてください
-  - Crient : 青色
-  - Server : 緑色
+  - iOS : 青色
   - Design : 黄色
   - Others : 灰色
 - 誰がその作業をやるのかMemberも必ずつけてください
