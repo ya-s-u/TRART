@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 for playlist in playlists {
                     println("========== \(playlist.title) ==========")
                     for track in playlist.tracks {
-                        println("\(track.name) \(track.playbackTimeStr()))")
+                        println("\(track.name) \(track.playbackTimeStr())")
                     }
                 }
 

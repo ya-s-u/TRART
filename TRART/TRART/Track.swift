@@ -11,6 +11,6 @@ class Track: Object {
 
     func playbackTimeStr() -> String {
         let ms = self.playbackTime
-        return "\(ms/1000/60)分\(ms/1000%60)秒"
+        return "\(ms/1000/60):\(ms/1000%60)"
     }
 }
