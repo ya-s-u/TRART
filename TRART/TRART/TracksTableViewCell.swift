@@ -21,4 +21,11 @@ class TracksTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func auditionButtonAction(sender: AnyObject) {
+        //NSNotificationのインスタンスを作成。["value":100]という辞書型のデータを持たせる
+        var notification : NSNotification = NSNotification(name: "audition", object: self, userInfo: ["value": 100])
+        //通知を送る
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+    }
+    
 }

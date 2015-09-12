@@ -12,6 +12,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-tY-GS7">
                     <rect key="frame" x="4" y="5" width="30" height="30"/>
+                    <color key="tintColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="▶︎">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -19,7 +20,9 @@
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XkD-Kq-ajG">
                     <rect key="frame" x="36" y="5" width="556" height="31"/>
-                    <color key="thumbTintColor" red="0.83529411760000005" green="0.1529411765" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="maximumTrackTintColor" red="0.82745098039999998" green="0.55294117649999996" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.87058823529999996" green="0.41568627450000001" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                 </slider>
             </subviews>
             <color key="backgroundColor" red="0.35779684779999998" green="0.3623342812" blue="0.37059336900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

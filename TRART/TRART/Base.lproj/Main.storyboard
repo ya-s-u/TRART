@@ -57,7 +57,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="s75-Jl-rSq"/>
+                    <navigationItem key="navigationItem" id="s75-Jl-rSq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="tqD-IV-0PZ">
+                            <color key="tintColor" red="0.35779684779999998" green="0.3623342812" blue="0.37059336900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backToTop:" destination="fma-TK-OMn" id="dCV-CU-YlU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhx-ah-Sts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +86,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrW-0f-Ufp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="389"/>
+            <point key="canvasLocation" x="1075" y="317"/>
         </scene>
     </scenes>
 </document>
