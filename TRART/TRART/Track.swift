@@ -1,21 +1,11 @@
-import Foundation
+import RealmSwift
 
-class Track {
-    let itunesId: Int
-    let name: String
-    let cover: String
-    let artist: String
-    let album: String
-    let trackSource: String
-    let playbackTime: Int
-    
-    init(dictionary: NSDictionary) {
-        self.itunesId = dictionary["trackId"] as! Int
-        self.name = dictionary["trackName"] as! String
-        self.cover = dictionary["artworkUrl100"] as! String
-        self.artist = dictionary["artistName"] as! String
-        self.album = dictionary["collectionName"] as! String
-        self.trackSource = dictionary["previewUrl"] as! String
-        self.playbackTime = dictionary["trackTimeMillis"] as! Int
-    }
+class Track: Object {
+    dynamic var itunesId = 0
+    dynamic var name = ""
+    dynamic var cover = ""
+    dynamic var artist = ""
+    dynamic var album = ""
+    dynamic var trackSource = ""
+    dynamic var playbackTime = 0
 }

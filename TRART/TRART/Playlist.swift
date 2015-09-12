@@ -1,21 +1,35 @@
-import Foundation
+import RealmSwift
 
-class Playlist {
-    var title: String?
-    var userName: String?
-    var description: String?
-    var mood: String?
-    var tracks: [Track]?
-    var layoutType: Int?
-    var jacket: [Track]?
-    var created = NSDate()
+class Playlist: Object {
+    dynamic var title = ""
+    dynamic var userName = ""
+    dynamic var comment = ""
+    dynamic var mood = ""
     
-    init() {}
+    dynamic var tracks = List<Track>()
     
-    init(title: String, userName: String, description: String, mood: String) {
+    dynamic var layoutType = 0
+    dynamic var jackets = List<Track>()
+    
+    dynamic var created = NSDate()
+    
+    func setMeta(#title: String, userName: String, comment: String, mood: String) {
         self.title = title
         self.userName = userName
-        self.description = description
+        self.comment = comment
         self.mood = mood
+    }
+    
+    func setTracksArr(tracks: [Track]) {
+        for track in tracks {
+            self.tracks.append(track)
+        }
+    }
+    
+    func setJackets(#layout: Int, jackets: [Track]) {
+        self.layoutType = layout
+        for jacket in jackets {
+            self.jackets.append(jacket)
+        }
     }
 }
