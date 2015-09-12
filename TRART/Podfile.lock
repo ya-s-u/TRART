@@ -7,6 +7,7 @@ PODS:
   - HanekeSwift (0.9.1)
   - KDEAudioPlayer (0.2.6):
     - ReachabilitySwift (~> 1.1)
+  - PageMenu (1.2.8)
   - ReachabilitySwift (1.1)
   - Realm (0.95.0):
     - Realm/Headers (= 0.95.0)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - APIKit
   - HanekeSwift
   - KDEAudioPlayer
+  - PageMenu
   - RealmSwift
   - SVProgressHUD
   - SwiftyJSON
@@ -35,6 +37,7 @@ SPEC CHECKSUMS:
   Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
   HanekeSwift: 50d37bfbc4432edc649167e538c259feccb4a2bb
   KDEAudioPlayer: 949a8fbc97bbd6fa1652e1bd21aa4b7c374caa46
+  PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
   ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
   Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
   RealmSwift: 35eeb642bf0b43dedfe363451ba3288d0e72ebb9
@@ -42,4 +45,4 @@ SPEC CHECKSUMS:
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.37.2
