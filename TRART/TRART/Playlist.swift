@@ -1,21 +1,15 @@
-import Foundation
+import RealmSwift
 
-class Playlist {
-    var title: String?
-    var userName: String?
-    var description: String?
-    var mood: String?
-    var tracks: [Track]?
-    var layoutType: Int?
-    var jacket: [Track]?
-    var created = NSDate()
+class Playlist: Object {
+    dynamic var title = ""
+    dynamic var userName = ""
+    dynamic var comment = ""
+    dynamic var mood = ""
     
-    init() {}
+    dynamic var tracks = List<Track>()
     
-    init(title: String, userName: String, description: String, mood: String) {
-        self.title = title
-        self.userName = userName
-        self.description = description
-        self.mood = mood
-    }
+    dynamic var layoutType = 0
+    dynamic var jackets = List<Track>()
+    
+    dynamic var created = NSDate()
 }
