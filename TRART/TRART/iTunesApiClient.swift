@@ -41,7 +41,14 @@ class iTunesApiClient: API {
             
             if let dictionaries = object["results"] as? [NSDictionary] {
                 for dictionary in dictionaries {
-                    let track = Track(dictionary: dictionary)
+                    let track = Track()
+                    track.itunesId = dictionary["trackId"] as! Int
+                    track.name = dictionary["trackName"] as! String
+                    track.cover = dictionary["artworkUrl100"] as! String
+                    track.artist = dictionary["artistName"] as! String
+                    track.album = dictionary["collectionName"] as! String
+                    track.trackSource = dictionary["previewUrl"] as! String
+                    track.playbackTime = dictionary["trackTimeMillis"] as! Int
                     Tracks.append(track)
                 }
             }
