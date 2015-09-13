@@ -22,6 +22,8 @@
 		47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */; };
 		5A7F614D1BA51B7300555414 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F614C1BA51B7300555414 /* Make.storyboard */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
+		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
+		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
 		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
@@ -58,6 +60,8 @@
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7F614C1BA51B7300555414 /* Make.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Make.storyboard; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
+		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
+		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
 		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
 				47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */,
 				5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */,
+				5A7F61501BA5312D00555414 /* MakeConfirmController.swift */,
+				5A7F61521BA5314E00555414 /* MakeJacketController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */,
+				5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
@@ -385,6 +392,7 @@
 				5AF773801BA2D353008056A7 /* Track.swift in Sources */,
 				5AF773821BA2E302008056A7 /* Playlist.swift in Sources */,
 				5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */,
+				5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
