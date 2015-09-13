@@ -64,7 +64,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             lay = collectionView.dequeueReusableCellWithReuseIdentifier(layname, forIndexPath: indexPath) as! LayerCell
             
             for i in 0..<jaket[indexPath.row].count{
-                var mname:String = "music" + String(jaket[indexPath.row][i]) + ".jpg"
+                var mname:String = "music" + String(jaket[indexPath.row][i])
                 lay.image[i].image = UIImage(named: mname)
                 if rastarize[indexPath.row] != 0{
                     if i == rastarize[indexPath.row]{
@@ -95,7 +95,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             selectView = collectionView
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCell
             
-            var mname:String = "music" + String(indexPath.row + 1) + ".jpg"
+            var mname:String = "music" + String(indexPath.row + 1)
             
             cell.image.image = UIImage(named: mname)
             cell.select.image = selectimg
@@ -115,7 +115,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         if collectionView.tag == 0{
         }else{
             
-            var mname:String = "music" + String(indexPath.row + 1) + ".jpg"
+            var mname:String = "music" + String(indexPath.row + 1)
             
             
             if contains(jaket[layout_type], (indexPath.row + 1)) == false && jaket[layout_type].count < jcnt[layout_type]{
