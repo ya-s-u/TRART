@@ -9,12 +9,11 @@
 import UIKit
 
 class TracksTableCellController: UITableViewCell {
-
     
     @IBOutlet weak var trackName: UILabel!
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var cover: UIImageView!
-    
+    var trackSource: String = String()
     
     override func awakeFromNib() {
         super.awakeFromNib()
