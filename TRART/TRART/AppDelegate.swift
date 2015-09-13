@@ -6,9 +6,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var track: Track? //TEMP
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        realmSampleUsage()
+//        realmSampleUsage()
         return true
     }
 

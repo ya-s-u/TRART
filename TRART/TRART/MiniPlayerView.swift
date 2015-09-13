@@ -1,17 +1,16 @@
-//
-//  MiniPlayerView.swift
-//  TRART
-//
-//  Created by Yohei Fusayasu on 9/13/15.
-//  Copyright (c) 2015 yohei2323. All rights reserved.
-//
-
 import UIKit
 
 class MiniPlayerView: UIView {
-
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var seekBar: UISlider!
+    
+    var track: Track? {
+        didSet {
+            let player = PlayerManager.sharedInstance
+            player.set(track!.trackSource as String)
+            player.play()
+        }
+    }
     
     func changePlayButtonToStop() {
         self.playButton.setTitle("◼︎", forState: UIControlState.Normal)
@@ -20,7 +19,4 @@ class MiniPlayerView: UIView {
     func changeStopButtonToPlay() {
         self.playButton.setTitle("▶︎", forState: UIControlState.Normal)
     }
-    
-    
-    
 }
