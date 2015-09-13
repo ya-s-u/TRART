@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -36,6 +36,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeM-cw-Ob0">
                         <rect key="frame" x="8" y="10" width="60" height="60"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="4NO-y2-Gdu"/>
                             <constraint firstAttribute="height" constant="60" id="gro-aH-sbx"/>
@@ -45,7 +46,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="auditionButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="F6Y-nb-fO5"/>
+                            <action selector="tapCover:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PSq-Fa-SYu"/>
                         </connections>
                     </button>
                 </subviews>
@@ -74,7 +75,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="artist" destination="SMn-qS-ZM3" id="u3K-68-NSN"/>
-                <outlet property="cover" destination="UmK-zx-b1S" id="9KA-aI-A6x"/>
+                <outlet property="cover" destination="UmK-zx-b1S" id="CY4-Lj-2BF"/>
                 <outlet property="trackName" destination="kud-2q-Tsy" id="hfM-0x-JGA"/>
             </connections>
             <point key="canvasLocation" x="334" y="353"/>

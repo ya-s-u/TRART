@@ -23,15 +23,19 @@ class TracksTableCellController: UITableViewCell {
         
         artist.font = UIFont.systemFontOfSize(11)
         artist.textColor = UIColor.whiteColor()
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        
+        var tap = UITapGestureRecognizer(target: self, action: Selector("showMailer"))
+        trackName.addGestureRecognizer(tap)
+        trackName.userInteractionEnabled = true
     }
     
-    @IBAction func auditionButtonAction(sender: AnyObject) {
+    @IBAction func tapCover(sender: AnyObject) {
         var notification : NSNotification = NSNotification(name: "audition", object: self, userInfo: ["value": 100])
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
+
+//    override func setSelected(selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
     
 }
