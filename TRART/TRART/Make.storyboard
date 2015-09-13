@@ -145,9 +145,9 @@
                                     <constraint firstAttribute="height" id="JnS-TA-aqr"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rnV-6v-zj7">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rnV-6v-zj7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="32" minimumInteritemSpacing="32" id="r54-dU-vFg">
                                     <size key="itemSize" width="343" height="228"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -256,6 +256,9 @@
                                     <outlet property="delegate" destination="uKh-gm-GNM" id="Xt8-xd-hIX"/>
                                 </connections>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
+                                <rect key="frame" x="281" y="263" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -273,10 +276,13 @@
                             <constraint firstAttribute="centerY" secondItem="kTG-iO-rma" secondAttribute="centerY" constant="100" id="Ivk-Ph-y4k"/>
                             <constraint firstAttribute="centerX" secondItem="3ek-5u-4ge" secondAttribute="centerX" id="LeS-r9-RS5"/>
                             <constraint firstAttribute="trailing" secondItem="kTG-iO-rma" secondAttribute="trailing" id="Nrm-pX-ItW"/>
+                            <constraint firstItem="eN3-tT-iM1" firstAttribute="top" secondItem="SCW-pL-kVm" secondAttribute="bottom" constant="243" id="Pto-fM-XfL"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leading" id="V2X-yW-YNI"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leading" id="VFS-D8-848"/>
+                            <constraint firstItem="kTG-iO-rma" firstAttribute="top" secondItem="eN3-tT-iM1" secondAttribute="bottom" id="Vmi-AA-0Cu"/>
                             <constraint firstAttribute="centerX" secondItem="h2D-Rs-kSR" secondAttribute="centerX" id="aKn-Fg-v26"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kTG-iO-rma" secondAttribute="trailing" id="cBY-NZ-Bdk"/>
+                            <constraint firstAttribute="centerX" secondItem="eN3-tT-iM1" secondAttribute="centerX" id="eRd-BD-B9Y"/>
                             <constraint firstAttribute="trailing" secondItem="rnV-6v-zj7" secondAttribute="trailing" id="fBi-ol-hSL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rnV-6v-zj7" secondAttribute="trailing" id="fOU-CL-iW9"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leadingMargin" id="fiy-9N-KjV"/>
@@ -309,12 +315,14 @@
                                 <exclude reference="cBY-NZ-Bdk"/>
                                 <exclude reference="fiy-9N-KjV"/>
                                 <exclude reference="jGS-lx-heF"/>
+                                <exclude reference="Pto-fM-XfL"/>
                                 <exclude reference="711-Ou-3RF"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="lview" destination="rnV-6v-zj7" id="epN-iD-y78"/>
+                        <outlet property="pageControl" destination="eN3-tT-iM1" id="oRk-aw-eig"/>
                         <outlet property="sview" destination="kTG-iO-rma" id="E05-Ic-AnK"/>
                     </connections>
                 </viewController>
