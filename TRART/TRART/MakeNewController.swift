@@ -14,7 +14,7 @@ class MakeNewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Make New!!"
+        self.title = "曲を選択"
         var controllerArray : [UIViewController] = []
     
         var tracksController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)

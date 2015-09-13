@@ -259,6 +259,16 @@
                             <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
                                 <rect key="frame" x="281" y="263" width="39" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM6-9B-pSg">
+                                <rect key="frame" x="16" y="0.0" width="30" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="W13-nc-nPg" kind="unwind" unwindAction="unwindToConfirmation:" id="wor-8i-vcH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -271,6 +281,7 @@
                             <constraint firstAttribute="trailing" secondItem="kTG-iO-rma" secondAttribute="trailing" id="9dy-4H-tC1"/>
                             <constraint firstItem="h2D-Rs-kSR" firstAttribute="top" secondItem="rnV-6v-zj7" secondAttribute="bottom" id="9uY-Pa-gbg"/>
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="top" secondItem="SCW-pL-kVm" secondAttribute="bottom" id="BLq-Bz-Vu0"/>
+                            <constraint firstItem="iM6-9B-pSg" firstAttribute="top" secondItem="Fvv-A7-CMR" secondAttribute="topMargin" id="D0F-lv-ovL"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="top" secondItem="h2D-Rs-kSR" secondAttribute="bottom" id="HyR-Cv-XTd"/>
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leadingMargin" id="IB6-2H-pHQ"/>
                             <constraint firstAttribute="centerY" secondItem="kTG-iO-rma" secondAttribute="centerY" constant="100" id="Ivk-Ph-y4k"/>
@@ -291,6 +302,7 @@
                             <constraint firstAttribute="centerY" secondItem="kTG-iO-rma" secondAttribute="centerY" id="jGS-lx-heF"/>
                             <constraint firstItem="yb9-KJ-0ht" firstAttribute="top" secondItem="kTG-iO-rma" secondAttribute="bottom" id="jPo-np-qXJ"/>
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="top" secondItem="Fvv-A7-CMR" secondAttribute="topMargin" id="loR-Q8-57o"/>
+                            <constraint firstItem="iM6-9B-pSg" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leadingMargin" id="nAb-OL-RDZ"/>
                             <constraint firstAttribute="centerY" secondItem="h2D-Rs-kSR" secondAttribute="centerY" id="q1n-MT-ZzN"/>
                             <constraint firstAttribute="trailing" secondItem="rnV-6v-zj7" secondAttribute="trailing" id="une-6K-78U"/>
                             <constraint firstAttribute="centerX" secondItem="rnV-6v-zj7" secondAttribute="centerX" id="xrZ-f6-YGI"/>
@@ -327,6 +339,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxF-YE-VHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="W13-nc-nPg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="555" y="191"/>
         </scene>
@@ -431,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMp-Qf-TQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="523" y="1200"/>
+            <point key="canvasLocation" x="531" y="1178"/>
         </scene>
     </scenes>
     <resources>
