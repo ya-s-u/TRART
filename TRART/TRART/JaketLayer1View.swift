@@ -11,15 +11,14 @@ import Haneke
 
 class JaketLayer1View: UIView {
 
-    @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
-    
+    @IBOutlet var image:[UIImageView] = Array(count: 3, repeatedValue: UIImageView())
     
     var playlist: Playlist? {
         didSet{
-            var url = NSURL(string: self.playlist?.jackets[0].cover as String!)
-            image1.hnk_setImageFromURL(url!)
+            for i in 0...2{
+                var url = NSURL(string: self.playlist?.jackets[i].cover as String!)
+                image[i].hnk_setImageFromURL(url!)
+            }
         }
     }
 }
