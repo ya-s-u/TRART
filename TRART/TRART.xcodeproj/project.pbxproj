@@ -44,9 +44,7 @@
 		983B3F9B1BA5539A00A24393 /* music7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8F1BA5539A00A24393 /* music7.jpg */; };
 		983B3F9C1BA5539A00A24393 /* music8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F901BA5539A00A24393 /* music8.jpg */; };
 		983B3F9D1BA5539A00A24393 /* music9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F911BA5539A00A24393 /* music9.jpg */; };
-		983B3F9E1BA5539A00A24393 /* frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F921BA5539A00A24393 /* frame1.png */; };
-		983B3F9F1BA5539A00A24393 /* frame2.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F931BA5539A00A24393 /* frame2.png */; };
-		983B3FA01BA5539A00A24393 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F941BA5539A00A24393 /* select.png */; };
+		983B3FA61BA5B9AD00A24393 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3FA51BA5B9AD00A24393 /* bg.png */; };
 		9885294F1BA52D37003D5FED /* Layer1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9885294E1BA52D37003D5FED /* Layer1.xib */; };
 		988529521BA5300D003D5FED /* Layer2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 988529511BA5300D003D5FED /* Layer2.xib */; };
 		988529541BA530CA003D5FED /* Layer3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 988529531BA530CA003D5FED /* Layer3.xib */; };
@@ -117,9 +115,7 @@
 		983B3F8F1BA5539A00A24393 /* music7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music7.jpg; sourceTree = "<group>"; };
 		983B3F901BA5539A00A24393 /* music8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music8.jpg; sourceTree = "<group>"; };
 		983B3F911BA5539A00A24393 /* music9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music9.jpg; sourceTree = "<group>"; };
-		983B3F921BA5539A00A24393 /* frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame1.png; sourceTree = "<group>"; };
-		983B3F931BA5539A00A24393 /* frame2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame2.png; sourceTree = "<group>"; };
-		983B3F941BA5539A00A24393 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		983B3FA51BA5B9AD00A24393 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		9885294E1BA52D37003D5FED /* Layer1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer1.xib; sourceTree = "<group>"; };
 		988529511BA5300D003D5FED /* Layer2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer2.xib; sourceTree = "<group>"; };
 		988529531BA530CA003D5FED /* Layer3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer3.xib; sourceTree = "<group>"; };
@@ -181,9 +177,7 @@
 				983B3F8F1BA5539A00A24393 /* music7.jpg */,
 				983B3F901BA5539A00A24393 /* music8.jpg */,
 				983B3F911BA5539A00A24393 /* music9.jpg */,
-				983B3F921BA5539A00A24393 /* frame1.png */,
-				983B3F931BA5539A00A24393 /* frame2.png */,
-				983B3F941BA5539A00A24393 /* select.png */,
+				983B3FA51BA5B9AD00A24393 /* bg.png */,
 				47BD971B1BA2779F00096854 /* TRART */,
 				47BD97311BA277A000096854 /* TRARTTests */,
 				47BD971A1BA2779F00096854 /* Products */,
@@ -443,20 +437,18 @@
 				983B3F9B1BA5539A00A24393 /* music7.jpg in Resources */,
 				988529581BA53102003D5FED /* Layer5.xib in Resources */,
 				983B3F981BA5539A00A24393 /* music4.jpg in Resources */,
-				983B3F9F1BA5539A00A24393 /* frame2.png in Resources */,
 				983B3F991BA5539A00A24393 /* music5.jpg in Resources */,
 				983B3F9A1BA5539A00A24393 /* music6.jpg in Resources */,
 				988529521BA5300D003D5FED /* Layer2.xib in Resources */,
 				9885294F1BA52D37003D5FED /* Layer1.xib in Resources */,
-				983B3FA01BA5539A00A24393 /* select.png in Resources */,
 				9885295E1BA5312D003D5FED /* Layer8.xib in Resources */,
 				47BD97241BA2779F00096854 /* Main.storyboard in Resources */,
-				983B3F9E1BA5539A00A24393 /* frame1.png in Resources */,
 				9885295C1BA53123003D5FED /* Layer7.xib in Resources */,
 				983B3F971BA5539A00A24393 /* music3.jpg in Resources */,
 				988529561BA530D5003D5FED /* Layer4.xib in Resources */,
 				47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */,
 				47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */,
+				983B3FA61BA5B9AD00A24393 /* bg.png in Resources */,
 				983B3F9C1BA5539A00A24393 /* music8.jpg in Resources */,
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
 				983B3F951BA5539A00A24393 /* music1.jpg in Resources */,

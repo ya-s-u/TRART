@@ -2,14 +2,14 @@ import UIKit
 
 class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate{
     
-    var frame:UIImage = UIImage(named: "frame1.png")!
-    var highlight:UIImage = UIImage(named: "frame2.png")!
-    var selectimg:UIImage = UIImage(named: "select.png")!
+    var frame:UIImage = UIImage(named: "frame")!
+    var highlight:UIImage = UIImage(named: "highlight")!
+    var selectimg:UIImage = UIImage(named: "selectFrame")!
     var setNum:Int = 0
     var cell:CustomCell!
     var lay:LayerCell!
     var cancel:Bool = false
-    var page:UInt32 = 1
+    var page:UInt32 = 0
     var layout_type:Int = 0
     var temp:[Int] = []
     var jaket:[[Int]] = Array(count: 8, repeatedValue: [])
@@ -21,15 +21,24 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var autoselect:[Int] = [0,1,0]
     var rastarize:[Int] = [0,4,0]
     
+    @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var lview: UICollectionView!
+    @IBOutlet var sview: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        pageControl.transform = CGAffineTransformMakeScale(1.5, 1.5)
+        pageControl.currentPageIndicatorTintColor = UIColor.auditionTextColor()
+        lview.backgroundColor = UIColor.clearColor()
+        sview.backgroundColor = UIColor.clearColor()
     }
     
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        page = (UInt32)(scrollView.contentOffset.x / scrollView.bounds.size.width) + 1
-        layout_type = Int(page) - 1
+        page = (UInt32)(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        pageControl.currentPage = Int(page)
+        layout_type = Int(page)
         
         
         selectView.reloadData()
@@ -70,7 +79,11 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
                     if i == jaket[indexPath.row].count{
                         lay.image[i].image = highlight
                     }else{
-                        lay.image[i].image = frame
+                        if i == rastarize[indexPath.row]{
+                            lay.image[i].image = nil
+                        }else{
+                            lay.image[i].image = frame
+                        }
                     }
                     lay.image[i].tag = 0
                 }
@@ -138,7 +151,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0{
-            return 1
+            return 3
         }else{
             return 8
         }
