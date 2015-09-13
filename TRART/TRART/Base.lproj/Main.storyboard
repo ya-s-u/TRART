@@ -2,12 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <viewController id="vXZ-lx-hvc" customClass="MainController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,38 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqH-5W-H78">
-                                <rect key="frame" x="277" y="335" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJZ-CQ-WE7">
-                                <rect key="frame" x="277" y="235" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tg9-Wn-QWb" kind="showDetail" id="WDA-Lc-vPG"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Home-backimg" translatesAutoresizingMaskIntoConstraints="NO" id="iL5-x5-eIf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hkj-qr-zKF">
+                                <rect key="frame" x="-16" y="0.0" width="632" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="ypf-Uq-rGJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="632" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypf-Uq-rGJ" id="p3J-2t-Zl7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="bqH-5W-H78" secondAttribute="centerX" id="59P-c1-9AU"/>
-                            <constraint firstAttribute="centerY" secondItem="bqH-5W-H78" secondAttribute="centerY" constant="-50" id="8Fl-qn-57m"/>
-                            <constraint firstAttribute="centerX" secondItem="KJZ-CQ-WE7" secondAttribute="centerX" id="EeB-NM-C9l"/>
-                            <constraint firstAttribute="centerY" secondItem="KJZ-CQ-WE7" secondAttribute="centerY" constant="50" id="ltf-P7-ZDA"/>
+                            <constraint firstAttribute="trailing" secondItem="hkj-qr-zKF" secondAttribute="trailing" constant="-16" id="0Pr-Ba-Yhj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iL5-x5-eIf" secondAttribute="trailing" constant="-16" id="65l-F4-Aj8"/>
+                            <constraint firstItem="iL5-x5-eIf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="79E-sK-0Fv"/>
+                            <constraint firstItem="iL5-x5-eIf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="SdT-fs-ncX"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="iL5-x5-eIf" secondAttribute="bottom" id="Ulu-OT-wQW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hkj-qr-zKF" secondAttribute="bottom" id="UyU-vf-69g"/>
+                            <constraint firstItem="hkj-qr-zKF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="pnD-93-EUx"/>
+                            <constraint firstItem="hkj-qr-zKF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-16" id="umM-y8-BIO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="hkj-qr-zKF" id="wv5-uH-R52"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="303" y="325"/>
         </scene>
         <!--Make New Controller-->
         <scene sceneID="cMc-yA-6ir">
             <objects>
-                <viewController id="fma-TK-OMn" customClass="MakeNewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Favorite" id="fma-TK-OMn" customClass="MakeNewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t8k-2h-SoY"/>
                         <viewControllerLayoutGuide type="bottom" id="aWs-Eo-2xW"/>
@@ -62,6 +74,7 @@
                             <color key="tintColor" red="0.35779684779999998" green="0.3623342812" blue="0.37059336900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="backToTop:" destination="fma-TK-OMn" id="dCV-CU-YlU"/>
+                                <segue destination="KQQ-T2-FF5" kind="unwind" unwindAction="unwindToTop:" id="Wr9-yI-aZ4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="次へ" id="KMT-wZ-AvO">
@@ -72,13 +85,14 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhx-ah-Sts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KQQ-T2-FF5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="389"/>
+            <point key="canvasLocation" x="1851" y="325"/>
         </scene>
         <!--Make New Navigation Controller-->
         <scene sceneID="beG-4Z-pX2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tg9-Wn-QWb" customClass="MakeNewNavigationController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MakeNew" automaticallyAdjustsScrollViewInsets="NO" id="tg9-Wn-QWb" customClass="MakeNewNavigationController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hJ4-aZ-QeW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -94,4 +108,7 @@
             <point key="canvasLocation" x="1075" y="317"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Home-backimg" width="375" height="667"/>
+    </resources>
 </document>
