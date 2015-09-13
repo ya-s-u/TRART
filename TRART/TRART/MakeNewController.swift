@@ -9,7 +9,7 @@
 import UIKit
 import PageMenu
 
-class MakeNewViewController: UIViewController {
+class MakeNewController: UIViewController {
     var pageMenu : CAPSPageMenu?
     
     override func viewDidLoad() {

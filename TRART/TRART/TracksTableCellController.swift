@@ -8,23 +8,29 @@
 
 import UIKit
 
-class TracksTableViewCell: UITableViewCell {
-
+class TracksTableCellController: UITableViewCell {
+    
+    @IBOutlet weak var trackName: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var cover: UIImageView!
+    var trackSource: String = String()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        trackName.font = UIFont.boldSystemFontOfSize(14)
+        trackName.textColor = UIColor.whiteColor()
+        
+        artist.font = UIFont.systemFontOfSize(11)
+        artist.textColor = UIColor.whiteColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func auditionButtonAction(sender: AnyObject) {
-        //NSNotificationのインスタンスを作成。["value":100]という辞書型のデータを持たせる
         var notification : NSNotification = NSNotification(name: "audition", object: self, userInfo: ["value": 100])
-        //通知を送る
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     

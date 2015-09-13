@@ -44,18 +44,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Make New View Controller-->
+        <!--Make New Controller-->
         <scene sceneID="cMc-yA-6ir">
             <objects>
-                <viewController id="fma-TK-OMn" customClass="MakeNewViewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fma-TK-OMn" customClass="MakeNewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t8k-2h-SoY"/>
                         <viewControllerLayoutGuide type="bottom" id="aWs-Eo-2xW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bt6-LW-Exo">
+                    <view key="view" contentMode="scaleToFill" id="Bt6-LW-Exo" customClass="MakeNewView" customModule="TRART" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="s75-Jl-rSq">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="tqD-IV-0PZ">

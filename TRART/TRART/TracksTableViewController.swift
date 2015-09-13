@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
+import Haneke
 
 class TracksTableViewController: UITableViewController {
     
     var parentNavigationController : UINavigationController?
+    let realm = Realm()
+    var tracks: [Track] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
+    
+        let realmResponse = realm.objects(Track)
+        println("Track Count: \(realmResponse.count)")
+        
+        for track in realmResponse {
+            println("\(track.name)")
+            tracks.append(track)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,25 +35,28 @@ class TracksTableViewController: UITableViewController {
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 15
+
+        return tracks.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : TracksTableViewCell = tableView.dequeueReusableCellWithIdentifier("TracksTableViewCell") as! TracksTableViewCell
+        let cell : TracksTableCellController = tableView.dequeueReusableCellWithIdentifier("TracksTableCellController") as! TracksTableCellController
+        let track = tracks[indexPath.row]
+        let URL = NSURL(string: track.cover)
+        
+        cell.trackName.text = track.name
+        cell.artist.text = track.artist
+        cell.cover.hnk_setImageFromURL(URL!)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60.0
+        return 68.0
     }
 
 }
