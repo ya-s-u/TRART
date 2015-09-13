@@ -13,10 +13,10 @@ class TracksTableViewController: UITableViewController {
         self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
     
         let realmResponse = realm.objects(Track)
-        println("Track Count: \(realmResponse.count)")
+//        println("Track Count: \(realmResponse.count)")
         
         for track in realmResponse {
-            println("\(track.name)")
+//            println("\(track.name)")
             tracks.append(track)
         }
     }

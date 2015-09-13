@@ -24,14 +24,13 @@ class TracksTableCellController: UITableViewCell {
         
         artist.font = UIFont.systemFontOfSize(11)
         artist.textColor = UIColor.whiteColor()
-        
-        var tap = UITapGestureRecognizer(target: self, action: Selector("showMailer"))
-        trackName.addGestureRecognizer(tap)
-        trackName.userInteractionEnabled = true
     }
     
     @IBAction func tapCover(sender: AnyObject) {
-        var notification : NSNotification = NSNotification(name: "audition", object: self, userInfo: ["value": 100])
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        app.track = track
+        
+        var notification : NSNotification = NSNotification(name: "audition", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
 }
