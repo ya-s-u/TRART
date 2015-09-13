@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		475B33521BA551BD00EC0E6A /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33511BA551BD00EC0E6A /* TrackCellView.swift */; };
 		47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD971E1BA2779F00096854 /* AppDelegate.swift */; };
 		47BD97241BA2779F00096854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97221BA2779F00096854 /* Main.storyboard */; };
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
@@ -18,7 +19,7 @@
 		47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE091E1BA2D57100168E4D /* MiniPlayer.xib */; };
 		47CE09241BA2E71700168E4D /* TracksTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09221BA2E71700168E4D /* TracksTableController.swift */; };
 		47CE09251BA2E71700168E4D /* TracksTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTable.xib */; };
-		47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */; };
+		47CE09281BA2E91100168E4D /* TracksCellContrroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksCellContrroller.swift */; };
 		47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */; };
 		5A7F614D1BA51B7300555414 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F614C1BA51B7300555414 /* Make.storyboard */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		475B33511BA551BD00EC0E6A /* TrackCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
 		47BD97191BA2779F00096854 /* TRART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD971D1BA2779F00096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD971E1BA2779F00096854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 		47CE091E1BA2D57100168E4D /* MiniPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
 		47CE09221BA2E71700168E4D /* TracksTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableController.swift; sourceTree = "<group>"; };
 		47CE09231BA2E71700168E4D /* TracksTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTable.xib; sourceTree = "<group>"; };
-		47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewCell.swift; sourceTree = "<group>"; };
+		47CE09261BA2E91000168E4D /* TracksCellContrroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TracksCellContrroller.s\U0010\U0010\U0010wift"; sourceTree = "<group>"; };
 		47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewCell.xib; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7F614C1BA51B7300555414 /* Make.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Make.storyboard; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 				47CE091A1BA2D4C900168E4D /* MakeNewController.swift */,
 				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
 				47CE09221BA2E71700168E4D /* TracksTableController.swift */,
-				47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */,
+				47CE09261BA2E91000168E4D /* TracksCellContrroller.swift */,
 				5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */,
 				5A7F61501BA5312D00555414 /* MakeConfirmController.swift */,
 				5A7F61521BA5314E00555414 /* MakeJacketController.swift */,
@@ -244,6 +246,7 @@
 			children = (
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5A7F61541BA544FD00555414 /* TracksTableView.swift */,
+				475B33511BA551BD00EC0E6A /* TrackCellView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -456,10 +459,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */,
+				47CE09281BA2E91100168E4D /* TracksCellContrroller.swift in Sources */,
 				5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */,
 				5A7F61551BA544FD00555414 /* TracksTableView.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
+				475B33521BA551BD00EC0E6A /* TrackCellView.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
 				988529641BA5378B003D5FED /* JaketLayer3View.swift in Sources */,
