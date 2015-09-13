@@ -50,14 +50,6 @@ class MakeNewNavigationController: UINavigationController, AVAudioPlayerDelegate
             miniPlayer.alpha = 1
         })
         
-        if ( audioPlayer.playing ){
-            audioPlayer.stop()
-            miniPlayer.changePlayButtonToStop()
-        }
-        else{
-            audioPlayer.play()
-            miniPlayer.changeStopButtonToPlay()
-        }
     }
     
 }
