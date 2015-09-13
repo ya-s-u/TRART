@@ -23,4 +23,8 @@ class PlayerManager {
             audioPlayer.pause()
         }
     }
+    
+    func currentTime() -> Double {
+        return audioPlayer.currentTime
+    }
 }
