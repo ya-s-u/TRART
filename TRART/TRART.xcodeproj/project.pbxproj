@@ -13,7 +13,7 @@
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
 		47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97271BA2779F00096854 /* LaunchScreen.xib */; };
 		47BD97351BA277A000096854 /* TRARTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD97341BA277A000096854 /* TRARTTests.swift */; };
-		47CE091B1BA2D4C900168E4D /* MakeNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091A1BA2D4C900168E4D /* MakeNewViewController.swift */; };
+		47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091A1BA2D4C900168E4D /* MakeNewController.swift */; };
 		47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */; };
 		47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE091E1BA2D57100168E4D /* MiniPlayer.xib */; };
 		47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09221BA2E71700168E4D /* TracksTableViewController.swift */; };
@@ -24,6 +24,7 @@
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
+		5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61541BA544FD00555414 /* MakeNewView.swift */; };
 		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
@@ -66,7 +67,7 @@
 		47BD972E1BA277A000096854 /* TRARTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRARTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD97331BA277A000096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD97341BA277A000096854 /* TRARTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRARTTests.swift; sourceTree = "<group>"; };
-		47CE091A1BA2D4C900168E4D /* MakeNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewViewController.swift; sourceTree = "<group>"; };
+		47CE091A1BA2D4C900168E4D /* MakeNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewController.swift; sourceTree = "<group>"; };
 		47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewNavigationController.swift; sourceTree = "<group>"; };
 		47CE091E1BA2D57100168E4D /* MiniPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
 		47CE09221BA2E71700168E4D /* TracksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
+		5A7F61541BA544FD00555414 /* MakeNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewView.swift; sourceTree = "<group>"; };
 		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -191,6 +193,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5A7F61561BA5467F00555414 /* Jackets */ = {
+			isa = PBXGroup;
+			children = (
+				9885295F1BA532FD003D5FED /* JaketLayer1View.swift */,
+				988529611BA53775003D5FED /* JaketLayer2View.swift */,
+				988529631BA5378B003D5FED /* JaketLayer3View.swift */,
+				988529651BA53793003D5FED /* JaketLayer4View.swift */,
+				988529671BA537A4003D5FED /* JaketLayer5View.swift */,
+				988529691BA537AF003D5FED /* JaketLayer6View.swift */,
+				9885296B1BA537B9003D5FED /* JaketLayer7View.swift */,
+				9885296D1BA537C4003D5FED /* JaketLayer8View.swift */,
+			);
+			name = Jackets;
+			sourceTree = "<group>";
+		};
 		5AE0DCF21BA2B0C900EE2A1B /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +228,7 @@
 		5AE0DCF41BA2B0DB00EE2A1B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				47CE091A1BA2D4C900168E4D /* MakeNewViewController.swift */,
+				47CE091A1BA2D4C900168E4D /* MakeNewController.swift */,
 				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
 				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
 				47CE09261BA2E91000168E4D /* TracksTableViewCell.swift */,
@@ -225,14 +242,8 @@
 		5AE0DCF51BA2B0E600EE2A1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9885295F1BA532FD003D5FED /* JaketLayer1View.swift */,
-				988529611BA53775003D5FED /* JaketLayer2View.swift */,
-				988529631BA5378B003D5FED /* JaketLayer3View.swift */,
-				988529651BA53793003D5FED /* JaketLayer4View.swift */,
-				988529671BA537A4003D5FED /* JaketLayer5View.swift */,
-				988529691BA537AF003D5FED /* JaketLayer6View.swift */,
-				9885296B1BA537B9003D5FED /* JaketLayer7View.swift */,
-				9885296D1BA537C4003D5FED /* JaketLayer8View.swift */,
+				5A7F61561BA5467F00555414 /* Jackets */,
+				5A7F61541BA544FD00555414 /* MakeNewView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -447,11 +458,12 @@
 			files = (
 				47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */,
 				5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */,
+				5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
 				988529641BA5378B003D5FED /* JaketLayer3View.swift in Sources */,
-				47CE091B1BA2D4C900168E4D /* MakeNewViewController.swift in Sources */,
+				47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */,
 				988529621BA53775003D5FED /* JaketLayer2View.swift in Sources */,
 				988529601BA532FD003D5FED /* JaketLayer1View.swift in Sources */,
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
