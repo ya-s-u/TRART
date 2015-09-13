@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		475B33541BA554A200EC0E6A /* TracksTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33531BA554A200EC0E6A /* TracksTableCellView.swift */; };
+		475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */; };
 		47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD971E1BA2779F00096854 /* AppDelegate.swift */; };
 		47BD97241BA2779F00096854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97221BA2779F00096854 /* Main.storyboard */; };
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		475B33531BA554A200EC0E6A /* TracksTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableCellView.swift; sourceTree = "<group>"; };
+		475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		47BD97191BA2779F00096854 /* TRART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD971D1BA2779F00096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD971E1BA2779F00096854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5A7F61541BA544FD00555414 /* MakeNewView.swift */,
 				475B33531BA554A200EC0E6A /* TracksTableCellView.swift */,
+				475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
 				475B33541BA554A200EC0E6A /* TracksTableCellView.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
+				475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				988529681BA537A4003D5FED /* JaketLayer5View.swift in Sources */,
 				5AF773801BA2D353008056A7 /* Track.swift in Sources */,

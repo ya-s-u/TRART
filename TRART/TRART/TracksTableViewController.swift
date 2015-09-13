@@ -18,7 +18,7 @@ class TracksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "TracksTableCellController", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
     
         let realmResponse = realm.objects(Track)
         println("Track Count: \(realmResponse.count)")
@@ -44,7 +44,7 @@ class TracksTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : TracksTableViewCell = tableView.dequeueReusableCellWithIdentifier("TracksTableViewCell") as! TracksTableViewCell
+        let cell : TracksTableCellController = tableView.dequeueReusableCellWithIdentifier("TracksTableCellController") as! TracksTableCellController
         let track = tracks[indexPath.row]
         let URL = NSURL(string: track.cover)
         
