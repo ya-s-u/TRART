@@ -74,5 +74,10 @@ class MakeNewController: UIViewController {
     @IBAction func backToTop(sender: AnyObject) {
     }
     
+    @IBAction func nextButtonAction(sender: AnyObject) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Make", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController() as! UIViewController
+        self.navigationController?.pushViewController(next, animated: true)
+    }
 
 }

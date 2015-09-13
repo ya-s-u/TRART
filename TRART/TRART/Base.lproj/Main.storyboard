@@ -64,6 +64,11 @@
                                 <action selector="backToTop:" destination="fma-TK-OMn" id="dCV-CU-YlU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="KMT-wZ-AvO">
+                            <connections>
+                                <action selector="nextButtonAction:" destination="fma-TK-OMn" id="Kff-hv-Q3u"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhx-ah-Sts" userLabel="First Responder" sceneMemberID="firstResponder"/>
