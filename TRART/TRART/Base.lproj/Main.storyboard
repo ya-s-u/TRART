@@ -5,11 +5,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -49,6 +49,9 @@
                             <constraint firstItem="hkj-qr-zKF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-16" id="umM-y8-BIO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="hkj-qr-zKF" id="wv5-uH-R52"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="303" y="325"/>
@@ -56,7 +59,7 @@
         <!--Make New Controller-->
         <scene sceneID="cMc-yA-6ir">
             <objects>
-                <viewController id="fma-TK-OMn" customClass="MakeNewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Favorite" id="fma-TK-OMn" customClass="MakeNewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t8k-2h-SoY"/>
                         <viewControllerLayoutGuide type="bottom" id="aWs-Eo-2xW"/>

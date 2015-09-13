@@ -10,12 +10,7 @@ import UIKit
 
 class MainTableHeaderController: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBAction func CreateButtonAction(sender: AnyObject) {
+        
     }
-    */
-
 }

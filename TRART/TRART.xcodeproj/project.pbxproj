@@ -11,6 +11,7 @@
 		475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */; };
 		475B335E1BA5C4BE00EC0E6A /* MainTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */; };
 		475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */; };
+		475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33611BA5CBF000EC0E6A /* MainController.swift */; };
 		47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD971E1BA2779F00096854 /* AppDelegate.swift */; };
 		47BD97241BA2779F00096854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97221BA2779F00096854 /* Main.storyboard */; };
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
@@ -79,6 +80,7 @@
 		475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableHeaderController.swift; sourceTree = "<group>"; };
 		475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableHeader.xib; sourceTree = "<group>"; };
+		475B33611BA5CBF000EC0E6A /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		47BD97191BA2779F00096854 /* TRART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD971D1BA2779F00096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD971E1BA2779F00096854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		5AE0DCF41BA2B0DB00EE2A1B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				475B33611BA5CBF000EC0E6A /* MainController.swift */,
 				47CE091A1BA2D4C900168E4D /* MakeNewController.swift */,
 				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
 				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
@@ -544,6 +547,7 @@
 				988529621BA53775003D5FED /* JaketLayer2View.swift in Sources */,
 				988529601BA532FD003D5FED /* JaketLayer1View.swift in Sources */,
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
+				475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */,
 				983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
 				475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */,

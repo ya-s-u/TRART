@@ -11,14 +11,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-title-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-4H-yNl">
-                    <rect key="frame" x="180" y="74" width="240" height="63"/>
+                    <rect key="frame" x="180" y="55" width="240" height="63"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="74a-jf-vaN"/>
                         <constraint firstAttribute="height" constant="63" id="UCd-UN-97Z"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqP-1U-eki">
-                    <rect key="frame" x="128" y="147" width="345" height="150"/>
+                    <rect key="frame" x="128" y="140" width="345" height="150"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="345" id="0bY-sc-dcy"/>
                         <constraint firstAttribute="height" constant="150" id="yWe-Cx-ALZ"/>
@@ -26,15 +26,18 @@
                     <state key="normal" backgroundImage="Create-button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="CreateButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="hdC-YJ-1bq"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Dbc-4H-yNl" firstAttribute="leading" secondItem="dqP-1U-eki" secondAttribute="trailing" constant="-143" id="DvT-M7-jMD"/>
-                <constraint firstItem="dqP-1U-eki" firstAttribute="top" secondItem="Dbc-4H-yNl" secondAttribute="bottom" constant="10" id="Lcv-6Y-vFk"/>
+                <constraint firstItem="dqP-1U-eki" firstAttribute="top" secondItem="Dbc-4H-yNl" secondAttribute="bottom" constant="22" id="Lcv-6Y-vFk"/>
                 <constraint firstAttribute="centerX" secondItem="dqP-1U-eki" secondAttribute="centerX" id="MTo-US-exl"/>
                 <constraint firstItem="Dbc-4H-yNl" firstAttribute="leading" secondItem="dqP-1U-eki" secondAttribute="trailing" constant="-143" id="TTU-Mx-ef3"/>
-                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="74" id="eey-kT-sWv"/>
+                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="eey-kT-sWv"/>
                 <constraint firstAttribute="centerX" secondItem="Dbc-4H-yNl" secondAttribute="centerX" id="fHd-Ml-1Fb"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
