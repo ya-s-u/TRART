@@ -13,7 +13,6 @@ class MakeNewNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //initなどでNSNotification登録
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMiniPlayer", name: "audition", object: nil)
     }
 

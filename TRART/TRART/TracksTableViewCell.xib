@@ -15,14 +15,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kud-2q-Tsy">
-                        <rect key="frame" x="139" y="29" width="42" height="21"/>
+                        <rect key="frame" x="84" y="19" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-qS-ZM3">
+                        <rect key="frame" x="84" y="41" width="32" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmK-zx-b1S" userLabel="Cover">
+                        <rect key="frame" x="8" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="LHN-b4-0dL"/>
+                            <constraint firstAttribute="height" constant="60" id="rBt-bZ-vVz"/>
+                        </constraints>
+                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeM-cw-Ob0">
-                        <rect key="frame" x="8" y="25" width="30" height="30"/>
-                        <color key="backgroundColor" red="0.35779684779999998" green="0.3623342812" blue="0.37059336900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="8" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="4NO-y2-Gdu"/>
+                            <constraint firstAttribute="height" constant="60" id="gro-aH-sbx"/>
+                        </constraints>
                         <state key="normal" title="▶︎">
                             <color key="titleColor" red="0.82745098039999998" green="0.55294117649999996" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,11 +52,30 @@
                 <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="IeM-cw-Ob0" secondAttribute="centerY" id="8pY-Rs-YE9"/>
+                    <constraint firstAttribute="centerY" secondItem="SMn-qS-ZM3" secondAttribute="centerY" constant="-10" id="BHx-iE-GP2"/>
                     <constraint firstAttribute="centerX" secondItem="kud-2q-Tsy" secondAttribute="centerX" id="EtX-h5-fmp"/>
-                    <constraint firstAttribute="centerY" secondItem="kud-2q-Tsy" secondAttribute="centerY" id="Xs4-uB-gc0"/>
+                    <constraint firstItem="UmK-zx-b1S" firstAttribute="leading" secondItem="IeM-cw-Ob0" secondAttribute="trailing" id="JwV-1i-OTg"/>
+                    <constraint firstItem="kud-2q-Tsy" firstAttribute="leading" secondItem="IeM-cw-Ob0" secondAttribute="trailing" constant="16" id="MfW-Qb-wsf"/>
+                    <constraint firstItem="UmK-zx-b1S" firstAttribute="leading" secondItem="IeM-cw-Ob0" secondAttribute="trailing" id="Nlu-pH-KEo"/>
+                    <constraint firstItem="SMn-qS-ZM3" firstAttribute="leading" secondItem="IeM-cw-Ob0" secondAttribute="trailing" constant="16" id="TXK-ur-DJh"/>
+                    <constraint firstItem="UmK-zx-b1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Vma-25-yPK"/>
+                    <constraint firstAttribute="centerY" secondItem="kud-2q-Tsy" secondAttribute="centerY" constant="10" id="Xs4-uB-gc0"/>
                     <constraint firstItem="IeM-cw-Ob0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hq3-HZ-gVA"/>
+                    <constraint firstAttribute="centerY" secondItem="UmK-zx-b1S" secondAttribute="centerY" id="lJ4-de-vbL"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="JwV-1i-OTg"/>
+                        <exclude reference="Nlu-pH-KEo"/>
+                        <exclude reference="EtX-h5-fmp"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="artist" destination="SMn-qS-ZM3" id="G3U-A7-aTs"/>
+                <outlet property="cover" destination="UmK-zx-b1S" id="J7G-wG-hqX"/>
+                <outlet property="trackName" destination="kud-2q-Tsy" id="iAL-RK-Ju3"/>
+            </connections>
             <point key="canvasLocation" x="334" y="353"/>
         </tableViewCell>
     </objects>

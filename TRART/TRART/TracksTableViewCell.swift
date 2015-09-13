@@ -10,21 +10,22 @@ import UIKit
 
 class TracksTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var trackName: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var cover: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func auditionButtonAction(sender: AnyObject) {
-        //NSNotificationのインスタンスを作成。["value":100]という辞書型のデータを持たせる
         var notification : NSNotification = NSNotification(name: "audition", object: self, userInfo: ["value": 100])
-        //通知を送る
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
