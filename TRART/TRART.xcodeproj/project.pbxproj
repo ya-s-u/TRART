@@ -27,6 +27,8 @@
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
 		5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61541BA544FD00555414 /* MakeNewView.swift */; };
 		5AD276151BA571590074B49C /* TracksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD276141BA571590074B49C /* TracksTableView.swift */; };
+		5AD2761A1BA59FAF0074B49C /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD276191BA59FAF0074B49C /* PlayerManager.swift */; };
+		5AD2764A1BA5B0180074B49C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD276491BA5B0170074B49C /* AVFoundation.framework */; };
 		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
@@ -98,6 +100,8 @@
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
 		5A7F61541BA544FD00555414 /* MakeNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewView.swift; sourceTree = "<group>"; };
 		5AD276141BA571590074B49C /* TracksTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableView.swift; sourceTree = "<group>"; };
+		5AD276191BA59FAF0074B49C /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		5AD276491BA5B0170074B49C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD2764A1BA5B0180074B49C /* AVFoundation.framework in Frameworks */,
 				12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +163,7 @@
 		0121194FABC31F508F3DF253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AD276491BA5B0170074B49C /* AVFoundation.framework */,
 				C154B7778607281D564FC65E /* Pods_TRART.framework */,
 			);
 			name = Frameworks;
@@ -256,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */,
+				5AD276191BA59FAF0074B49C /* PlayerManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -532,6 +539,7 @@
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
+				5AD2761A1BA59FAF0074B49C /* PlayerManager.swift in Sources */,
 				988529641BA5378B003D5FED /* JaketLayer3View.swift in Sources */,
 				47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */,
 				988529621BA53775003D5FED /* JaketLayer2View.swift in Sources */,
