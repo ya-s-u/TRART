@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		475B33521BA551BD00EC0E6A /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33511BA551BD00EC0E6A /* TrackCellView.swift */; };
+		475B33541BA554A200EC0E6A /* TracksTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33531BA554A200EC0E6A /* TracksTableCellView.swift */; };
 		47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD971E1BA2779F00096854 /* AppDelegate.swift */; };
 		47BD97241BA2779F00096854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97221BA2779F00096854 /* Main.storyboard */; };
 		47BD97261BA2779F00096854 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD97251BA2779F00096854 /* Images.xcassets */; };
@@ -17,15 +17,15 @@
 		47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091A1BA2D4C900168E4D /* MakeNewController.swift */; };
 		47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */; };
 		47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE091E1BA2D57100168E4D /* MiniPlayer.xib */; };
-		47CE09241BA2E71700168E4D /* TracksTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09221BA2E71700168E4D /* TracksTableController.swift */; };
-		47CE09251BA2E71700168E4D /* TracksTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTable.xib */; };
-		47CE09281BA2E91100168E4D /* TracksCellContrroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksCellContrroller.swift */; };
+		47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09221BA2E71700168E4D /* TracksTableViewController.swift */; };
+		47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTableViewController.xib */; };
+		47CE09281BA2E91100168E4D /* TracksTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksTableCellController.swift */; };
 		47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */; };
 		5A7F614D1BA51B7300555414 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F614C1BA51B7300555414 /* Make.storyboard */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
-		5A7F61551BA544FD00555414 /* TracksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61541BA544FD00555414 /* TracksTableView.swift */; };
+		5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61541BA544FD00555414 /* MakeNewView.swift */; };
 		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
@@ -59,7 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		475B33511BA551BD00EC0E6A /* TrackCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
+		475B33531BA554A200EC0E6A /* TracksTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableCellView.swift; sourceTree = "<group>"; };
 		47BD97191BA2779F00096854 /* TRART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BD971D1BA2779F00096854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47BD971E1BA2779F00096854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,16 +72,16 @@
 		47CE091A1BA2D4C900168E4D /* MakeNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewController.swift; sourceTree = "<group>"; };
 		47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewNavigationController.swift; sourceTree = "<group>"; };
 		47CE091E1BA2D57100168E4D /* MiniPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
-		47CE09221BA2E71700168E4D /* TracksTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableController.swift; sourceTree = "<group>"; };
-		47CE09231BA2E71700168E4D /* TracksTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTable.xib; sourceTree = "<group>"; };
-		47CE09261BA2E91000168E4D /* TracksCellContrroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TracksCellContrroller.s\U0010\U0010\U0010wift"; sourceTree = "<group>"; };
+		47CE09221BA2E71700168E4D /* TracksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
+		47CE09231BA2E71700168E4D /* TracksTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewController.xib; sourceTree = "<group>"; };
+		47CE09261BA2E91000168E4D /* TracksTableCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableCellController.swift; sourceTree = "<group>"; };
 		47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewCell.xib; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7F614C1BA51B7300555414 /* Make.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Make.storyboard; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
-		5A7F61541BA544FD00555414 /* TracksTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableView.swift; sourceTree = "<group>"; };
+		5A7F61541BA544FD00555414 /* MakeNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewView.swift; sourceTree = "<group>"; };
 		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -232,10 +232,10 @@
 			children = (
 				47CE091A1BA2D4C900168E4D /* MakeNewController.swift */,
 				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
-				47CE09221BA2E71700168E4D /* TracksTableController.swift */,
-				47CE09261BA2E91000168E4D /* TracksCellContrroller.swift */,
+				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
 				5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */,
 				5A7F61501BA5312D00555414 /* MakeConfirmController.swift */,
+				47CE09261BA2E91000168E4D /* TracksTableCellController.swift */,
 				5A7F61521BA5314E00555414 /* MakeJacketController.swift */,
 			);
 			name = Controllers;
@@ -245,8 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				5A7F61561BA5467F00555414 /* Jackets */,
-				5A7F61541BA544FD00555414 /* TracksTableView.swift */,
-				475B33511BA551BD00EC0E6A /* TrackCellView.swift */,
+				5A7F61541BA544FD00555414 /* MakeNewView.swift */,
+				475B33531BA554A200EC0E6A /* TracksTableCellView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 				47BD97221BA2779F00096854 /* Main.storyboard */,
 				5A7F614C1BA51B7300555414 /* Make.storyboard */,
 				47CE091E1BA2D57100168E4D /* MiniPlayer.xib */,
-				47CE09231BA2E71700168E4D /* TracksTable.xib */,
+				47CE09231BA2E71700168E4D /* TracksTableViewController.xib */,
 				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
 				988529501BA52F21003D5FED /* LayerSet */,
 			);
@@ -379,7 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CE09251BA2E71700168E4D /* TracksTable.xib in Resources */,
+				47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */,
 				988529581BA53102003D5FED /* Layer5.xib in Resources */,
 				988529521BA5300D003D5FED /* Layer2.xib in Resources */,
 				9885294F1BA52D37003D5FED /* Layer1.xib in Resources */,
@@ -459,18 +459,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CE09281BA2E91100168E4D /* TracksCellContrroller.swift in Sources */,
+				47CE09281BA2E91100168E4D /* TracksTableCellController.swift in Sources */,
 				5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */,
-				5A7F61551BA544FD00555414 /* TracksTableView.swift in Sources */,
+				5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
-				475B33521BA551BD00EC0E6A /* TrackCellView.swift in Sources */,
-				47CE09241BA2E71700168E4D /* TracksTableController.swift in Sources */,
+				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
 				988529641BA5378B003D5FED /* JaketLayer3View.swift in Sources */,
 				47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */,
 				988529621BA53775003D5FED /* JaketLayer2View.swift in Sources */,
 				988529601BA532FD003D5FED /* JaketLayer1View.swift in Sources */,
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
+				475B33541BA554A200EC0E6A /* TracksTableCellView.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				988529681BA537A4003D5FED /* JaketLayer5View.swift in Sources */,

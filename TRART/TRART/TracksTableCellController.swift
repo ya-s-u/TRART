@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TracksTableViewCell: UITableViewCell {
+class TracksTableCellController: UITableViewCell {
 
     
     @IBOutlet weak var trackName: UILabel!

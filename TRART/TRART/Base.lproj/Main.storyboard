@@ -52,7 +52,7 @@
                         <viewControllerLayoutGuide type="top" id="t8k-2h-SoY"/>
                         <viewControllerLayoutGuide type="bottom" id="aWs-Eo-2xW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bt6-LW-Exo">
+                    <view key="view" contentMode="scaleToFill" id="Bt6-LW-Exo" customClass="MakeNewView" customModule="TRART" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
