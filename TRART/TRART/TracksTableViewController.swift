@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import Haneke
 
-class TracksTableController: UITableViewController {
+class TracksTableViewController: UITableViewController {
     
     var parentNavigationController : UINavigationController?
     let realm = Realm()

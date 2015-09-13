@@ -17,22 +17,22 @@ class MakeNewController: UIViewController {
         self.title = "Make New!!"
         var controllerArray : [UIViewController] = []
     
-        var tracksController : TracksTableController = TracksTableController(nibName: "TracksTable", bundle: nil)
+        var tracksController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
         tracksController.title = "Tracks"
         tracksController.parentNavigationController = self.navigationController
         controllerArray.append(tracksController)
         
-        var albumController : TracksTableController = TracksTableController(nibName: "TracksTable", bundle: nil)
+        var albumController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
         albumController.title = "Album"
         albumController.parentNavigationController = self.navigationController
         controllerArray.append(albumController)
         
-        var artistController : TracksTableController = TracksTableController(nibName: "TracksTable", bundle: nil)
+        var artistController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
         artistController.title = "Artist"
         artistController.parentNavigationController = self.navigationController
         controllerArray.append(artistController)
         
-        var usersController : TracksTableController = TracksTableController(nibName: "TracksTable", bundle: nil)
+        var usersController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
         usersController.title = "Users"
         usersController.parentNavigationController = self.navigationController
         controllerArray.append(usersController)
