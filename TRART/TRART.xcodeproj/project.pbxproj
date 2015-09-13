@@ -24,7 +24,7 @@
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
-		5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61541BA544FD00555414 /* MakeNewView.swift */; };
+		5A7F61551BA544FD00555414 /* TracksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61541BA544FD00555414 /* TracksTableView.swift */; };
 		5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */; };
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
@@ -79,7 +79,7 @@
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
-		5A7F61541BA544FD00555414 /* MakeNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewView.swift; sourceTree = "<group>"; };
+		5A7F61541BA544FD00555414 /* TracksTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableView.swift; sourceTree = "<group>"; };
 		5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApiClient.swift; sourceTree = "<group>"; };
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7F61561BA5467F00555414 /* Jackets */,
-				5A7F61541BA544FD00555414 /* MakeNewView.swift */,
+				5A7F61541BA544FD00555414 /* TracksTableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -458,7 +458,7 @@
 			files = (
 				47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */,
 				5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */,
-				5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */,
+				5A7F61551BA544FD00555414 /* TracksTableView.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
