@@ -206,7 +206,6 @@
 				5AE0DCF51BA2B0E600EE2A1B /* Views */,
 				5AE0DCF61BA2B0EE00EE2A1B /* Layouts */,
 				47BD97251BA2779F00096854 /* Images.xcassets */,
-				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 				47BD971C1BA2779F00096854 /* Supporting Files */,
 			);
 			path = TRART;
@@ -240,14 +239,6 @@
 		5A7F61561BA5467F00555414 /* Jackets */ = {
 			isa = PBXGroup;
 			children = (
-				9885295F1BA532FD003D5FED /* JaketLayer1View.swift */,
-				988529611BA53775003D5FED /* JaketLayer2View.swift */,
-				988529631BA5378B003D5FED /* JaketLayer3View.swift */,
-				988529651BA53793003D5FED /* JaketLayer4View.swift */,
-				988529671BA537A4003D5FED /* JaketLayer5View.swift */,
-				988529691BA537AF003D5FED /* JaketLayer6View.swift */,
-				9885296B1BA537B9003D5FED /* JaketLayer7View.swift */,
-				9885296D1BA537C4003D5FED /* JaketLayer8View.swift */,
 			);
 			name = Jackets;
 			sourceTree = "<group>";
@@ -315,6 +306,7 @@
 		5AE0DCF61BA2B0EE00EE2A1B /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 				47BD97221BA2779F00096854 /* Main.storyboard */,
 				5A7F614C1BA51B7300555414 /* Make.storyboard */,
 				47CE091E1BA2D57100168E4D /* MiniPlayer.xib */,
