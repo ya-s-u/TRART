@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        realmSampleUsage()
+        realmSampleUsage()
         return true
     }
 
@@ -47,16 +47,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 println("Realm Path: \(realm.path)")
                 
                 // save playlist
-                realm.write {
-                    realm.add(playlist)
-                }
+//                realm.write {
+//                    realm.add(playlist)
+//                }
                 
                 // get all playlists
                 let playlists = realm.objects(Playlist)
                 println("Playlist Count: \(playlists.count)")
                 
                 for playlist in playlists {
-                    println(playlist.title)
+                    println("========== \(playlist.title) ==========")
+                    for track in playlist.tracks {
+                        println("\(track.name) \(track.playbackTimeStr())")
+                    }
                 }
 
             case .Failure(let box):

@@ -10,7 +10,15 @@ extension UIColor {
     }
     
     class func textColor() -> UIColor {
-        return UIColor.rgbColor(0x5AE628)
+        return UIColor.rgbColor(0xffffff)
+    }
+    
+    class func auditionTextColor() -> UIColor {
+        return UIColor.rgbColor(0xCCAA74)
+    }
+    
+    class func addedTextColor() -> UIColor {
+        return UIColor.rgbColor(0x4B4F5A)
     }
     
     class func buttonColor() -> UIColor {
