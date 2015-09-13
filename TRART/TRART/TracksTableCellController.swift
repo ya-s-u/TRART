@@ -17,6 +17,12 @@ class TracksTableCellController: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        trackName.font = UIFont.boldSystemFontOfSize(14)
+        trackName.textColor = UIColor.whiteColor()
+        
+        artist.font = UIFont.systemFontOfSize(11)
+        artist.textColor = UIColor.whiteColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
