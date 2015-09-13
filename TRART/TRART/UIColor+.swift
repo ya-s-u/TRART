@@ -21,6 +21,14 @@ extension UIColor {
         return UIColor.rgbColor(0x4B4F5A)
     }
     
+    class func makeNewTabColorActive() -> UIColor {
+        return UIColor.rgbColor(0x1A2C45)
+    }
+    
+    class func makeNewTabColorNonActive() -> UIColor {
+        return UIColor.rgbColor(0x404040)
+    }
+    
     class func buttonColor() -> UIColor {
         return UIColor.redColor()
     }

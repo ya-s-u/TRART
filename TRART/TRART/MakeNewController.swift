@@ -14,7 +14,7 @@ class MakeNewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "曲を選択"
+        self.title = "Favoriteから曲を選択"
         var controllerArray : [UIViewController] = []
     
         var tracksController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
@@ -40,13 +40,13 @@ class MakeNewController: UIViewController {
         // Customize menu (Optional)
         var parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(0),
-            .ScrollMenuBackgroundColor(UIColor.lightGrayColor()),
-            .ViewBackgroundColor(UIColor.blackColor()),
-            .BottomMenuHairlineColor(UIColor.lightGrayColor()),
-            .SelectionIndicatorColor(UIColor.blackColor()),
+            .ScrollMenuBackgroundColor(UIColor.makeNewTabColorNonActive()),
+            .ViewBackgroundColor(UIColor.makeNewTabColorActive()),
+            .BottomMenuHairlineColor(UIColor.makeNewTabColorActive()),
+            .SelectionIndicatorColor(UIColor.makeNewTabColorActive()),
             .MenuMargin(20.0),
             .MenuHeight(35.0),
-            .SelectedMenuItemLabelColor(UIColor.whiteColor()),
+            .SelectedMenuItemLabelColor(UIColor.auditionTextColor()),
             .UnselectedMenuItemLabelColor(UIColor.grayColor()),
             .MenuItemFont(UIFont(name: "HelveticaNeue-Medium", size: 17.0)!),
             .UseMenuLikeSegmentedControl(true),
