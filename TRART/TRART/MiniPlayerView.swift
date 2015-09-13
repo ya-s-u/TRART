@@ -6,8 +6,9 @@ class MiniPlayerView: UIView {
     
     var track: Track? {
         didSet {
-            println("#####")
-            println(track?.trackSource)
+            let player = PlayerManager.sharedInstance
+            player.set(track!.trackSource as String)
+            player.play()
         }
     }
     
@@ -18,7 +19,4 @@ class MiniPlayerView: UIView {
     func changeStopButtonToPlay() {
         self.playButton.setTitle("▶︎", forState: UIControlState.Normal)
     }
-    
-    
-    
 }
