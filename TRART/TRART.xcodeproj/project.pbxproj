@@ -28,6 +28,20 @@
 		5AF773801BA2D353008056A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7737F1BA2D353008056A7 /* Track.swift */; };
 		5AF773821BA2E302008056A7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773811BA2E302008056A7 /* Playlist.swift */; };
 		5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF773841BA2E84F008056A7 /* UIColor+.swift */; };
+		983B3F861BA5515100A24393 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B3F851BA5515100A24393 /* CustomCell.swift */; };
+		983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B3F871BA5515B00A24393 /* LayerCell.swift */; };
+		983B3F951BA5539A00A24393 /* music1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F891BA5539A00A24393 /* music1.jpg */; };
+		983B3F961BA5539A00A24393 /* music2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8A1BA5539A00A24393 /* music2.jpg */; };
+		983B3F971BA5539A00A24393 /* music3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8B1BA5539A00A24393 /* music3.jpg */; };
+		983B3F981BA5539A00A24393 /* music4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8C1BA5539A00A24393 /* music4.jpg */; };
+		983B3F991BA5539A00A24393 /* music5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8D1BA5539A00A24393 /* music5.jpg */; };
+		983B3F9A1BA5539A00A24393 /* music6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8E1BA5539A00A24393 /* music6.jpg */; };
+		983B3F9B1BA5539A00A24393 /* music7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F8F1BA5539A00A24393 /* music7.jpg */; };
+		983B3F9C1BA5539A00A24393 /* music8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F901BA5539A00A24393 /* music8.jpg */; };
+		983B3F9D1BA5539A00A24393 /* music9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F911BA5539A00A24393 /* music9.jpg */; };
+		983B3F9E1BA5539A00A24393 /* frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F921BA5539A00A24393 /* frame1.png */; };
+		983B3F9F1BA5539A00A24393 /* frame2.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F931BA5539A00A24393 /* frame2.png */; };
+		983B3FA01BA5539A00A24393 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 983B3F941BA5539A00A24393 /* select.png */; };
 		9885294F1BA52D37003D5FED /* Layer1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9885294E1BA52D37003D5FED /* Layer1.xib */; };
 		988529521BA5300D003D5FED /* Layer2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 988529511BA5300D003D5FED /* Layer2.xib */; };
 		988529541BA530CA003D5FED /* Layer3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 988529531BA530CA003D5FED /* Layer3.xib */; };
@@ -82,6 +96,20 @@
 		5AF7737F1BA2D353008056A7 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5AF773811BA2E302008056A7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		5AF773841BA2E84F008056A7 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		983B3F851BA5515100A24393 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		983B3F871BA5515B00A24393 /* LayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerCell.swift; sourceTree = "<group>"; };
+		983B3F891BA5539A00A24393 /* music1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music1.jpg; sourceTree = "<group>"; };
+		983B3F8A1BA5539A00A24393 /* music2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music2.jpg; sourceTree = "<group>"; };
+		983B3F8B1BA5539A00A24393 /* music3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music3.jpg; sourceTree = "<group>"; };
+		983B3F8C1BA5539A00A24393 /* music4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music4.jpg; sourceTree = "<group>"; };
+		983B3F8D1BA5539A00A24393 /* music5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music5.jpg; sourceTree = "<group>"; };
+		983B3F8E1BA5539A00A24393 /* music6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music6.jpg; sourceTree = "<group>"; };
+		983B3F8F1BA5539A00A24393 /* music7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music7.jpg; sourceTree = "<group>"; };
+		983B3F901BA5539A00A24393 /* music8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music8.jpg; sourceTree = "<group>"; };
+		983B3F911BA5539A00A24393 /* music9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music9.jpg; sourceTree = "<group>"; };
+		983B3F921BA5539A00A24393 /* frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame1.png; sourceTree = "<group>"; };
+		983B3F931BA5539A00A24393 /* frame2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame2.png; sourceTree = "<group>"; };
+		983B3F941BA5539A00A24393 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		9885294E1BA52D37003D5FED /* Layer1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer1.xib; sourceTree = "<group>"; };
 		988529511BA5300D003D5FED /* Layer2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer2.xib; sourceTree = "<group>"; };
 		988529531BA530CA003D5FED /* Layer3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer3.xib; sourceTree = "<group>"; };
@@ -132,6 +160,18 @@
 		47BD97101BA2779F00096854 = {
 			isa = PBXGroup;
 			children = (
+				983B3F891BA5539A00A24393 /* music1.jpg */,
+				983B3F8A1BA5539A00A24393 /* music2.jpg */,
+				983B3F8B1BA5539A00A24393 /* music3.jpg */,
+				983B3F8C1BA5539A00A24393 /* music4.jpg */,
+				983B3F8D1BA5539A00A24393 /* music5.jpg */,
+				983B3F8E1BA5539A00A24393 /* music6.jpg */,
+				983B3F8F1BA5539A00A24393 /* music7.jpg */,
+				983B3F901BA5539A00A24393 /* music8.jpg */,
+				983B3F911BA5539A00A24393 /* music9.jpg */,
+				983B3F921BA5539A00A24393 /* frame1.png */,
+				983B3F931BA5539A00A24393 /* frame2.png */,
+				983B3F941BA5539A00A24393 /* select.png */,
 				47BD971B1BA2779F00096854 /* TRART */,
 				47BD97311BA277A000096854 /* TRARTTests */,
 				47BD971A1BA2779F00096854 /* Products */,
@@ -233,6 +273,8 @@
 				988529691BA537AF003D5FED /* JaketLayer6View.swift */,
 				9885296B1BA537B9003D5FED /* JaketLayer7View.swift */,
 				9885296D1BA537C4003D5FED /* JaketLayer8View.swift */,
+				983B3F851BA5515100A24393 /* CustomCell.swift */,
+				983B3F871BA5515B00A24393 /* LayerCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -366,16 +408,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */,
+				983B3F9B1BA5539A00A24393 /* music7.jpg in Resources */,
 				988529581BA53102003D5FED /* Layer5.xib in Resources */,
+				983B3F981BA5539A00A24393 /* music4.jpg in Resources */,
+				983B3F9F1BA5539A00A24393 /* frame2.png in Resources */,
+				983B3F991BA5539A00A24393 /* music5.jpg in Resources */,
+				983B3F9A1BA5539A00A24393 /* music6.jpg in Resources */,
 				988529521BA5300D003D5FED /* Layer2.xib in Resources */,
 				9885294F1BA52D37003D5FED /* Layer1.xib in Resources */,
+				983B3FA01BA5539A00A24393 /* select.png in Resources */,
 				9885295E1BA5312D003D5FED /* Layer8.xib in Resources */,
 				47BD97241BA2779F00096854 /* Main.storyboard in Resources */,
+				983B3F9E1BA5539A00A24393 /* frame1.png in Resources */,
 				9885295C1BA53123003D5FED /* Layer7.xib in Resources */,
+				983B3F971BA5539A00A24393 /* music3.jpg in Resources */,
 				988529561BA530D5003D5FED /* Layer4.xib in Resources */,
 				47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */,
 				47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */,
+				983B3F9C1BA5539A00A24393 /* music8.jpg in Resources */,
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
+				983B3F951BA5539A00A24393 /* music1.jpg in Resources */,
+				983B3F961BA5539A00A24393 /* music2.jpg in Resources */,
+				983B3F9D1BA5539A00A24393 /* music9.jpg in Resources */,
 				9885295A1BA53114003D5FED /* Layer6.xib in Resources */,
 				47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */,
 				5A7F614D1BA51B7300555414 /* Make.storyboard in Resources */,
@@ -447,6 +501,7 @@
 			files = (
 				47CE09281BA2E91100168E4D /* TracksTableViewCell.swift in Sources */,
 				5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */,
+				983B3F861BA5515100A24393 /* CustomCell.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
@@ -455,6 +510,7 @@
 				988529621BA53775003D5FED /* JaketLayer2View.swift in Sources */,
 				988529601BA532FD003D5FED /* JaketLayer1View.swift in Sources */,
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
+				983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				988529681BA537A4003D5FED /* JaketLayer5View.swift in Sources */,
