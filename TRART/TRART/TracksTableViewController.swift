@@ -18,7 +18,7 @@ class TracksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerNib(UINib(nibName: "TracksTableCellController", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
+        self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
     
         let realmResponse = realm.objects(Track)
         println("Track Count: \(realmResponse.count)")

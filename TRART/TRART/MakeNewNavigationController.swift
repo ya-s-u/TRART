@@ -17,19 +17,19 @@ class MakeNewNavigationController: UINavigationController, AVAudioPlayerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 再生する audio ファイルのパスを取得
-        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sample", ofType: "mp3")!)
-        
-        // auido を再生するプレイヤーを作成する
-        var audioError:NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: audioPath, error:&audioError)
-        
-        // エラーが起きたとき
-        if let error = audioError {
-            println("Error \(error.localizedDescription)")
-        }
-        audioPlayer.delegate = self
-        audioPlayer.prepareToPlay()
+//        // 再生する audio ファイルのパスを取得
+//        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sample", ofType: "mp3")!)
+//        
+//        // auido を再生するプレイヤーを作成する
+//        var audioError:NSError?
+//        audioPlayer = AVAudioPlayer(contentsOfURL: audioPath, error:&audioError)
+//        
+//        // エラーが起きたとき
+//        if let error = audioError {
+//            println("Error \(error.localizedDescription)")
+//        }
+//        audioPlayer.delegate = self
+//        audioPlayer.prepareToPlay()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMiniPlayer", name: "audition", object: nil)
     }
