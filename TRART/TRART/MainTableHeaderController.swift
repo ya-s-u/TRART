@@ -11,6 +11,7 @@ import UIKit
 class MainTableHeaderController: UIView {
 
     @IBAction func CreateButtonAction(sender: AnyObject) {
-        
+        var notification : NSNotification = NSNotification(name: "CreateButton", object: self, userInfo: ["value": 200])
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
 }

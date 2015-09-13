@@ -18,13 +18,20 @@ class MainController: UIViewController {
         let header: MainTableHeaderController = UINib(nibName: "MainTableHeader", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MainTableHeaderController
         self.tableView.tableHeaderView = header
         
-        header.CreateButtonAction(self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToMakeNew", name: "CreateButton", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func segueToMakeNew() {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var makeNewViewController = storyboard.instantiateViewControllerWithIdentifier("MakeNew") as! UIViewController
+        self.presentViewController(makeNewViewController, animated: true, completion: nil)
+    }
     
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+    }
 
 }

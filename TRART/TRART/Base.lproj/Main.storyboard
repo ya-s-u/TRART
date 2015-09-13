@@ -74,6 +74,7 @@
                             <color key="tintColor" red="0.35779684779999998" green="0.3623342812" blue="0.37059336900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="backToTop:" destination="fma-TK-OMn" id="dCV-CU-YlU"/>
+                                <segue destination="KQQ-T2-FF5" kind="unwind" unwindAction="unwindToTop:" id="Wr9-yI-aZ4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="次へ" id="KMT-wZ-AvO">
@@ -84,13 +85,14 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhx-ah-Sts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KQQ-T2-FF5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="389"/>
+            <point key="canvasLocation" x="1851" y="325"/>
         </scene>
         <!--Make New Navigation Controller-->
         <scene sceneID="beG-4Z-pX2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tg9-Wn-QWb" customClass="MakeNewNavigationController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MakeNew" automaticallyAdjustsScrollViewInsets="NO" id="tg9-Wn-QWb" customClass="MakeNewNavigationController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hJ4-aZ-QeW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
