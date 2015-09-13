@@ -21,9 +21,14 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var autoselect:[Int] = [0,1,0]
     var rastarize:[Int] = [0,4,0]
     
+    @IBOutlet var lview: UICollectionView!
+    @IBOutlet var sview: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        lview.backgroundColor = UIColor.clearColor()
+        sview.backgroundColor = UIColor.clearColor()
     }
     
     
@@ -138,7 +143,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0{
-            return 1
+            return 3
         }else{
             return 8
         }
