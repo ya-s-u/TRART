@@ -15,7 +15,7 @@ class TracksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
-    
+        
         let realmResponse = realm.objects(Track)
         
         for track in realmResponse {
@@ -26,18 +26,16 @@ class TracksTableViewController: UITableViewController {
         //Receive Nortification from MakeNewController.swift
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "savePlaylist", name: "makePlaylist", object: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return tracks.count
     }
     
@@ -52,29 +50,38 @@ class TracksTableViewController: UITableViewController {
     }
     
     override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        
         let cell : TracksTableCellController = tableView.cellForRowAtIndexPath(indexPath) as! TracksTableCellController
         
-        if cell.isChecked{
-            cell.plusButton.image = UIImage(named: "plus-button")
-            self.checkedTracks.removeValueForKey(self.tracks[indexPath.row].itunesId)
-        } else {
-            cell.plusButton.image = UIImage(named: "plus-button-checked")
-            self.checkedTracks[self.tracks[indexPath.row].itunesId] = self.tracks[indexPath.row]
-        }
-        
-        cell.isChecked = !cell.isChecked
-        
         if self.checkedTracks.count == 8 {
-            //Send a Nortification to MakeNewController
-            var notification : NSNotification = NSNotification(name: "8TracksSelected", object: nil)
-            NSNotificationCenter.defaultCenter().postNotification(notification)
+            if cell.isChecked{
+                cell.plusButton.image = UIImage(named: "plus-button")
+                self.checkedTracks.removeValueForKey(self.tracks[indexPath.row].itunesId)
+                cell.isChecked = !cell.isChecked
+                
+                //Send a Nortification to MakeNewController.swift
+                var notification : NSNotification = NSNotification(name: "8TracksUnSelected", object: nil)
+                NSNotificationCenter.defaultCenter().postNotification(notification)
+            }
             return
         }
         
-        //Send a Nortification to MakeNewController
-        var notification : NSNotification = NSNotification(name: "8TracksUnSelected", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
+        if self.checkedTracks.count < 8 {
+            if cell.isChecked{
+                cell.plusButton.image = UIImage(named: "plus-button")
+                self.checkedTracks.removeValueForKey(self.tracks[indexPath.row].itunesId)
+            } else {
+                cell.plusButton.image = UIImage(named: "plus-button-checked")
+                self.checkedTracks[self.tracks[indexPath.row].itunesId] = self.tracks[indexPath.row]
+            }
+            cell.isChecked = !cell.isChecked
+        }
         
+        if self.checkedTracks.count == 8 {
+            //Send a Nortification to MakeNewController.swift
+            var notification : NSNotification = NSNotification(name: "8TracksSelected", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        }
     }
     
     func savePlaylist(){
@@ -85,5 +92,5 @@ class TracksTableViewController: UITableViewController {
     }
     
     
-
+    
 }

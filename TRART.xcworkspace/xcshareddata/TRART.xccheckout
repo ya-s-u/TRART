@@ -14,11 +14,11 @@
 		<string>https://github.com/techcampman/techdesign_kyoto_a.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TRART/TRART.xcworkspace</string>
+	<string>TRART.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EE4B5387DB93C3CF3CC224851CF3F5C44D9D95E</key>
-		<string>../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/techcampman/techdesign_kyoto_a.git</string>
