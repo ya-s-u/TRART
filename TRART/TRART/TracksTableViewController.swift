@@ -7,6 +7,7 @@ class TracksTableViewController: UITableViewController {
     var parentNavigationController : UINavigationController?
     let realm = Realm()
     var tracks: [Track] = []
+    var checkedTracks: [Track] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +43,18 @@ class TracksTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 68.0
     }
+    
+    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        let cell : TracksTableCellController = tableView.cellForRowAtIndexPath(indexPath) as! TracksTableCellController
+        
+        if cell.isChecked{
+            cell.plusButton.image = UIImage(named: "plus-button")
+        } else {
+            cell.plusButton.image = UIImage(named: "plus-button-checked")
+        }
+        
+        cell.isChecked = !cell.isChecked
+    }
+    
 
 }

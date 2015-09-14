@@ -49,23 +49,17 @@
                             <action selector="tapCover:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PSq-Fa-SYu"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geh-v2-bOK">
-                        <rect key="frame" x="277" y="25" width="30" height="30"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="wq5-GE-vov">
+                        <rect key="frame" x="282" y="25" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="okx-JP-RhP"/>
-                            <constraint firstAttribute="height" constant="30" id="tQl-xy-VUB"/>
+                            <constraint firstAttribute="height" constant="30" id="1Rd-g0-ugY"/>
+                            <constraint firstAttribute="width" constant="30" id="WiL-9R-ywv"/>
                         </constraints>
-                        <state key="normal" image="plus-button">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="plusButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jbT-I3-2ns"/>
-                        </connections>
-                    </button>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="geh-v2-bOK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-5" id="7tc-Dw-Uhv"/>
+                    <constraint firstAttribute="centerY" secondItem="wq5-GE-vov" secondAttribute="centerY" id="6qm-lj-Klz"/>
                     <constraint firstAttribute="centerY" secondItem="IeM-cw-Ob0" secondAttribute="centerY" id="8pY-Rs-YE9"/>
                     <constraint firstAttribute="centerY" secondItem="SMn-qS-ZM3" secondAttribute="centerY" constant="-10" id="BHx-iE-GP2"/>
                     <constraint firstAttribute="centerX" secondItem="kud-2q-Tsy" secondAttribute="centerX" id="EtX-h5-fmp"/>
@@ -76,8 +70,8 @@
                     <constraint firstItem="UmK-zx-b1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Vma-25-yPK"/>
                     <constraint firstAttribute="centerY" secondItem="kud-2q-Tsy" secondAttribute="centerY" constant="10" id="Xs4-uB-gc0"/>
                     <constraint firstItem="IeM-cw-Ob0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="hq3-HZ-gVA"/>
-                    <constraint firstAttribute="centerY" secondItem="geh-v2-bOK" secondAttribute="centerY" id="jLD-Wx-JDF"/>
                     <constraint firstAttribute="centerY" secondItem="UmK-zx-b1S" secondAttribute="centerY" id="lJ4-de-vbL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="wq5-GE-vov" secondAttribute="trailing" id="qC8-uR-zJb"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
@@ -91,7 +85,7 @@
             <connections>
                 <outlet property="artist" destination="SMn-qS-ZM3" id="u3K-68-NSN"/>
                 <outlet property="cover" destination="UmK-zx-b1S" id="CY4-Lj-2BF"/>
-                <outlet property="plusButton" destination="geh-v2-bOK" id="QVF-3M-ecU"/>
+                <outlet property="plusButton" destination="wq5-GE-vov" id="h75-m5-m3Q"/>
                 <outlet property="trackName" destination="kud-2q-Tsy" id="hfM-0x-JGA"/>
             </connections>
             <point key="canvasLocation" x="334" y="353"/>

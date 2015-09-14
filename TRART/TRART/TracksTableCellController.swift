@@ -5,7 +5,7 @@ class TracksTableCellController: UITableViewCell {
     @IBOutlet weak var trackName: UILabel!
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var cover: UIImageView!
-    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var plusButton: UIImageView!
     var isChecked: Bool = false
     
     var track: Track? {
@@ -35,15 +35,5 @@ class TracksTableCellController: UITableViewCell {
         var notification : NSNotification = NSNotification(name: "audition", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
-    
-    @IBAction func plusButtonAction(sender: AnyObject) {
-        if isChecked{
-            plusButton.setImage(UIImage(named: "plus-button"), forState: UIControlState.Normal)
-        } else {
-            plusButton.setImage(UIImage(named: "plus-button-checked"), forState: UIControlState.Normal)
-        }
-        isChecked = !isChecked
-    }
-    
     
 }
