@@ -21,6 +21,8 @@ class TracksTableCellController: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.selectionStyle = UITableViewCellSelectionStyle.None
+        
         trackName.font = UIFont.boldSystemFontOfSize(14)
         trackName.textColor = UIColor.whiteColor()
         

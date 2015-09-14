@@ -55,6 +55,5 @@ class TracksTableViewController: UITableViewController {
         
         cell.isChecked = !cell.isChecked
     }
-    
 
 }
