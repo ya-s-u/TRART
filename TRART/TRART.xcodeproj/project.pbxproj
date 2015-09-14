@@ -24,7 +24,6 @@
 		47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTableViewController.xib */; };
 		47CE09281BA2E91100168E4D /* TracksTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksTableCellController.swift */; };
 		47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */; };
-		5A7F614D1BA51B7300555414 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F614C1BA51B7300555414 /* Make.storyboard */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
@@ -55,6 +54,8 @@
 		9885296A1BA537AF003D5FED /* JaketLayer6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988529691BA537AF003D5FED /* JaketLayer6View.swift */; };
 		9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9885296B1BA537B9003D5FED /* JaketLayer7View.swift */; };
 		9885296E1BA537C4003D5FED /* JaketLayer8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9885296D1BA537C4003D5FED /* JaketLayer8View.swift */; };
+		98DF433C1BA71B1C0009FB34 /* LayoutLastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */; };
+		98DF433E1BA723C40009FB34 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98DF433D1BA723C40009FB34 /* Make.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +90,6 @@
 		47CE09261BA2E91000168E4D /* TracksTableCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableCellController.swift; sourceTree = "<group>"; };
 		47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewCell.xib; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
-		5A7F614C1BA51B7300555414 /* Make.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Make.storyboard; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
@@ -120,6 +120,8 @@
 		988529691BA537AF003D5FED /* JaketLayer6View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JaketLayer6View.swift; sourceTree = "<group>"; };
 		9885296B1BA537B9003D5FED /* JaketLayer7View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JaketLayer7View.swift; sourceTree = "<group>"; };
 		9885296D1BA537C4003D5FED /* JaketLayer8View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JaketLayer8View.swift; sourceTree = "<group>"; };
+		98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutLastViewController.swift; sourceTree = "<group>"; };
+		98DF433D1BA723C40009FB34 /* Make.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Make.storyboard; sourceTree = "<group>"; };
 		C154B7778607281D564FC65E /* Pods_TRART.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRART.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91779C21E5C5E2FDE0A015 /* Pods-TRART.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,6 +263,7 @@
 				47CE09261BA2E91000168E4D /* TracksTableCellController.swift */,
 				475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */,
 				986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */,
+				98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -290,7 +293,7 @@
 			children = (
 				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 				47BD97221BA2779F00096854 /* Main.storyboard */,
-				5A7F614C1BA51B7300555414 /* Make.storyboard */,
+				98DF433D1BA723C40009FB34 /* Make.storyboard */,
 				47CE091E1BA2D57100168E4D /* MiniPlayer.xib */,
 				47CE09231BA2E71700168E4D /* TracksTableViewController.xib */,
 				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
@@ -420,6 +423,7 @@
 				988529581BA53102003D5FED /* Layer5.xib in Resources */,
 				988529521BA5300D003D5FED /* Layer2.xib in Resources */,
 				9885294F1BA52D37003D5FED /* Layer1.xib in Resources */,
+				98DF433E1BA723C40009FB34 /* Make.storyboard in Resources */,
 				9885295E1BA5312D003D5FED /* Layer8.xib in Resources */,
 				47BD97241BA2779F00096854 /* Main.storyboard in Resources */,
 				9885295C1BA53123003D5FED /* Layer7.xib in Resources */,
@@ -430,7 +434,6 @@
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
 				9885295A1BA53114003D5FED /* Layer6.xib in Resources */,
 				47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */,
-				5A7F614D1BA51B7300555414 /* Make.storyboard in Resources */,
 				988529541BA530CA003D5FED /* Layer3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +516,7 @@
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
 				475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */,
 				983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */,
+				98DF433C1BA71B1C0009FB34 /* LayoutLastViewController.swift in Sources */,
 				986E7DC11BA6AFCF00503400 /* LayoutTableViewController.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
 				475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */,
