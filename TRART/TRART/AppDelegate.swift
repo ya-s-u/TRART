@@ -7,9 +7,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var track: Track? //TEMP
+    
+    var playlist:Playlist!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         realmSampleUsage()
+        
+        playlist = Playlist()
+        
         return true
     }
 
@@ -47,10 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let realm = Realm()
                 println("Realm Path: \(realm.path)")
                 
-                // save playlist
-//                realm.write {
-//                    realm.add(playlist)
-//                }
+//                 save playlist
+                realm.write {
+                    realm.add(playlist)
+                }
                 
                 // get all playlists
                 let playlists = realm.objects(Playlist)
