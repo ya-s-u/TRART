@@ -11,17 +11,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main-title-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-4H-yNl">
-                    <rect key="frame" x="180" y="55" width="240" height="63"/>
+                    <rect key="frame" x="233" y="125" width="134" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="240" id="74a-jf-vaN"/>
-                        <constraint firstAttribute="height" constant="63" id="UCd-UN-97Z"/>
+                        <constraint firstAttribute="width" constant="134" id="74a-jf-vaN"/>
+                        <constraint firstAttribute="height" constant="21" id="UCd-UN-97Z"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqP-1U-eki">
-                    <rect key="frame" x="128" y="140" width="345" height="150"/>
+                    <rect key="frame" x="128" y="198" width="345" height="90"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="345" id="0bY-sc-dcy"/>
-                        <constraint firstAttribute="height" constant="150" id="yWe-Cx-ALZ"/>
+                        <constraint firstAttribute="height" constant="90" id="yWe-Cx-ALZ"/>
                     </constraints>
                     <state key="normal" backgroundImage="Create-button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,29 +30,57 @@
                         <action selector="CreateButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="hdC-YJ-1bq"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-logo" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-7y-02t">
+                    <rect key="frame" x="267" y="40" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="llH-85-zmH"/>
+                        <constraint firstAttribute="width" constant="65" id="sSk-WS-JkV"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sub-title-logo" translatesAutoresizingMaskIntoConstraints="NO" id="RYj-Zw-FOl">
+                    <rect key="frame" x="231" y="156" width="139" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="139" id="4fz-UM-iA1"/>
+                        <constraint firstAttribute="height" constant="12" id="BC2-gF-c4z"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="RYj-Zw-FOl" secondAttribute="bottom" constant="5" id="8x3-JF-C2A"/>
                 <constraint firstItem="Dbc-4H-yNl" firstAttribute="leading" secondItem="dqP-1U-eki" secondAttribute="trailing" constant="-143" id="DvT-M7-jMD"/>
+                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="RYj-Zw-FOl" secondAttribute="bottom" constant="-10" id="GP7-CE-Ueo"/>
                 <constraint firstItem="dqP-1U-eki" firstAttribute="top" secondItem="Dbc-4H-yNl" secondAttribute="bottom" constant="22" id="Lcv-6Y-vFk"/>
                 <constraint firstAttribute="centerX" secondItem="dqP-1U-eki" secondAttribute="centerX" id="MTo-US-exl"/>
+                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="BuJ-7y-02t" secondAttribute="bottom" constant="20" id="PPx-gY-cSJ"/>
+                <constraint firstItem="dqP-1U-eki" firstAttribute="top" secondItem="RYj-Zw-FOl" secondAttribute="bottom" constant="30" id="RXY-bV-jdy"/>
                 <constraint firstItem="Dbc-4H-yNl" firstAttribute="leading" secondItem="dqP-1U-eki" secondAttribute="trailing" constant="-143" id="TTU-Mx-ef3"/>
-                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="eey-kT-sWv"/>
                 <constraint firstAttribute="centerX" secondItem="Dbc-4H-yNl" secondAttribute="centerX" id="fHd-Ml-1Fb"/>
+                <constraint firstItem="BuJ-7y-02t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="h2Q-7g-PLW"/>
+                <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="RYj-Zw-FOl" secondAttribute="bottom" constant="-10" id="kMf-yF-ecE"/>
+                <constraint firstAttribute="centerX" secondItem="RYj-Zw-FOl" secondAttribute="centerX" id="pbG-39-ujz"/>
+                <constraint firstAttribute="centerX" secondItem="BuJ-7y-02t" secondAttribute="centerX" id="uXa-vJ-kbj"/>
+                <constraint firstItem="RYj-Zw-FOl" firstAttribute="top" secondItem="Dbc-4H-yNl" secondAttribute="bottom" constant="10" id="zdR-PA-CW2"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="Lcv-6Y-vFk"/>
+                    <exclude reference="8x3-JF-C2A"/>
                     <exclude reference="DvT-M7-jMD"/>
+                    <exclude reference="GP7-CE-Ueo"/>
                     <exclude reference="TTU-Mx-ef3"/>
+                    <exclude reference="kMf-yF-ecE"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="338" y="193"/>
         </view>
     </objects>
     <resources>
-        <image name="Create-button" width="345" height="150"/>
-        <image name="Main-title-logo" width="145" height="52"/>
+        <image name="Create-button" width="345" height="90"/>
+        <image name="Home-logo" width="65" height="65"/>
+        <image name="Main-title-logo" width="138" height="21"/>
+        <image name="Sub-title-logo" width="139" height="12"/>
     </resources>
 </document>
