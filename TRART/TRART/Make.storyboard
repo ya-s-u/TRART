@@ -29,19 +29,47 @@
                                     <segue destination="1td-V9-MQ1" kind="embed" id="RBj-wl-fXV"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="概要" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-tV-EpL">
+                                <rect key="frame" x="16" y="398" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z27-UF-YDy">
+                                <rect key="frame" x="16" y="361" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="FqR-v1-B5u" secondAttribute="bottom" id="2F8-Gb-zcm"/>
                             <constraint firstItem="mQG-78-hFe" firstAttribute="top" secondItem="Vdj-DL-N1u" secondAttribute="bottom" constant="100" id="2Vv-7p-6f2"/>
                             <constraint firstItem="FqR-v1-B5u" firstAttribute="top" secondItem="Z2J-B0-if8" secondAttribute="top" id="5Qn-Am-NRk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z27-UF-YDy" secondAttribute="trailing" id="HZc-3u-itv"/>
                             <constraint firstItem="FqR-v1-B5u" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leading" id="JmE-f6-TKT"/>
                             <constraint firstItem="mQG-78-hFe" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leadingMargin" id="Lc4-15-mmQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eJd-tV-EpL" secondAttribute="trailing" id="Tlt-ak-NpF"/>
                             <constraint firstItem="mQG-78-hFe" firstAttribute="trailing" secondItem="Z2J-B0-if8" secondAttribute="trailingMargin" id="fCp-Fl-bsw"/>
+                            <constraint firstItem="eJd-tV-EpL" firstAttribute="top" secondItem="Z27-UF-YDy" secondAttribute="bottom" constant="16" id="gWN-ra-StE"/>
+                            <constraint firstAttribute="centerX" secondItem="Z27-UF-YDy" secondAttribute="centerX" id="j8F-pM-Ify"/>
                             <constraint firstAttribute="trailing" secondItem="FqR-v1-B5u" secondAttribute="trailing" id="kCA-Sy-HeK"/>
+                            <constraint firstItem="Z27-UF-YDy" firstAttribute="top" secondItem="mQG-78-hFe" secondAttribute="bottom" constant="13" id="pEL-zD-m94"/>
+                            <constraint firstItem="eJd-tV-EpL" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leadingMargin" id="trh-mn-YR2"/>
+                            <constraint firstItem="Z27-UF-YDy" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leadingMargin" id="uuc-1J-9ck"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="j8F-pM-Ify"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="IQs-5i-fgs"/>
+                    <connections>
+                        <outlet property="pSummary" destination="eJd-tV-EpL" id="3Jo-k3-pcU"/>
+                        <outlet property="pTitle" destination="Z27-UF-YDy" id="JtV-bf-bn5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGR-dm-Tkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -535,6 +563,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="970"/>
                     <connections>
+                        <outlet property="PlayListSummary" destination="DRn-de-vEd" id="eZH-8t-9aG"/>
+                        <outlet property="PlaylistTitle" destination="uAS-mm-9UE" id="pee-2J-mGy"/>
                         <segue destination="Z4C-UU-93b" kind="show" identifier="confirm2finish" id="Zoe-Hp-Oce"/>
                     </connections>
                 </viewController>

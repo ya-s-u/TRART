@@ -4,12 +4,15 @@ import RealmSwift
 class MakeConfirmViewController: UIViewController {
     
     
+    @IBOutlet var PlaylistTitle: UITextField!
+    @IBOutlet var PlayListSummary: UITextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     let MyNotification = "MyNotification"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println(PlayListSummary.text)
         // BarButtonItemを作成する.
         
         let myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
@@ -24,10 +27,9 @@ class MakeConfirmViewController: UIViewController {
     internal func onClickMyBarButton(sender: UIButton){
 //        let secondViewController = MakeFinishViewController()
 //        self.navigationController?.pushViewController(secondViewController, animated: false)
-//
+
+        del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListSummary.text, mood: "HAPPY")
         self.performSegueWithIdentifier("confirm2finish", sender: nil)
-        
-        
     }
     
     
@@ -35,6 +37,7 @@ class MakeConfirmViewController: UIViewController {
 
         let ns = NSNotificationCenter.defaultCenter()
         ns.postNotificationName(MyNotification, object: nil)
+
     }
     
     @IBAction func selectJacket(sender: AnyObject) {
