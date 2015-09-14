@@ -48,9 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 println("Realm Path: \(realm.path)")
                 
                 // save playlist
-//                realm.write {
-//                    realm.add(playlist)
-//                }
+                realm.write {
+                    realm.add(playlist)
+                }
                 
                 // get all playlists
                 let playlists = realm.objects(Playlist)

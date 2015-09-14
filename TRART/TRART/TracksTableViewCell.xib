@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kud-2q-Tsy">
-                        <rect key="frame" x="84" y="19.5" width="41.5" height="20.5"/>
+                        <rect key="frame" x="84" y="19" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
@@ -49,15 +49,18 @@
                             <action selector="tapCover:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PSq-Fa-SYu"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geh-v2-bOK">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geh-v2-bOK">
                         <rect key="frame" x="277" y="25" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="okx-JP-RhP"/>
                             <constraint firstAttribute="height" constant="30" id="tQl-xy-VUB"/>
                         </constraints>
-                        <state key="normal" backgroundImage="plus-button">
+                        <state key="normal" image="plus-button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="plusButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jbT-I3-2ns"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -88,6 +91,7 @@
             <connections>
                 <outlet property="artist" destination="SMn-qS-ZM3" id="u3K-68-NSN"/>
                 <outlet property="cover" destination="UmK-zx-b1S" id="CY4-Lj-2BF"/>
+                <outlet property="plusButton" destination="geh-v2-bOK" id="QVF-3M-ecU"/>
                 <outlet property="trackName" destination="kud-2q-Tsy" id="hfM-0x-JGA"/>
             </connections>
             <point key="canvasLocation" x="334" y="353"/>
