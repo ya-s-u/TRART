@@ -455,6 +455,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
+                                            <action selector="selectJacket:" destination="C66-NY-jZD" eventType="touchDown" id="UPF-JH-YpD"/>
                                             <segue destination="uKh-gm-GNM" kind="presentation" identifier="confirm2jacket" id="ClP-GK-XSS"/>
                                         </connections>
                                     </button>
@@ -499,8 +500,8 @@
                                         <exclude reference="NUk-dq-DBH"/>
                                         <exclude reference="dF2-vi-7tN"/>
                                         <exclude reference="sI3-02-tcF"/>
-                                        <exclude reference="I5b-Bg-aGf"/>
                                         <exclude reference="HOR-4w-iRL"/>
+                                        <exclude reference="I5b-Bg-aGf"/>
                                         <exclude reference="qBR-57-5mX"/>
                                         <exclude reference="QgD-4z-WZY"/>
                                         <exclude reference="pi6-SM-iih"/>
@@ -528,10 +529,10 @@
             </objects>
             <point key="canvasLocation" x="531" y="1178"/>
         </scene>
-        <!--View Controller-->
+        <!--Layout Table View Controller-->
         <scene sceneID="Ull-dP-Nt9">
             <objects>
-                <viewController id="VQv-fV-cNa" sceneMemberID="viewController">
+                <viewController id="VQv-fV-cNa" customClass="LayoutTableViewController" customModule="TRART" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mPY-2T-rAt"/>
                         <viewControllerLayoutGuide type="bottom" id="ajh-0f-SGI"/>
