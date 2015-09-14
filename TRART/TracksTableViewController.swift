@@ -23,6 +23,7 @@ class TracksTableViewController: UITableViewController {
         }
         
         self.checkedTracks.removeAll()
+        //Receive Nortification from MakeNewController.swift
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "savePlaylist", name: "makePlaylist", object: nil)
     }
 
@@ -62,7 +63,18 @@ class TracksTableViewController: UITableViewController {
         }
         
         cell.isChecked = !cell.isChecked
-        println(self.checkedTracks)
+        
+        if self.checkedTracks.count == 8 {
+            //Send a Nortification to MakeNewController
+            var notification : NSNotification = NSNotification(name: "8TracksSelected", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+            return
+        }
+        
+        //Send a Nortification to MakeNewController
+        var notification : NSNotification = NSNotification(name: "8TracksUnSelected", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+        
     }
     
     func savePlaylist(){
