@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="970"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-78-hFe">
-                                <rect key="frame" x="16" y="270" width="568" height="228"/>
+                                <rect key="frame" x="16" y="120" width="568" height="228"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="228" id="SzW-8z-7Q2"/>
                                 </constraints>
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="FqR-v1-B5u" secondAttribute="bottom" id="2F8-Gb-zcm"/>
-                            <constraint firstItem="mQG-78-hFe" firstAttribute="top" secondItem="Vdj-DL-N1u" secondAttribute="bottom" constant="250" id="2Vv-7p-6f2"/>
+                            <constraint firstItem="mQG-78-hFe" firstAttribute="top" secondItem="Vdj-DL-N1u" secondAttribute="bottom" constant="100" id="2Vv-7p-6f2"/>
                             <constraint firstItem="FqR-v1-B5u" firstAttribute="top" secondItem="Z2J-B0-if8" secondAttribute="top" id="5Qn-Am-NRk"/>
                             <constraint firstItem="FqR-v1-B5u" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leading" id="JmE-f6-TKT"/>
                             <constraint firstItem="mQG-78-hFe" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leadingMargin" id="Lc4-15-mmQ"/>
