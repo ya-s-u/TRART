@@ -7,9 +7,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var track: Track? //TEMP
+    
+    var playlist:Playlist!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        realmSampleUsage()
+        realmSampleUsage()
+        
+        playlist = Playlist()
         return true
     }
 

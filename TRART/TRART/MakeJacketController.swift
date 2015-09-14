@@ -1,7 +1,10 @@
 import UIKit
+import Haneke
 
 class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate{
     
+
+    var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     var frame:UIImage = UIImage(named: "frame")!
     var highlight:UIImage = UIImage(named: "highlight")!
     var selectimg:UIImage = UIImage(named: "selectFrame")!
@@ -20,10 +23,15 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var scrollFlag:Bool = false
     var autoselect:[Int] = [0,1,0]
     var rastarize:[Int] = [0,4,0]
+    var sendJacket:[Track] = []
     
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var lview: UICollectionView!
     @IBOutlet var sview: UICollectionView!
+    
+    
+//    var playlist: Playlist?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -64,8 +72,11 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             lay = collectionView.dequeueReusableCellWithReuseIdentifier(layname, forIndexPath: indexPath) as! LayerCell
             
             for i in 0..<jaket[indexPath.row].count{
-                var mname:String = "music" + String(jaket[indexPath.row][i])
-                lay.image[i].image = UIImage(named: mname)
+//                var mname:String = "music" + String(jaket[indexPath.row][i])
+//                lay.image[i].image = UIImage(named: mname)
+                var url = NSURL(string: del.playlist?.tracks[jaket[indexPath.row][i] - 1].cover as String!)
+
+                lay.image[i].hnk_setImageFromURL(url!)
                 if rastarize[indexPath.row] != 0{
                     if i == rastarize[indexPath.row]{
                         lay.image[i].layer.shouldRasterize = true
@@ -94,10 +105,15 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         }else{
             selectView = collectionView
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCell
+//            
+//            println(indexPath.row)
+            var url = NSURL(string: del.playlist?.tracks[indexPath.row].cover as String!)
+            cell.image.hnk_setImageFromURL(url!)
             
-            var mname:String = "music" + String(indexPath.row + 1)
+//            var mname:String = "music" + String(indexPath.row + 1)
+//            var nmname2 = playlist?.tracks[indexPath.row].cover
             
-            cell.image.image = UIImage(named: mname)
+//            cell.image.image = UIImage(named: mname)
             cell.select.image = selectimg
             if selectFlag[layout_type][indexPath.row] == true{
                 cell.select.alpha = 1.0
@@ -109,14 +125,11 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             return cell
         }
     }
-    
+
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if collectionView.tag == 0{
         }else{
-            
-            var mname:String = "music" + String(indexPath.row + 1)
-            
             
             if contains(jaket[layout_type], (indexPath.row + 1)) == false && jaket[layout_type].count < jcnt[layout_type]{
                 jaket[layout_type].append(indexPath.row + 1)
@@ -136,7 +149,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
                 selectFlag[layout_type][indexPath.row] = false
             }
             layoutView.reloadData()
-            selectView.reloadData()
+            //selectView.reloadData()
+            sview.reloadItemsAtIndexPaths([indexPath])
         }
     }
     
@@ -147,6 +161,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             return 1
         }
     }
+    
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -160,6 +175,16 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func exitButtonAction(sender: AnyObject) {
+        for i in 0..<jaket[layout_type].count{
+            var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
+            sendJacket.append(track)
+        }
+        
+        del.playlist?.setJackets(layout: layout_type, jackets: sendJacket)
     }
 
     
