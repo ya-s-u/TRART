@@ -79,7 +79,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="次へ" id="KMT-wZ-AvO">
                             <connections>
-                                <action selector="nextButtonAction:" destination="fma-TK-OMn" id="Kff-hv-Q3u"/>
+                                <action selector="nextButtonAction:" destination="fma-TK-OMn" id="29M-Rd-Aos"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

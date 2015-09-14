@@ -78,6 +78,9 @@ class MakeNewController: UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Make", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController() as! UIViewController
         self.navigationController?.pushViewController(next, animated: true)
+        
+        var notification : NSNotification = NSNotification(name: "makePlaylist", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
 
 }

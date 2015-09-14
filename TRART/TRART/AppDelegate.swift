@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         realmSampleUsage()
         
         playlist = Playlist()
-        
         return true
     }
 
@@ -52,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let realm = Realm()
                 println("Realm Path: \(realm.path)")
                 
-//                 save playlist
+                // save playlist
                 realm.write {
                     realm.add(playlist)
                 }

@@ -5,6 +5,8 @@ class TracksTableCellController: UITableViewCell {
     @IBOutlet weak var trackName: UILabel!
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var cover: UIImageView!
+    @IBOutlet weak var plusButton: UIImageView!
+    var isChecked: Bool = false
     
     var track: Track? {
         didSet {
@@ -18,6 +20,8 @@ class TracksTableCellController: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         
         trackName.font = UIFont.boldSystemFontOfSize(14)
         trackName.textColor = UIColor.whiteColor()
@@ -33,4 +37,5 @@ class TracksTableCellController: UITableViewCell {
         var notification : NSNotification = NSNotification(name: "audition", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
+    
 }
