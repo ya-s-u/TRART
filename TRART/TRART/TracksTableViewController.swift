@@ -4,6 +4,7 @@ import Haneke
 
 class TracksTableViewController: UITableViewController {
     
+    var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     var parentNavigationController : UINavigationController?
     let realm = Realm()
     var tracks: [Track] = []
@@ -68,7 +69,9 @@ class TracksTableViewController: UITableViewController {
         for track in checkedTracks{
             saveTracks.append(track.1)
         }
-        self.playlist.setTracksArr(saveTracks)
+        del.playlist.setTracksArr(saveTracks)
     }
+    
+    
 
 }
