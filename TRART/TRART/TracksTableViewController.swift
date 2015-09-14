@@ -7,7 +7,9 @@ class TracksTableViewController: UITableViewController {
     var parentNavigationController : UINavigationController?
     let realm = Realm()
     var tracks: [Track] = []
-    var checkedTracks: [Track] = []
+    var saveTracks: [Track] = []
+    var checkedTracks: [Int: Track] = [0: Track()]
+    var playlist = Playlist()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,9 @@ class TracksTableViewController: UITableViewController {
         for track in realmResponse {
             tracks.append(track)
         }
+        
+        self.checkedTracks.removeAll()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "savePlaylist", name: "makePlaylist", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,11 +54,21 @@ class TracksTableViewController: UITableViewController {
         
         if cell.isChecked{
             cell.plusButton.image = UIImage(named: "plus-button")
+            self.checkedTracks.removeValueForKey(self.tracks[indexPath.row].itunesId)
         } else {
             cell.plusButton.image = UIImage(named: "plus-button-checked")
+            self.checkedTracks[self.tracks[indexPath.row].itunesId] = self.tracks[indexPath.row]
         }
         
         cell.isChecked = !cell.isChecked
+        println(self.checkedTracks)
+    }
+    
+    func savePlaylist(){
+        for track in checkedTracks{
+            saveTracks.append(track.1)
+        }
+        self.playlist.setTracksArr(saveTracks)
     }
 
 }
