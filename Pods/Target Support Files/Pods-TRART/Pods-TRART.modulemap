@@ -1,0 +1,6 @@
+framework module Pods_TRART {
+  umbrella header "Pods-TRART-umbrella.h"
+
+  export *
+  module * { export * }
+}

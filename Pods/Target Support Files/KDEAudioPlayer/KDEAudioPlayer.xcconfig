@@ -1,0 +1,1 @@
+KDEAUDIOPLAYER_OTHER_LDFLAGS = -framework "AVFoundation" -framework "MediaPlayer" -framework "SystemConfiguration" -framework "UIKit"

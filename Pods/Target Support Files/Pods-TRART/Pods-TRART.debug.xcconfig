@@ -1,0 +1,9 @@
+CLANG_CXX_LANGUAGE_STANDARD = compiler-default
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AMWaveTransition.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/APIKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Alamofire.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Box.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Haneke.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KDEAudioPlayer.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/PageMenu.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/ReachabilitySwift.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Realm.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/RealmSwift.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Result.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SVProgressHUD.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftyJSON.framework/Headers"
+OTHER_CPLUSPLUSFLAGS = -std=c++1y $(inherited)
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AMWaveTransition" -framework "APIKit" -framework "Alamofire" -framework "Box" -framework "Haneke" -framework "KDEAudioPlayer" -framework "PageMenu" -framework "ReachabilitySwift" -framework "Realm" -framework "RealmSwift" -framework "Result" -framework "SVProgressHUD" -framework "SwiftyJSON"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-TRART
+PODS_ROOT = ${SRCROOT}/Pods
