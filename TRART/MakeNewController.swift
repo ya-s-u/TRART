@@ -44,15 +44,15 @@ class MakeNewController: UIViewController {
             .ViewBackgroundColor(UIColor.makeNewTabColorActive()),
             .BottomMenuHairlineColor(UIColor.makeNewTabColorActive()),
             .SelectionIndicatorColor(UIColor.makeNewTabColorActive()),
-            .MenuMargin(20.0),
+            .MenuMargin(10.0),
             .MenuHeight(35.0),
             .SelectedMenuItemLabelColor(UIColor.auditionTextColor()),
             .UnselectedMenuItemLabelColor(UIColor.grayColor()),
             .MenuItemFont(UIFont(name: "HelveticaNeue-Medium", size: 17.0)!),
-            .UseMenuLikeSegmentedControl(true),
+            .UseMenuLikeSegmentedControl(false),
             .MenuItemSeparatorRoundEdges(true),
-            .SelectionIndicatorHeight(4.0),
-            .MenuItemSeparatorPercentageHeight(0)
+            .SelectionIndicatorHeight(10.0),
+            .MenuItemSeparatorPercentageHeight(0)   
         ]
         
         let statusBarHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
