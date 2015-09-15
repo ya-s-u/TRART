@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-iG-qfi">
-                    <rect key="frame" x="10" y="16.5" width="37" height="37"/>
+                    <rect key="frame" x="10" y="16" width="37" height="37"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="37" id="GNo-dv-z7Q"/>
                         <constraint firstAttribute="height" constant="37" id="YfV-t7-CQ0"/>
@@ -23,15 +23,24 @@
                         <action selector="tapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="DCx-L4-pfl"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-Yh-er5">
+                    <rect key="frame" x="560.5" y="47.5" width="33.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="aBT-Yh-er5" secondAttribute="trailing" constant="6" id="all-gU-aB9"/>
                 <constraint firstAttribute="centerY" secondItem="WeF-iG-qfi" secondAttribute="centerY" id="dgw-Ue-2Ui"/>
                 <constraint firstItem="WeF-iG-qfi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="td1-Lq-U9r"/>
+                <constraint firstAttribute="bottom" secondItem="aBT-Yh-er5" secondAttribute="bottom" constant="2" id="vGP-0W-g5f"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="button" destination="WeF-iG-qfi" id="Z6L-Zm-MvN"/>
+                <outlet property="timer" destination="aBT-Yh-er5" id="5yy-KA-d0U"/>
             </connections>
         </view>
     </objects>
