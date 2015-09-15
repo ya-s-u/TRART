@@ -44,4 +44,22 @@ class MakeConfirmViewController: UIViewController {
         del.playlist.jackets.removeAll()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        
+        let viewControllers = self.navigationController?.viewControllers!
+        if indexOfArray(viewControllers!, searchObject: self) == nil{
+            del.playlist.jackets.removeAll()
+        }
+        super.viewWillDisappear(animated)
+    }
+    
+    func indexOfArray(array:[AnyObject], searchObject: AnyObject)-> Int? {
+        for (index, value) in enumerate(array) {
+            if value as! UIViewController == searchObject as! UIViewController {
+                return index
+            }
+        }
+        return nil
+    }
+    
 }
