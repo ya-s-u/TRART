@@ -7,12 +7,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var playlist:Playlist!
+    var tempJackets:List<Track>!
     
     let realm = Realm()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         playlist = Playlist()
+        tempJackets = List()
         print(realm.path)
         setDefaultData()
         return true
