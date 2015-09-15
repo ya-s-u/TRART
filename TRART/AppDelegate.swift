@@ -7,15 +7,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var track: Track? //TEMP
-    
     var playlist:Playlist!
     
+    let realm = Realm()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        realmSampleUsage()
-        
+        setDefaultData()
         playlist = Playlist()
         return true
+    }
+    
+    func setDefaultData() {
+        let tracks = realm.objects(Track)
+        if tracks.count == 0 {
+            setTracks("Avicii")
+            setTracks("Afrojack")
+            setTracks("Perfume")
+        }
+    }
+    
+    func setTracks(term: String) {
+        let request = iTunesApiClient.Search(term: term)
+        iTunesApiClient.sendRequest(request) { response in
+            switch response {
+            case .Success(let tracks):
+                for track in tracks.value {
+                    self.realm.write {
+                        self.realm.add(track)
+                        println("\(track.name) \(track.playbackTimeStr())")
+                    }
+                }
+                
+            case .Failure(let box):
+                // Error Handling
+                println("iTunesApiClient request error")
+            }
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -32,48 +59,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
     }
-    
-    func realmSampleUsage() {
-        // request track data
-        let request = iTunesApiClient.Search(term: "avichii")
-        iTunesApiClient.sendRequest(request) { response in
-            switch response {
-            case .Success(let tracks):
-                // create playlist
-                let playlist = Playlist()
-                playlist.setMeta(title: "EDM PRTY MIX", userName: "fussa", comment: "あざっす", mood: "HAPPY")
-                playlist.setTracksArr(tracks.value)
-                playlist.setJackets(layout: 0, jackets: [
-                    tracks.value[0],
-                    tracks.value[1],
-                    tracks.value[2]
-                ])
-                
-                let realm = Realm()
-                println("Realm Path: \(realm.path)")
-                
-                // save playlist
-                realm.write {
-                    realm.add(playlist)
-                }
-                
-                // get all playlists
-                let playlists = realm.objects(Playlist)
-                println("Playlist Count: \(playlists.count)")
-                
-                for playlist in playlists {
-                    println("========== \(playlist.title) ==========")
-                    for track in playlist.tracks {
-                        println("\(track.name) \(track.playbackTimeStr())")
-                    }
-                }
-
-            case .Failure(let box):
-                // Error Handling
-                println("error")
-            }
-        }
-    }
-
 }
 

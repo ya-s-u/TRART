@@ -38,7 +38,6 @@ class iTunesApiClient: API {
         
         class func responseFromObject(object: AnyObject) -> Response? {
             var Tracks = [Track]()
-            println(object)
             if let dictionaries = object["results"] as? [NSDictionary] {
                 for dictionary in dictionaries {
                     let track = Track()
@@ -50,7 +49,6 @@ class iTunesApiClient: API {
                     track.trackSource = dictionary["previewUrl"] as! String
                     track.playbackTime = dictionary["trackTimeMillis"] as! Int
                     Tracks.append(track)
-                    println(track)
                 }
             }
             
