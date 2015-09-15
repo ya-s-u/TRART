@@ -1,6 +1,8 @@
 import UIKit
 
 class PlayerView: UIView {
+    let player = PlayerManager.sharedInstance
+    
     @IBOutlet weak var button: UIButton!
     
     override func awakeFromNib() {
@@ -8,6 +10,6 @@ class PlayerView: UIView {
     }
     
     @IBAction func tapButton(sender: AnyObject) {
-        println("tapButton")
+        println(player.track?.name)
     }
 }

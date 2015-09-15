@@ -6,9 +6,9 @@ class MiniPlayerView: UIView {
     
     var track: Track? {
         didSet {
-            let player = PlayerManager.sharedInstance
-            player.set(track!.trackSource as String)
-            player.play()
+//            let player = PlayerManager.sharedInstance
+//            player.set(track!.trackSource as String)
+//            player.play()
         }
     }
     

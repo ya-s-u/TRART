@@ -15,7 +15,7 @@ class MakeNewNavigationController: UINavigationController {
         miniPlayer.alpha = 0
         
         let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        miniPlayer.track = app.track
+//        miniPlayer.track = app.track
         
         self.view.addSubview(miniPlayer)
     }
