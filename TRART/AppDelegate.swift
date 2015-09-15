@@ -6,7 +6,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var track: Track? //TEMP
     var playlist:Playlist!
     
     let realm = Realm()
