@@ -3,7 +3,6 @@ platform :ios, '8.0'
 use_frameworks!
 target 'TRART' do
   pod 'KDEAudioPlayer'
-  pod 'HanekeSwift'
   pod 'SDWebImage', '~>3.7'
   pod 'SVProgressHUD'
   pod 'SwiftyJSON'
