@@ -83,6 +83,8 @@ class TracksTableViewController: UITableViewController {
             cell.isChecked = !cell.isChecked
         }
         
+        println(self.checkedTracks.count)
+        
         if self.checkedTracks.count == 8 {
             //Send a Nortification to MakeNewController.swift
             var notification : NSNotification = NSNotification(name: "8TracksSelected", object: nil)

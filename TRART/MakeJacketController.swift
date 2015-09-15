@@ -24,6 +24,9 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var autoselect:[Int] = [0,1,0]
     var rastarize:[Int] = [0,4,0]
     var sendJacket:[Track] = []
+    let MyNotification = "MyNotification"
+    var myBarButton_Done:UIBarButtonItem!
+    var myBarButton_Cancel:UIBarButtonItem!
     
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var lview: UICollectionView!
@@ -33,11 +36,12 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 //    var playlist: Playlist?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.title = "ラベルを編集"
 
-        let myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
-        let myBarButton_Cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancelButton:")
+        myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
+        myBarButton_Cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancelButton:")
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -49,13 +53,35 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         pageControl.currentPageIndicatorTintColor = UIColor.auditionTextColor()
         lview.backgroundColor = UIColor.clearColor()
         sview.backgroundColor = UIColor.clearColor()
+        enableButton()
+    }
+    
+    func enableButton(){
+        if self.jaket[layout_type].count != jcnt[layout_type]{
+            myBarButton_Done.enabled = false
+        }else{
+            myBarButton_Done.enabled = true
+        }
+        
     }
     
     internal func onDoneButton(sender: UIButton){
+        
+        for i in 0..<jaket[layout_type].count{
+            var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
+            sendJacket.append(track)
+        }
+        
+        del.playlist?.setJackets(layout: layout_type, jackets: sendJacket)
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        // Post Notification（送信）
+        let ns = NSNotificationCenter.defaultCenter()
+        ns.postNotificationName(MyNotification, object: nil)
     }
     
     internal func onCancelButton(sender: UIButton){
+        del.playlist?.jackets.removeAll()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -64,17 +90,9 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         page = (UInt32)(scrollView.contentOffset.x / scrollView.bounds.size.width)
         pageControl.currentPage = Int(page)
         layout_type = Int(page)
-
-        
+        enableButton()
         selectView.reloadData()
         
-        //        setNum = jaket[layout_type].count
-        //        for i in 0..<jaket[layout_type].count{
-        //            var mname:String = "music" + String(jaket[layout_type][i]) + ".jpg"
-        //            lay.image[i].image = UIImage(named: mname)
-        //        }
-        
-        print(page)
     }
     
     
@@ -96,7 +114,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
                 
                 if rastarize[indexPath.row] != 0{
                     if i == rastarize[indexPath.row]{
-                        println("in")
                         lay.image[i].layer.shouldRasterize = true
                         lay.image[i].layer.rasterizationScale = 0.1
                     }
@@ -131,6 +148,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             
             var url = NSURL(string: del.playlist?.tracks[indexPath.row].cover as String!)
             cell.image.sd_setImageWithURL(url!)
+            
+            cell.Stitle.text = del.playlist?.tracks[indexPath.row].name
             
 //            var mname:String = "music" + String(indexPath.row + 1)
 //            var nmname2 = playlist?.tracks[indexPath.row].cover
@@ -173,6 +192,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             layoutView.reloadData()
 //            selectView.reloadData()
             sview.reloadItemsAtIndexPaths([indexPath])
+            enableButton()
         }
     }
     
@@ -198,16 +218,5 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    @IBAction func exitButtonAction(sender: AnyObject) {
-        for i in 0..<jaket[layout_type].count{
-            var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
-            sendJacket.append(track)
-        }
-        
-        del.playlist?.setJackets(layout: layout_type, jackets: sendJacket)
-    }
-    
     
 }

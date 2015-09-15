@@ -11,6 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let realm = Realm()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        playlist = Playlist()
+
         setDefaultData()
         return true
     }

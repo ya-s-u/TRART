@@ -1,0 +1,91 @@
+//
+//  HomeTableViewCell.swift
+//  TRART
+//
+//  Created by Yohei Fusayasu on 9/15/15.
+//  Copyright (c) 2015 yohei2323. All rights reserved.
+//
+
+import UIKit
+
+class HomeTableViewCell: UITableViewCell {
+    @IBOutlet weak var homeCellView: UIView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    func loadTemplate(playlist: Playlist){
+        switch(playlist.layoutType){
+        case 0:
+            let Cview = UINib(nibName: "Layer1", bundle: nil).instantiateWithOwner(self, options: nil)[0]
+                as! JaketLayer1View
+            Cview.layer.frame = CGRectMake(0, 0, self.homeCellView.bounds.size.width,self.homeCellView.bounds.size.height)
+            Cview.layer.position = CGPointMake(self.homeCellView.bounds.size.width/2, self.homeCellView.bounds.size.height/2)
+            Cview.playlist = playlist
+            self.homeCellView.addSubview(Cview)
+            break
+        case 1:
+            let Cview = UINib(nibName: "Layer2", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer2View
+            Cview.layer.frame = CGRectMake(0, 0, self.homeCellView.bounds.size.width,self.homeCellView.bounds.size.height)
+            Cview.layer.position = CGPointMake(self.homeCellView.bounds.size.width/2, self.homeCellView.bounds.size.height/2)
+            Cview.playlist = playlist
+            self.homeCellView.addSubview(Cview)
+            break
+        case 2:
+            let Cview = UINib(nibName: "Layer3", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer3View
+            Cview.layer.frame = CGRectMake(0, 0, self.homeCellView.bounds.size.width,self.homeCellView.bounds.size.height)
+            Cview.layer.position = CGPointMake(self.homeCellView.bounds.size.width/2, self.homeCellView.bounds.size.height/2)
+            Cview.playlist = playlist
+            self.homeCellView.addSubview(Cview)
+            break
+        case 3:
+            let Cview = UINib(nibName: "Layer4", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer4View
+            Cview.layer.frame = CGRectMake(0, 0, self.homeCellView.bounds.size.width,self.homeCellView.bounds.size.height)
+            Cview.layer.position = CGPointMake(self.homeCellView.bounds.size.width/2, self.homeCellView.bounds.size.height/2)
+            Cview.playlist = playlist
+            self.homeCellView.addSubview(Cview)
+            break
+//        case 4:
+//            let Cview = UINib(nibName: "Layer5", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer5View
+//            Cview.layer.frame = CGRectMake(0, 0, self.view.bounds.size.width,self.view.bounds.size.height)
+//            Cview.layer.position = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)
+//            Cview.playlist = del.playlist
+//            self.view.addSubview(Cview)
+//            break
+//        case 5:
+//            let Cview = UINib(nibName: "Layer6", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer6View
+//            Cview.layer.frame = CGRectMake(0, 0, self.view.bounds.size.width,self.view.bounds.size.height)
+//            Cview.layer.position = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)
+//            Cview.playlist = del.playlist
+//            self.view.addSubview(Cview)
+//            break
+//        case 6:
+//            let Cview = UINib(nibName: "Layer7", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer7View
+//            Cview.layer.frame = CGRectMake(0, 0, self.view.bounds.size.width,self.view.bounds.size.height)
+//            Cview.layer.position = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)
+//            Cview.playlist = del.playlist
+//            self.view.addSubview(Cview)
+//            break
+//        case 7:
+//            let Cview = UINib(nibName: "Layer8", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer8View
+//            Cview.layer.frame = CGRectMake(0, 0, self.view.bounds.size.width,self.view.bounds.size.height)
+//            Cview.layer.position = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)
+//            Cview.playlist = del.playlist
+//            self.view.addSubview(Cview)
+//            break
+        default:
+            let Cview = UINib(nibName: "Layer1", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! JaketLayer1View
+            Cview.layer.frame = CGRectMake(0, 0, self.contentView.bounds.size.width,self.contentView.bounds.size.height)
+            Cview.layer.position = CGPointMake(self.contentView.bounds.size.width/2, self.contentView.bounds.size.height/2)
+            Cview.playlist = playlist
+            self.contentView.addSubview(Cview)
+            break
+
+        }
+    }
+}

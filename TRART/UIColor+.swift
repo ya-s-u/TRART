@@ -33,6 +33,10 @@ extension UIColor {
         return UIColor.redColor()
     }
     
+    class func textViewColor() -> UIColor{
+        return UIColor.rgbColor(0x1b1b1b)
+    }
+    
     class func rgbColor(rgbValue: UInt, alpha: Float = 1.0) -> UIColor {
         return UIColor(
             red:   CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
