@@ -94,6 +94,7 @@
 		47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
+		5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TRART-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 				5AE0DCF61BA2B0EE00EE2A1B /* Layouts */,
 				47BD97251BA2779F00096854 /* Images.xcassets */,
 				47BD971C1BA2779F00096854 /* Supporting Files */,
+				5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */,
 			);
 			path = TRART;
 			sourceTree = "<group>";
@@ -677,6 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				SWIFT_OBJC_BRIDGING_HEADER = "TRART/TRART-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -692,6 +695,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				SWIFT_OBJC_BRIDGING_HEADER = "TRART/TRART-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
