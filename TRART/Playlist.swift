@@ -21,6 +21,7 @@ class Playlist: Object {
     }
     
     func setTracksArr(tracks: [Track]) {
+        self.tracks.removeAll()
         for track in tracks {
             self.tracks.append(track)
         }
