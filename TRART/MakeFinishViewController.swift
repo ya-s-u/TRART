@@ -13,6 +13,7 @@ class MakeFinishViewController: UIViewController {
         super.viewDidLoad()
         pTitle.text = del.playlist.title
         pSummary.text = del.playlist.comment
+        self.navigationItem.setHidesBackButton(true, animated: false)
         
         //グラデーションの開始色
         let topColor = UIColorFromRGB(0x000000, aValue: 0)

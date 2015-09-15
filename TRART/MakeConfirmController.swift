@@ -7,26 +7,41 @@ class MakeConfirmViewController: UIViewController {
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListSummary: UITextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
-    let MyNotification = "MyNotification"
+    var myBarButton_1:UIBarButtonItem!
     
-    @IBOutlet var TField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PlaylistTitle.backgroundColor = UIColor.textViewColor()
         
-        TField.layer.cornerRadius = 4
+        PlayListSummary.layer.cornerRadius = 4
+        PlayListSummary.backgroundColor = UIColor.textViewColor()
 
         // BarButtonItemを作成する.
         
-        let myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
+        myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_1, animated: true)
-
+        enableButton()
     }
     
+    func enableButton(){
+        if PlaylistTitle.text.isEmpty == false{
+            myBarButton_1.enabled = true
+        }else{
+            myBarButton_1.enabled = false
+        }
+    }
+    
+    @IBAction func didChange(sender: AnyObject) {
+        enableButton()
+    }
+    @IBAction func endEdit(sender: AnyObject) {
+        enableButton()
+    }
     internal func onClickMyBarButton(sender: UIButton){
 
         del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListSummary.text, mood: "HAPPY")
@@ -39,13 +54,6 @@ class MakeConfirmViewController: UIViewController {
         self.performSegueWithIdentifier("confirm2finish", sender: nil)
     }
     
-    
-    @IBAction func unwindToConfirmation(segue: UIStoryboardSegue) {
-
-        let ns = NSNotificationCenter.defaultCenter()
-        ns.postNotificationName(MyNotification, object: nil)
-
-    }
     
     @IBAction func selectJacket(sender: AnyObject) {
         del.playlist.jackets.removeAll()

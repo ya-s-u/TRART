@@ -12,6 +12,7 @@ class CustomCell: UICollectionViewCell {
     
     @IBOutlet var image:UIImageView!
     @IBOutlet var select:UIImageView!
+    @IBOutlet var Stitle:UILabel!
     
     override init(frame: CGRect){
         super.init(frame: frame)

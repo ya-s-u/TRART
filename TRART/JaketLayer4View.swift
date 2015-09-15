@@ -16,7 +16,8 @@ class JaketLayer4View: UIView {
     
     var playlist: Playlist? {
         didSet{
-            for i in 0...2{
+            var cnt = self.playlist?.jackets.count
+            for i in 0..<cnt!{
                 var url = NSURL(string: self.playlist?.jackets[i].cover as String!)
                 image[i].sd_setImageWithURL(url!)
             }
