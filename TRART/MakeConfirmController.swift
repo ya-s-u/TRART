@@ -7,7 +7,7 @@ class MakeConfirmViewController: UIViewController {
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListSummary: UITextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
-    let MyNotification = "MyNotification"
+
     
     @IBOutlet var TField: UITextView!
     override func viewDidLoad() {
@@ -39,13 +39,6 @@ class MakeConfirmViewController: UIViewController {
         self.performSegueWithIdentifier("confirm2finish", sender: nil)
     }
     
-    
-    @IBAction func unwindToConfirmation(segue: UIStoryboardSegue) {
-
-        let ns = NSNotificationCenter.defaultCenter()
-        ns.postNotificationName(MyNotification, object: nil)
-
-    }
     
     @IBAction func selectJacket(sender: AnyObject) {
         del.playlist.jackets.removeAll()

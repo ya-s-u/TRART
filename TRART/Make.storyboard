@@ -306,7 +306,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3z-VX-dIE">
-                                                    <rect key="frame" x="133" y="0.0" width="228" height="228"/>
+                                                    <rect key="frame" x="115" y="0.0" width="228" height="228"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-sM-AhV">
                                                     <rect key="frame" x="0.0" y="152" width="76" height="76"/>
@@ -391,17 +391,6 @@
                                     <outlet property="delegate" destination="uKh-gm-GNM" id="Xt8-xd-hIX"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM6-9B-pSg">
-                                <rect key="frame" x="16" y="0.0" width="30" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="×">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="exitButtonAction:" destination="uKh-gm-GNM" eventType="touchUpInside" id="bGW-31-ELo"/>
-                                    <segue destination="W13-nc-nPg" kind="unwind" unwindAction="unwindToConfirmation:" id="wor-8i-vcH"/>
-                                </connections>
-                            </button>
                             <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
                                 <rect key="frame" x="281" y="300" width="39" height="37"/>
                             </pageControl>
@@ -409,7 +398,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leading" id="48A-7z-ood"/>
-                            <constraint firstItem="iM6-9B-pSg" firstAttribute="top" secondItem="Fvv-A7-CMR" secondAttribute="topMargin" id="D0F-lv-ovL"/>
                             <constraint firstAttribute="centerX" secondItem="3ek-5u-4ge" secondAttribute="centerX" id="LeS-r9-RS5"/>
                             <constraint firstAttribute="trailing" secondItem="kTG-iO-rma" secondAttribute="trailing" id="Nrm-pX-ItW"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leading" id="V2X-yW-YNI"/>
@@ -419,7 +407,6 @@
                             <constraint firstAttribute="centerY" secondItem="3ek-5u-4ge" secondAttribute="centerY" id="gIV-25-HUN"/>
                             <constraint firstItem="yb9-KJ-0ht" firstAttribute="top" secondItem="kTG-iO-rma" secondAttribute="bottom" id="jPo-np-qXJ"/>
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="top" secondItem="Fvv-A7-CMR" secondAttribute="topMargin" constant="64" id="loR-Q8-57o"/>
-                            <constraint firstItem="iM6-9B-pSg" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leadingMargin" id="nAb-OL-RDZ"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="top" secondItem="rnV-6v-zj7" secondAttribute="bottom" id="nOJ-5f-IqC"/>
                             <constraint firstItem="eN3-tT-iM1" firstAttribute="top" secondItem="rnV-6v-zj7" secondAttribute="bottom" constant="8" id="rgS-WW-f8L"/>
                         </constraints>
@@ -437,7 +424,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxF-YE-VHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="W13-nc-nPg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1367" y="191"/>
         </scene>

@@ -24,6 +24,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var autoselect:[Int] = [0,1,0]
     var rastarize:[Int] = [0,4,0]
     var sendJacket:[Track] = []
+    let MyNotification = "MyNotification"
     
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var lview: UICollectionView!
@@ -33,6 +34,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 //    var playlist: Playlist?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.title = "ラベルを編集"
 
@@ -52,10 +54,21 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     internal func onDoneButton(sender: UIButton){
+        for i in 0..<jaket[layout_type].count{
+            var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
+            sendJacket.append(track)
+        }
+        
+        del.playlist?.setJackets(layout: layout_type, jackets: sendJacket)
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        // Post Notification（送信）
+        let ns = NSNotificationCenter.defaultCenter()
+        ns.postNotificationName(MyNotification, object: nil)
     }
     
     internal func onCancelButton(sender: UIButton){
+        del.playlist?.jackets.removeAll()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -74,7 +87,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         //            lay.image[i].image = UIImage(named: mname)
         //        }
         
-        print(page)
     }
     
     
@@ -96,7 +108,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
                 
                 if rastarize[indexPath.row] != 0{
                     if i == rastarize[indexPath.row]{
-                        println("in")
                         lay.image[i].layer.shouldRasterize = true
                         lay.image[i].layer.rasterizationScale = 0.1
                     }
@@ -198,16 +209,5 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    @IBAction func exitButtonAction(sender: AnyObject) {
-        for i in 0..<jaket[layout_type].count{
-            var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
-            sendJacket.append(track)
-        }
-        
-        del.playlist?.setJackets(layout: layout_type, jackets: sendJacket)
-    }
-    
     
 }
