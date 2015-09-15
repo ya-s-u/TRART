@@ -17,15 +17,15 @@ class PlayerView: UIView {
         let myImage = UIImage(named: "dummy-pulse")!
         let myImageView = UIImageView()
         myImageView.image = myImage
-        myImageView.frame = CGRectMake(0, 0, myImage.size.width, 70)
+        myImageView.frame = CGRectMake(0, 0, myImage.size.width, self.bounds.height)
         scrollView.addSubview(myImageView)
-        scrollView.contentSize = CGSizeMake(1200, 70)
+        scrollView.contentSize = CGSizeMake(1200, self.bounds.height)
         
         mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
         mask.userInteractionEnabled = false
         
         let separator = UIView()
-        separator.frame = CGRectMake(UIScreen.mainScreen().bounds.size.width/2, 0, 1, 70)
+        separator.frame = CGRectMake(UIScreen.mainScreen().bounds.size.width/2, 0, 1, self.bounds.height)
         separator.backgroundColor = UIColor.auditionTextColor()
         self.addSubview(separator)
     }
