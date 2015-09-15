@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */; };
 		475B335E1BA5C4BE00EC0E6A /* MainTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */; };
 		475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */; };
 		475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33611BA5CBF000EC0E6A /* MainController.swift */; };
@@ -19,7 +18,6 @@
 		47BD97351BA277A000096854 /* TRARTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD97341BA277A000096854 /* TRARTTests.swift */; };
 		47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091A1BA2D4C900168E4D /* MakeNewController.swift */; };
 		47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */; };
-		47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE091E1BA2D57100168E4D /* MiniPlayer.xib */; };
 		47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09221BA2E71700168E4D /* TracksTableViewController.swift */; };
 		47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTableViewController.xib */; };
 		47CE09281BA2E91100168E4D /* TracksTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksTableCellController.swift */; };
@@ -74,7 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableHeaderController.swift; sourceTree = "<group>"; };
 		475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableHeader.xib; sourceTree = "<group>"; };
 		475B33611BA5CBF000EC0E6A /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -89,7 +86,6 @@
 		47BD97341BA277A000096854 /* TRARTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRARTTests.swift; sourceTree = "<group>"; };
 		47CE091A1BA2D4C900168E4D /* MakeNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewController.swift; sourceTree = "<group>"; };
 		47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeNewNavigationController.swift; sourceTree = "<group>"; };
-		47CE091E1BA2D57100168E4D /* MiniPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
 		47CE09221BA2E71700168E4D /* TracksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
 		47CE09231BA2E71700168E4D /* TracksTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewController.xib; sourceTree = "<group>"; };
 		47CE09261BA2E91000168E4D /* TracksTableCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableCellController.swift; sourceTree = "<group>"; };
@@ -296,7 +292,6 @@
 				983B3F871BA5515B00A24393 /* LayerCell.swift */,
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5AD276161BA572270074B49C /* MakeNew */,
-				475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */,
 				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
 			);
 			name = Views;
@@ -309,7 +304,6 @@
 				47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */,
 				47BD97221BA2779F00096854 /* Main.storyboard */,
 				98DF433D1BA723C40009FB34 /* Make.storyboard */,
-				47CE091E1BA2D57100168E4D /* MiniPlayer.xib */,
 				47CE09231BA2E71700168E4D /* TracksTableViewController.xib */,
 				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
 				475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */,
@@ -446,7 +440,6 @@
 				47BD97241BA2779F00096854 /* Main.storyboard in Resources */,
 				9885295C1BA53123003D5FED /* Layer7.xib in Resources */,
 				988529561BA530D5003D5FED /* Layer4.xib in Resources */,
-				47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */,
 				47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */,
 				475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */,
 				5A2F4E221BA85E8800CA71D5 /* Player.xib in Resources */,
@@ -542,7 +535,6 @@
 				986E7DC11BA6AFCF00503400 /* LayoutTableViewController.swift in Sources */,
 				5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
-				475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				988529681BA537A4003D5FED /* JaketLayer5View.swift in Sources */,
 				5AF773801BA2D353008056A7 /* Track.swift in Sources */,

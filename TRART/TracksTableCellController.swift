@@ -34,9 +34,6 @@ class TracksTableCellController: UITableViewCell {
     
     @IBAction func tapCover(sender: AnyObject) {
         player.track = track
-        
-        var notification : NSNotification = NSNotification(name: "audition", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
 }
