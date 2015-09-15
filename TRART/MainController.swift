@@ -26,11 +26,11 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
             playlists.append(playlist)
         }
         
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToMakeNew", name: "CreateButton", object: nil)
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -57,13 +57,15 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 300.0
+        return 330.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("HomeTableViewCell") as! HomeTableViewCell
         
         cell.loadTemplate(playlists[indexPath.row])
+        cell.titleLabel.text = playlists[indexPath.row].title
+        cell.commentLabel.text = playlists[indexPath.row].comment
         
         return cell
     }
