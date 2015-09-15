@@ -186,6 +186,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         
         del.playlist?.setJackets(layout: layout_type, jackets: sendJacket)
     }
-
+    
     
 }

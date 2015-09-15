@@ -24,6 +24,9 @@ class Playlist: Object {
         for track in tracks {
             self.tracks.append(track)
         }
+        self.jackets.append(tracks[0])
+        self.jackets.append(tracks[1])
+        self.jackets.append(tracks[2])
     }
     
     func setJackets(#layout: Int, jackets: [Track]) {
