@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        realmSampleUsage()
+        realmSampleUsage()
         
         playlist = Playlist()
         return true
@@ -35,13 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func realmSampleUsage() {
         // request track data
-        let request = iTunesApiClient.Search(term: "akb48")
+        let request = iTunesApiClient.Search(term: "avichii")
         iTunesApiClient.sendRequest(request) { response in
             switch response {
             case .Success(let tracks):
                 // create playlist
                 let playlist = Playlist()
-                playlist.setMeta(title: "AKB神曲リスト", userName: "やす", comment: "さっしー最高", mood: "HAPPY")
+                playlist.setMeta(title: "EDM PRTY MIX", userName: "fussa", comment: "あざっす", mood: "HAPPY")
                 playlist.setTracksArr(tracks.value)
                 playlist.setJackets(layout: 0, jackets: [
                     tracks.value[0],
