@@ -21,6 +21,7 @@ class TracksTableViewController: UITableViewController {
         for track in realmResponse {
             tracks.append(track)
         }
+        tracks.shuffle(tracks.count)
         
         self.checkedTracks.removeAll()
         //Receive Nortification from MakeNewController.swift
