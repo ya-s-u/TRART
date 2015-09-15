@@ -8,13 +8,13 @@ class MakeConfirmViewController: UIViewController {
     @IBOutlet var PlayListSummary: UITextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
 
-    
-    @IBOutlet var TField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PlaylistTitle.backgroundColor = UIColor.textViewColor()
         
-        TField.layer.cornerRadius = 4
+        PlayListSummary.layer.cornerRadius = 4
+        PlayListSummary.backgroundColor = UIColor.textViewColor()
 
         // BarButtonItemを作成する.
         

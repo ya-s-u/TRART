@@ -54,6 +54,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     internal func onDoneButton(sender: UIButton){
+        
         for i in 0..<jaket[layout_type].count{
             var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
             sendJacket.append(track)
@@ -80,12 +81,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 
         
         selectView.reloadData()
-        
-        //        setNum = jaket[layout_type].count
-        //        for i in 0..<jaket[layout_type].count{
-        //            var mname:String = "music" + String(jaket[layout_type][i]) + ".jpg"
-        //            lay.image[i].image = UIImage(named: mname)
-        //        }
         
     }
     
@@ -142,6 +137,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             
             var url = NSURL(string: del.playlist?.tracks[indexPath.row].cover as String!)
             cell.image.sd_setImageWithURL(url!)
+            
+            cell.Stitle.text = del.playlist?.tracks[indexPath.row].name
             
 //            var mname:String = "music" + String(indexPath.row + 1)
 //            var nmname2 = playlist?.tracks[indexPath.row].cover
