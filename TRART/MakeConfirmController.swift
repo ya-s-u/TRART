@@ -56,7 +56,7 @@ class MakeConfirmViewController: UIViewController {
     
     
     @IBAction func selectJacket(sender: AnyObject) {
-        del.playlist.jackets.removeAll()
+
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -64,6 +64,7 @@ class MakeConfirmViewController: UIViewController {
         let viewControllers = self.navigationController?.viewControllers!
         if indexOfArray(viewControllers!, searchObject: self) == nil{
             del.playlist.jackets.removeAll()
+            
         }
         super.viewWillDisappear(animated)
     }
