@@ -28,10 +28,14 @@ class MakeConfirmViewController: UIViewController {
     }
     
     internal func onClickMyBarButton(sender: UIButton){
-//        let secondViewController = MakeFinishViewController()
-//        self.navigationController?.pushViewController(secondViewController, animated: false)
 
         del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListSummary.text, mood: "HAPPY")
+        
+        let realm = Realm()
+        realm.write{
+            realm.add(self.del.playlist)
+        }
+        
         self.performSegueWithIdentifier("confirm2finish", sender: nil)
     }
     
