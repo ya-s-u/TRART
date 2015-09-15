@@ -12,10 +12,16 @@ import PageMenu
 class MakeNewController: UIViewController {
     var pageMenu : CAPSPageMenu?
     @IBOutlet weak var nextButton: UIBarButtonItem!
+    
+    var del =  UIApplication.sharedApplication().delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favoriteから曲を選択"
+        
+        // init Playlist
+        del.playlist = Playlist()
+        
         self.nextButton.enabled = false
         //Receive Nortification from MakeNewController.swift
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "enableNextButton", name: "8TracksSelected", object: nil)
