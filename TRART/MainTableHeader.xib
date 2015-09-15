@@ -18,7 +18,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqP-1U-eki">
-                    <rect key="frame" x="128" y="198" width="345" height="90"/>
+                    <rect key="frame" x="128" y="208" width="345" height="90"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="345" id="0bY-sc-dcy"/>
                         <constraint firstAttribute="height" constant="90" id="yWe-Cx-ALZ"/>
@@ -45,7 +45,7 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-recently" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-zE-4yT">
-                    <rect key="frame" x="32" y="324" width="139" height="12"/>
+                    <rect key="frame" x="32" y="338" width="139" height="12"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="139" id="29o-vQ-zLP"/>
                         <constraint firstAttribute="height" constant="12" id="6RE-6U-Pj1"/>
@@ -61,7 +61,7 @@
                 <constraint firstAttribute="centerX" secondItem="dqP-1U-eki" secondAttribute="centerX" id="MTo-US-exl"/>
                 <constraint firstItem="Dbc-4H-yNl" firstAttribute="top" secondItem="BuJ-7y-02t" secondAttribute="bottom" constant="20" id="PPx-gY-cSJ"/>
                 <constraint firstAttribute="bottom" secondItem="wtr-zE-4yT" secondAttribute="bottom" constant="5" id="R2l-SS-Rh9"/>
-                <constraint firstItem="dqP-1U-eki" firstAttribute="top" secondItem="RYj-Zw-FOl" secondAttribute="bottom" constant="30" id="RXY-bV-jdy"/>
+                <constraint firstItem="dqP-1U-eki" firstAttribute="top" secondItem="RYj-Zw-FOl" secondAttribute="bottom" constant="40" id="RXY-bV-jdy"/>
                 <constraint firstItem="Dbc-4H-yNl" firstAttribute="leading" secondItem="dqP-1U-eki" secondAttribute="trailing" constant="-143" id="TTU-Mx-ef3"/>
                 <constraint firstAttribute="centerX" secondItem="Dbc-4H-yNl" secondAttribute="centerX" id="fHd-Ml-1Fb"/>
                 <constraint firstItem="BuJ-7y-02t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="h2Q-7g-PLW"/>
@@ -69,7 +69,7 @@
                 <constraint firstAttribute="centerX" secondItem="RYj-Zw-FOl" secondAttribute="centerX" id="pbG-39-ujz"/>
                 <constraint firstAttribute="centerX" secondItem="BuJ-7y-02t" secondAttribute="centerX" id="uXa-vJ-kbj"/>
                 <constraint firstItem="wtr-zE-4yT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="xba-Mr-5BR"/>
-                <constraint firstItem="wtr-zE-4yT" firstAttribute="top" secondItem="dqP-1U-eki" secondAttribute="bottom" constant="36" id="yq7-QQ-WYm"/>
+                <constraint firstItem="wtr-zE-4yT" firstAttribute="top" secondItem="dqP-1U-eki" secondAttribute="bottom" constant="40" id="yq7-QQ-WYm"/>
                 <constraint firstItem="RYj-Zw-FOl" firstAttribute="top" secondItem="Dbc-4H-yNl" secondAttribute="bottom" constant="10" id="zdR-PA-CW2"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

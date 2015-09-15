@@ -70,8 +70,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="s75-Jl-rSq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="tqD-IV-0PZ">
-                            <color key="tintColor" red="0.35779684779999998" green="0.3623342812" blue="0.37059336900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tqD-IV-0PZ">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backToTop:" destination="fma-TK-OMn" id="dCV-CU-YlU"/>
                                 <segue destination="KQQ-T2-FF5" kind="unwind" unwindAction="unwindToTop:" id="Wr9-yI-aZ4"/>
@@ -102,8 +102,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.80000000000000004" green="0.66666666666666663" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.80000000000000004" green="0.66666666669999997" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

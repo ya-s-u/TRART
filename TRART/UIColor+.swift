@@ -22,11 +22,11 @@ extension UIColor {
     }
     
     class func makeNewTabColorActive() -> UIColor {
-        return UIColor.rgbColor(0x1A2C45)
+        return UIColor.rgbColor(0x182941)
     }
     
     class func makeNewTabColorNonActive() -> UIColor {
-        return UIColor.rgbColor(0x404040)
+        return UIColor.rgbColor(0x3a4758)
     }
     
     class func buttonColor() -> UIColor {
