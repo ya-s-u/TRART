@@ -14,7 +14,7 @@ class TracksTableCellController: UITableViewCell {
             artist.text = self.track!.artist
             
             var url = NSURL(string: self.track!.cover as String!)
-            cover.hnk_setImageFromURL(url!)
+            cover.sd_setImageWithURL(url!)
         }
     }
     

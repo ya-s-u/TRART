@@ -1,5 +1,5 @@
 import UIKit
-import Haneke
+import SDWebImage
 
 class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate{
     
@@ -92,7 +92,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 //                var mname:String = "music" + String(jaket[indexPath.row][i])
 //                lay.image[i].image = UIImage(named: mname)
                 var url = NSURL(string: del.playlist?.tracks[jaket[indexPath.row][i] - 1].cover as String!)
-                lay.image[i].hnk_setImageFromURL(url!)
+                lay.image[i].sd_setImageWithURL(url!)
                 
                 if rastarize[indexPath.row] != 0{
                     if i == rastarize[indexPath.row]{
@@ -130,7 +130,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 //            cell.bounds.size = CGSizeMake(cellsize, cellsize)
             
             var url = NSURL(string: del.playlist?.tracks[indexPath.row].cover as String!)
-            cell.image.hnk_setImageFromURL(url!)
+            cell.image.sd_setImageWithURL(url!)
             
 //            var mname:String = "music" + String(indexPath.row + 1)
 //            var nmname2 = playlist?.tracks[indexPath.row].cover

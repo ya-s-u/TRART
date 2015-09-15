@@ -8,7 +8,7 @@
 
 
 import UIKit
-import Haneke
+import SDWebImage
 
 class JaketLayer8View: UIView {
     
@@ -18,7 +18,7 @@ class JaketLayer8View: UIView {
         didSet{
             for i in 0...2{
                 var url = NSURL(string: self.playlist?.jackets[i].cover as String!)
-                image[i].hnk_setImageFromURL(url!)
+                image[i].sd_setImageWithURL(url!)
             }
         }
     }
