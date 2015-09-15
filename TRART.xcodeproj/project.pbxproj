@@ -27,6 +27,8 @@
 		47F291A41BA8194A00BC8DD0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */; };
 		47F291A51BA8194A00BC8DD0 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */; };
 		5A2F4E1C1BA8323000CA71D5 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E1B1BA8323000CA71D5 /* Array+.swift */; };
+		5A2F4E221BA85E8800CA71D5 /* Player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F4E211BA85E8800CA71D5 /* Player.xib */; };
+		5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
@@ -97,6 +99,8 @@
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TRART-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A2F4E1B1BA8323000CA71D5 /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		5A2F4E211BA85E8800CA71D5 /* Player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Player.xib; sourceTree = "<group>"; };
+		5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5AD276161BA572270074B49C /* MakeNew */,
 				475B33571BA5656E00EC0E6A /* MiniPlayerView.swift */,
+				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				47CE09231BA2E71700168E4D /* TracksTableViewController.xib */,
 				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
 				475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */,
+				5A2F4E211BA85E8800CA71D5 /* Player.xib */,
 				988529501BA52F21003D5FED /* LayerSet */,
 			);
 			name = Layouts;
@@ -443,6 +449,7 @@
 				47CE091F1BA2D57100168E4D /* MiniPlayer.xib in Resources */,
 				47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */,
 				475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */,
+				5A2F4E221BA85E8800CA71D5 /* Player.xib in Resources */,
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
 				9885295A1BA53114003D5FED /* Layer6.xib in Resources */,
 				47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */,
@@ -533,6 +540,7 @@
 				5A2F4E1C1BA8323000CA71D5 /* Array+.swift in Sources */,
 				98DF433C1BA71B1C0009FB34 /* LayoutLastViewController.swift in Sources */,
 				986E7DC11BA6AFCF00503400 /* LayoutTableViewController.swift in Sources */,
+				5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
 				475B33581BA5656E00EC0E6A /* MiniPlayerView.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
