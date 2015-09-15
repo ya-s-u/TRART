@@ -34,7 +34,16 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = "ラベルを編集"
+
+        let myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
+        let myBarButton_Cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancelButton:")
+        
+        self.navigationController?.navigationBar
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationItem
+        self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
+        self.navigationItem.setLeftBarButtonItem(myBarButton_Cancel, animated: true)
         
         pageControl.transform = CGAffineTransformMakeScale(1.5, 1.5)
         pageControl.currentPageIndicatorTintColor = UIColor.auditionTextColor()
@@ -42,12 +51,20 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         sview.backgroundColor = UIColor.clearColor()
     }
     
+    internal func onDoneButton(sender: UIButton){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    internal func onCancelButton(sender: UIButton){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         page = (UInt32)(scrollView.contentOffset.x / scrollView.bounds.size.width)
         pageControl.currentPage = Int(page)
         layout_type = Int(page)
-        
+
         
         selectView.reloadData()
         
@@ -75,10 +92,11 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 //                var mname:String = "music" + String(jaket[indexPath.row][i])
 //                lay.image[i].image = UIImage(named: mname)
                 var url = NSURL(string: del.playlist?.tracks[jaket[indexPath.row][i] - 1].cover as String!)
-
                 lay.image[i].hnk_setImageFromURL(url!)
+                
                 if rastarize[indexPath.row] != 0{
                     if i == rastarize[indexPath.row]{
+                        println("in")
                         lay.image[i].layer.shouldRasterize = true
                         lay.image[i].layer.rasterizationScale = 0.1
                     }
@@ -104,9 +122,13 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             return lay
         }else{
             selectView = collectionView
+            
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCell
-//            
-//            println(indexPath.row)
+
+            //セルの動的なサイズ変更について（余裕があれば）
+//            var cellsize:CGFloat = (selectView.bounds.size.width - 51) / 4
+//            cell.bounds.size = CGSizeMake(cellsize, cellsize)
+            
             var url = NSURL(string: del.playlist?.tracks[indexPath.row].cover as String!)
             cell.image.hnk_setImageFromURL(url!)
             
@@ -149,7 +171,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
                 selectFlag[layout_type][indexPath.row] = false
             }
             layoutView.reloadData()
-            //selectView.reloadData()
+//            selectView.reloadData()
             sview.reloadItemsAtIndexPaths([indexPath])
         }
     }

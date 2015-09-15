@@ -34,6 +34,17 @@ class MakeFinishViewController: UIViewController {
         self.TitleView.layer.insertSublayer(gradientLayer, atIndex: 0)
         
         self.CommentView.backgroundColor = UIColorFromRGB(0x282828, aValue: 1.0)
+        
+        let myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
+        self.navigationController?.navigationBar
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationItem
+        self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
+
+    }
+    
+    internal func onDoneButton(sender: UIButton){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func UIColorFromRGB(rgbValue: UInt ,aValue: CGFloat) -> UIColor {
