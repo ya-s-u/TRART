@@ -39,10 +39,10 @@ class MakeNewController: UIViewController {
         artistController.parentNavigationController = self.navigationController
         controllerArray.append(artistController)
         
-        var usersController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
-        usersController.title = "Users"
-        usersController.parentNavigationController = self.navigationController
-        controllerArray.append(usersController)
+        var searchController : SearchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        searchController.title = "Search"
+        searchController.parentNavigationController = self.navigationController
+        controllerArray.append(searchController)
         
         // Customize menu (Optional)
         var parameters: [CAPSPageMenuOption] = [
