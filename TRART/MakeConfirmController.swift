@@ -9,10 +9,13 @@ class MakeConfirmViewController: UIViewController {
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     let MyNotification = "MyNotification"
     
+    @IBOutlet var TField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(PlayListSummary.text)
+        
+        TField.layer.cornerRadius = 4
+
         // BarButtonItemを作成する.
         
         let myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
@@ -42,6 +45,24 @@ class MakeConfirmViewController: UIViewController {
     
     @IBAction func selectJacket(sender: AnyObject) {
         del.playlist.jackets.removeAll()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        let viewControllers = self.navigationController?.viewControllers!
+        if indexOfArray(viewControllers!, searchObject: self) == nil{
+            del.playlist.jackets.removeAll()
+        }
+        super.viewWillDisappear(animated)
+    }
+    
+    func indexOfArray(array:[AnyObject], searchObject: AnyObject)-> Int? {
+        for (index, value) in enumerate(array) {
+            if value as! UIViewController == searchObject as! UIViewController {
+                return index
+            }
+        }
+        return nil
     }
     
 }
