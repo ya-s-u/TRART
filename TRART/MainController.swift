@@ -26,7 +26,6 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
             playlists.append(playlist)
         }
         
-        println(self.playlists.count)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToMakeNew", name: "CreateButton", object: nil)
         //tableView Delegate
