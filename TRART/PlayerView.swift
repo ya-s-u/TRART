@@ -22,6 +22,7 @@ class PlayerView: UIView {
         scrollView.contentSize = CGSizeMake(1200, 70)
         
         mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        mask.userInteractionEnabled = false
         
         let separator = UIView()
         separator.frame = CGRectMake(UIScreen.mainScreen().bounds.size.width/2, 0, 1, 70)
