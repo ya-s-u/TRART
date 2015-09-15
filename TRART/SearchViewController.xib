@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="TRART" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-backimg" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-Ry-jlO">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="曲名やアーティスト名で検索" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FqB-d4-ZTr">
+                    <rect key="frame" x="20" y="15" width="560" height="30"/>
+                    <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-Kf-hMN">
+                    <rect key="frame" x="20" y="57" width="560" height="29"/>
+                    <segments>
+                        <segment title="Favorite"/>
+                        <segment title="All"/>
+                    </segments>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FqB-d4-ZTr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="675-Px-W7s"/>
+                <constraint firstAttribute="bottom" secondItem="AMR-Ry-jlO" secondAttribute="bottom" id="6iV-ov-ihJ"/>
+                <constraint firstAttribute="trailing" secondItem="AMR-Ry-jlO" secondAttribute="trailing" id="AAF-Qw-Alg"/>
+                <constraint firstItem="AMR-Ry-jlO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="B0T-2e-8Ye"/>
+                <constraint firstAttribute="trailing" secondItem="FqB-d4-ZTr" secondAttribute="trailing" constant="20" id="URs-nT-xT1"/>
+                <constraint firstAttribute="trailing" secondItem="j7P-Kf-hMN" secondAttribute="trailing" constant="20" id="Z1G-Pt-C7d"/>
+                <constraint firstItem="j7P-Kf-hMN" firstAttribute="top" secondItem="FqB-d4-ZTr" secondAttribute="bottom" constant="12" id="aQn-Wy-Nl3"/>
+                <constraint firstItem="j7P-Kf-hMN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dHD-VD-5zc"/>
+                <constraint firstItem="FqB-d4-ZTr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="eJj-dE-pSk"/>
+                <constraint firstItem="AMR-Ry-jlO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oJN-Ff-pU6"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Home-backimg" width="375" height="667"/>
+    </resources>
+</document>

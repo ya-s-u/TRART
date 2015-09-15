@@ -31,6 +31,11 @@ class TracksTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.parentNavigationController!.title! = "Favoriteから曲を選択"
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

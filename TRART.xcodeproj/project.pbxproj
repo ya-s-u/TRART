@@ -24,6 +24,8 @@
 		47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09231BA2E71700168E4D /* TracksTableViewController.xib */; };
 		47CE09281BA2E91100168E4D /* TracksTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE09261BA2E91000168E4D /* TracksTableCellController.swift */; };
 		47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */; };
+		47F291A41BA8194A00BC8DD0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */; };
+		47F291A51BA8194A00BC8DD0 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
@@ -89,6 +91,8 @@
 		47CE09231BA2E71700168E4D /* TracksTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewController.xib; sourceTree = "<group>"; };
 		47CE09261BA2E91000168E4D /* TracksTableCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableCellController.swift; sourceTree = "<group>"; };
 		47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TracksTableViewCell.xib; sourceTree = "<group>"; };
+		47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRART.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRART/Pods-TRART.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */,
 				986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */,
 				98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */,
+				47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
+				47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */,
 				47BD97221BA2779F00096854 /* Main.storyboard */,
 				98DF433D1BA723C40009FB34 /* Make.storyboard */,
 				47CE091E1BA2D57100168E4D /* MiniPlayer.xib */,
@@ -435,6 +441,7 @@
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
 				9885295A1BA53114003D5FED /* Layer6.xib in Resources */,
 				47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */,
+				47F291A51BA8194A00BC8DD0 /* SearchViewController.xib in Resources */,
 				988529541BA530CA003D5FED /* Layer3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +515,7 @@
 				5AD276151BA571590074B49C /* TracksTableView.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
+				47F291A41BA8194A00BC8DD0 /* SearchViewController.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
 				5AD2761A1BA59FAF0074B49C /* PlayerManager.swift in Sources */,
 				988529641BA5378B003D5FED /* JaketLayer3View.swift in Sources */,
