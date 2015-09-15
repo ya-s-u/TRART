@@ -47,7 +47,7 @@ class MakeNewController: UIViewController {
         // Customize menu (Optional)
         var parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(0),
-            .ScrollMenuBackgroundColor(UIColor.makeNewTabColorNonActive()),
+            .ScrollMenuBackgroundColor(UIColor.makeNewTabColorActive()),
             .ViewBackgroundColor(UIColor.makeNewTabColorActive()),
             .BottomMenuHairlineColor(UIColor.makeNewTabColorActive()),
             .SelectionIndicatorColor(UIColor.makeNewTabColorActive()),
