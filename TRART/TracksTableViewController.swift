@@ -21,6 +21,7 @@ class TracksTableViewController: UITableViewController {
         for track in realmResponse {
             tracks.append(track)
         }
+        tracks.shuffle(tracks.count)
         
         self.checkedTracks.removeAll()
         //Receive Nortification from MakeNewController.swift
@@ -81,6 +82,8 @@ class TracksTableViewController: UITableViewController {
             }
             cell.isChecked = !cell.isChecked
         }
+        
+        println(self.checkedTracks.count)
         
         if self.checkedTracks.count == 8 {
             //Send a Nortification to MakeNewController.swift
