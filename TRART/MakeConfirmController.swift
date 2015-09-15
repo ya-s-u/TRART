@@ -9,10 +9,13 @@ class MakeConfirmViewController: UIViewController {
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     let MyNotification = "MyNotification"
     
+    @IBOutlet var TField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(PlayListSummary.text)
+        
+        TField.layer.cornerRadius = 4
+
         // BarButtonItemを作成する.
         
         let myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
