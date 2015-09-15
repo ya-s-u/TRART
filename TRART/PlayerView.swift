@@ -18,8 +18,10 @@ class PlayerView: UIView {
         
         if player.isPlaying() {
             player.stop()
+            button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
         } else {
             player.play()
+            button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
         }
     }
     
