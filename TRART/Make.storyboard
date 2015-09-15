@@ -508,6 +508,10 @@
                                                 <exclude reference="Hua-Ir-JK1"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="didChange:" destination="C66-NY-jZD" eventType="editingChanged" id="eE3-4T-Dja"/>
+                                            <action selector="endEdit:" destination="C66-NY-jZD" eventType="editingDidEnd" id="yBh-8j-gXf"/>
+                                        </connections>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRn-de-vEd">
                                         <rect key="frame" x="16" y="278" width="568" height="90"/>

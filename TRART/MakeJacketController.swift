@@ -25,6 +25,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var rastarize:[Int] = [0,4,0]
     var sendJacket:[Track] = []
     let MyNotification = "MyNotification"
+    var myBarButton_Done:UIBarButtonItem!
+    var myBarButton_Cancel:UIBarButtonItem!
     
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var lview: UICollectionView!
@@ -38,8 +40,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         self.title = "ラベルを編集"
 
-        let myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
-        let myBarButton_Cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancelButton:")
+        myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
+        myBarButton_Cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancelButton:")
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -51,6 +53,16 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         pageControl.currentPageIndicatorTintColor = UIColor.auditionTextColor()
         lview.backgroundColor = UIColor.clearColor()
         sview.backgroundColor = UIColor.clearColor()
+        enableButton()
+    }
+    
+    func enableButton(){
+        if self.jaket[layout_type].count != jcnt[layout_type]{
+            myBarButton_Done.enabled = false
+        }else{
+            myBarButton_Done.enabled = true
+        }
+        
     }
     
     internal func onDoneButton(sender: UIButton){
@@ -78,8 +90,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         page = (UInt32)(scrollView.contentOffset.x / scrollView.bounds.size.width)
         pageControl.currentPage = Int(page)
         layout_type = Int(page)
-
-        
+        enableButton()
         selectView.reloadData()
         
     }
@@ -181,6 +192,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
             layoutView.reloadData()
 //            selectView.reloadData()
             sview.reloadItemsAtIndexPaths([indexPath])
+            enableButton()
         }
     }
     

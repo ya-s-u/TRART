@@ -7,7 +7,8 @@ class MakeConfirmViewController: UIViewController {
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListSummary: UITextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
-
+    var myBarButton_1:UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,15 +19,29 @@ class MakeConfirmViewController: UIViewController {
 
         // BarButtonItemを作成する.
         
-        let myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
+        myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_1, animated: true)
-
+        enableButton()
     }
     
+    func enableButton(){
+        if PlaylistTitle.text.isEmpty == false{
+            myBarButton_1.enabled = true
+        }else{
+            myBarButton_1.enabled = false
+        }
+    }
+    
+    @IBAction func didChange(sender: AnyObject) {
+        enableButton()
+    }
+    @IBAction func endEdit(sender: AnyObject) {
+        enableButton()
+    }
     internal func onClickMyBarButton(sender: UIButton){
 
         del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListSummary.text, mood: "HAPPY")
