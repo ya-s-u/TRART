@@ -16,6 +16,9 @@ PODS:
     - Realm (= 0.95.0)
   - Result (0.4.4):
     - Box (~> 1.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - SVProgressHUD (1.1.3)
   - SwiftyJSON (2.2.1)
 
@@ -27,6 +30,7 @@ DEPENDENCIES:
   - KDEAudioPlayer
   - PageMenu
   - RealmSwift
+  - SDWebImage (~> 3.7)
   - SVProgressHUD
   - SwiftyJSON
 
@@ -42,6 +46,7 @@ SPEC CHECKSUMS:
   Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
   RealmSwift: 35eeb642bf0b43dedfe363451ba3288d0e72ebb9
   Result: b44f6bc8762bbffaf2c5df58f2c7d12c3496ced8
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
