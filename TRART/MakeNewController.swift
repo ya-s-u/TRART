@@ -11,10 +11,17 @@ import PageMenu
 
 class MakeNewController: UIViewController {
     var pageMenu : CAPSPageMenu?
-    
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favoriteから曲を選択"
+        self.nextButton.enabled = false
+        //Receive Nortification from MakeNewController.swift
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "enableNextButton", name: "8TracksSelected", object: nil)
+        //Receive Nortification from MakeNewController.swift
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "disableNextButton", name: "8TracksUnSelected", object: nil)
+        
         var controllerArray : [UIViewController] = []
     
         var tracksController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
@@ -52,7 +59,7 @@ class MakeNewController: UIViewController {
             .UseMenuLikeSegmentedControl(false),
             .MenuItemSeparatorRoundEdges(true),
             .SelectionIndicatorHeight(10.0),
-            .MenuItemSeparatorPercentageHeight(0)   
+            .MenuItemSeparatorPercentageHeight(0)
         ]
         
         let statusBarHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
@@ -81,6 +88,14 @@ class MakeNewController: UIViewController {
         
         var notification : NSNotification = NSNotification(name: "makePlaylist", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
+    }
+    
+    func enableNextButton() {
+        self.nextButton.enabled = true
+    }
+    
+    func disableNextButton() {
+        self.nextButton.enabled = false
     }
 
 }

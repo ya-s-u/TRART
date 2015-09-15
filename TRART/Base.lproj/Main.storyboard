@@ -83,6 +83,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="KMT-wZ-AvO" id="pte-O7-WUH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhx-ah-Sts" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KQQ-T2-FF5" userLabel="Exit" sceneMemberID="exit"/>
