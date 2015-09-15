@@ -55,10 +55,10 @@ class MakeNewController: UIViewController {
             .MenuHeight(35.0),
             .SelectedMenuItemLabelColor(UIColor.auditionTextColor()),
             .UnselectedMenuItemLabelColor(UIColor.grayColor()),
-            .MenuItemFont(UIFont(name: "HelveticaNeue-Medium", size: 17.0)!),
+            .MenuItemFont(UIFont(name: "HelveticaNeue-Light", size: 17.0)!),
             .UseMenuLikeSegmentedControl(false),
             .MenuItemSeparatorRoundEdges(true),
-            .SelectionIndicatorHeight(10.0),
+            .SelectionIndicatorHeight(3.0),
             .MenuItemSeparatorPercentageHeight(0)
         ]
         
