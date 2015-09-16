@@ -1,21 +1,26 @@
 import UIKit
 import RealmSwift
 
-class MakeConfirmViewController: UIViewController {
+class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var PlaylistTitle: UITextField!
-    @IBOutlet var PlayListSummary: UITextView!
+    @IBOutlet var PlayListComment: UIPlaceHolderTextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     var myBarButton_1:UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PlaylistTitle.delegate = self
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
+        PlaylistTitle.attributedPlaceholder = NSAttributedString(string:"タイトル(必須)",
+            attributes:[NSForegroundColorAttributeName: UIColor.placeHolderColor()])
         
-        PlayListSummary.layer.cornerRadius = 4
-        PlayListSummary.backgroundColor = UIColor.textViewColor()
+        PlayListComment.layer.cornerRadius = 4
+        PlayListComment.backgroundColor = UIColor.textViewColor()
+        PlayListComment.placeHolderColor = UIColor.placeHolderColor()
+        PlayListComment.placeHolderLabel.text = "プレイリストの説明"
 
         // BarButtonItemを作成する.
         
@@ -36,6 +41,14 @@ class MakeConfirmViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
     @IBAction func didChange(sender: AnyObject) {
         enableButton()
     }
@@ -44,7 +57,7 @@ class MakeConfirmViewController: UIViewController {
     }
     internal func onClickMyBarButton(sender: UIButton){
 
-        del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListSummary.text, mood: "HAPPY")
+        del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListComment.text, mood: "HAPPY")
         
         let realm = Realm()
         realm.write{
@@ -78,4 +91,7 @@ class MakeConfirmViewController: UIViewController {
         return nil
     }
     
+    @IBAction func tapScreen(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
 }

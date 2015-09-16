@@ -51,7 +51,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
         self.navigationItem.setLeftBarButtonItem(myBarButton_Cancel, animated: true)
         
-        pageControl.transform = CGAffineTransformMakeScale(1.5, 1.5)
+        pageControl.transform = CGAffineTransformMakeScale(1.0, 1.0)
         pageControl.currentPageIndicatorTintColor = UIColor.auditionTextColor()
         lview.backgroundColor = UIColor.clearColor()
         sview.backgroundColor = UIColor.clearColor()
