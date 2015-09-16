@@ -41,6 +41,11 @@
 		5A2F4E221BA85E8800CA71D5 /* Player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F4E211BA85E8800CA71D5 /* Player.xib */; };
 		5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */; };
 		5A2F4E281BA9255A00CA71D5 /* PlaylistPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E271BA9255A00CA71D5 /* PlaylistPlayerManager.swift */; };
+		5A2F4E2A1BA988F200CA71D5 /* SelectedTracks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F4E291BA988F200CA71D5 /* SelectedTracks.xib */; };
+		5A2F4E2C1BA9892200CA71D5 /* SelectedTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E2B1BA9892200CA71D5 /* SelectedTracksView.swift */; };
+		5A2F4E2E1BA98CBB00CA71D5 /* SelectedTracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E2D1BA98CBB00CA71D5 /* SelectedTracksController.swift */; };
+		5A2F4E301BA98D1500CA71D5 /* SelectedTracksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F4E2F1BA98D1500CA71D5 /* SelectedTracksCell.xib */; };
+		5A2F4E321BA98D4200CA71D5 /* SelectedTracksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F4E311BA98D4200CA71D5 /* SelectedTracksCellController.swift */; };
 		5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */; };
 		5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61501BA5312D00555414 /* MakeConfirmController.swift */; };
 		5A7F61531BA5314E00555414 /* MakeJacketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F61521BA5314E00555414 /* MakeJacketController.swift */; };
@@ -126,6 +131,11 @@
 		5A2F4E211BA85E8800CA71D5 /* Player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Player.xib; sourceTree = "<group>"; };
 		5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		5A2F4E271BA9255A00CA71D5 /* PlaylistPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistPlayerManager.swift; sourceTree = "<group>"; };
+		5A2F4E291BA988F200CA71D5 /* SelectedTracks.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedTracks.xib; sourceTree = "<group>"; };
+		5A2F4E2B1BA9892200CA71D5 /* SelectedTracksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedTracksView.swift; sourceTree = "<group>"; };
+		5A2F4E2D1BA98CBB00CA71D5 /* SelectedTracksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedTracksController.swift; sourceTree = "<group>"; };
+		5A2F4E2F1BA98D1500CA71D5 /* SelectedTracksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedTracksCell.xib; sourceTree = "<group>"; };
+		5A2F4E311BA98D4200CA71D5 /* SelectedTracksCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedTracksCellController.swift; sourceTree = "<group>"; };
 		5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFinishViewController.swift; sourceTree = "<group>"; };
 		5A7F61501BA5312D00555414 /* MakeConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConfirmController.swift; sourceTree = "<group>"; };
 		5A7F61521BA5314E00555414 /* MakeJacketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeJacketController.swift; sourceTree = "<group>"; };
@@ -360,6 +370,13 @@
 			children = (
 				471EF8DF1BA9093600D21972 /* Home */,
 				471EF8DE1BA9083900D21972 /* MakeNew */,
+				5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */,
+				5A7F61501BA5312D00555414 /* MakeConfirmController.swift */,
+				5A7F61521BA5314E00555414 /* MakeJacketController.swift */,
+				986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */,
+				98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */,
+				5A2F4E2D1BA98CBB00CA71D5 /* SelectedTracksController.swift */,
+				5A2F4E311BA98D4200CA71D5 /* SelectedTracksCellController.swift */,
 				471EF8FE1BA97BB000D21972 /* Confirmation */,
 			);
 			name = Controllers;
@@ -379,6 +396,7 @@
 				983B3F851BA5515100A24393 /* CustomCell.swift */,
 				983B3F871BA5515B00A24393 /* LayerCell.swift */,
 				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
+				5A2F4E2B1BA9892200CA71D5 /* SelectedTracksView.swift */,
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5AD276161BA572270074B49C /* MakeNew */,
 			);
@@ -393,6 +411,8 @@
 				47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */,
 				475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */,
 				5A2F4E211BA85E8800CA71D5 /* Player.xib */,
+				5A2F4E291BA988F200CA71D5 /* SelectedTracks.xib */,
+				5A2F4E2F1BA98D1500CA71D5 /* SelectedTracksCell.xib */,
 				988529501BA52F21003D5FED /* LayerSet */,
 			);
 			name = Layouts;
@@ -516,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2F4E2A1BA988F200CA71D5 /* SelectedTracks.xib in Resources */,
 				47CE09251BA2E71700168E4D /* TracksTableViewController.xib in Resources */,
 				988529581BA53102003D5FED /* Layer5.xib in Resources */,
 				988529521BA5300D003D5FED /* Layer2.xib in Resources */,
@@ -524,6 +545,7 @@
 				471EF8F91BA9154F00D21972 /* AlbumTableViewController.xib in Resources */,
 				98DF433E1BA723C40009FB34 /* Make.storyboard in Resources */,
 				9885295E1BA5312D003D5FED /* Layer8.xib in Resources */,
+				5A2F4E301BA98D1500CA71D5 /* SelectedTracksCell.xib in Resources */,
 				47BD97241BA2779F00096854 /* Main.storyboard in Resources */,
 				9885295C1BA53123003D5FED /* Layer7.xib in Resources */,
 				988529561BA530D5003D5FED /* Layer4.xib in Resources */,
@@ -608,6 +630,7 @@
 				5A7F61551BA544FD00555414 /* MakeNewView.swift in Sources */,
 				5A2F4E281BA9255A00CA71D5 /* PlaylistPlayerManager.swift in Sources */,
 				5AD276151BA571590074B49C /* TracksTableView.swift in Sources */,
+				5A2F4E2E1BA98CBB00CA71D5 /* SelectedTracksController.swift in Sources */,
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47F291A41BA8194A00BC8DD0 /* SearchViewController.swift in Sources */,
@@ -621,6 +644,7 @@
 				471EF8FC1BA9157500D21972 /* AlbumTableViewCell.swift in Sources */,
 				471EF9001BA97BD500D21972 /* ConfirmationTableViewCell.swift in Sources */,
 				988529601BA532FD003D5FED /* JaketLayer1View.swift in Sources */,
+				5A2F4E321BA98D4200CA71D5 /* SelectedTracksCellController.swift in Sources */,
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
 				475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */,
 				983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */,
@@ -631,6 +655,7 @@
 				5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */,
 				471EF8E41BA909B400D21972 /* ArtistTableViewCell.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
+				5A2F4E2C1BA9892200CA71D5 /* SelectedTracksView.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				988529681BA537A4003D5FED /* JaketLayer5View.swift in Sources */,
 				5AF773801BA2D353008056A7 /* Track.swift in Sources */,
