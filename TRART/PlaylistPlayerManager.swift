@@ -91,11 +91,10 @@ class PlaylistPlayerManager: NSObject {
     }
     
     func totalTimeStr() -> String {
-        var origin = 0
-        for track in tracks {
-            origin += track.playbackTime
-        }
-        return "\(origin/1000/60):\(origin/1000%60)"
+        let origin = tracks.count * 30
+        let min = Int(origin/60)
+        let sec = NSString(format: "%02d", Int(origin%60))
+        return "\(min):\(sec)"
     }
     
     private func incrCurrentIndex() -> Bool {

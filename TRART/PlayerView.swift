@@ -104,7 +104,9 @@ class PlayerView: UIView, UIScrollViewDelegate {
     func updateTimer() {
         if playlistPlayer.playing() {
             timer.text = playlistPlayer.currentTimeStr()
-            scrollView.contentOffset.x = scrollView.contentOffset.x+1
+            if scrollView.contentOffset.x < scrollView.contentSize.width-self.bounds.size.width {
+                scrollView.contentOffset.x = scrollView.contentOffset.x+1
+            }
         }
     }
     
