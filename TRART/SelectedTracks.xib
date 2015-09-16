@@ -4,9 +4,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedTracksController" customModule="TRART" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedTracksController" customModule="TRART" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="xVQ-BV-OmH" id="G42-1v-HsS"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="xVQ-BV-OmH" customClass="SelectedTracksView" customModule="TRART" customModuleProvider="target">
+        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="xVQ-BV-OmH" customClass="SelectedTracksView" customModule="TRART" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

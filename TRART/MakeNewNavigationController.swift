@@ -30,8 +30,12 @@ class MakeNewNavigationController: UINavigationController {
     
     func showPlaylistPlayer(sender: AnyObject) {
         selectedTracks = UINib(nibName: "SelectedTracks", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! SelectedTracksView
+        
+//        selectedTracks = UINib(nibName: "SelectedTracks", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! SelectedTracksView
+        
         selectedTracks.layer.frame = CGRectMake(0, 0, self.view.bounds.size.width, 80.0)
         selectedTracks.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height - 110.0)
+        println(selectedTracks)
         self.view.addSubview(selectedTracks)
         
         player = UINib(nibName: "Player", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! PlayerView
