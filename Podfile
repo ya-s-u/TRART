@@ -12,7 +12,7 @@ target 'TRART' do
   pod 'PageMenu'
   pod 'APIKit'
   pod 'Spring', '~> 1.0.3'
-  pod 'LTMorphingLabel', '~> 0.0.8'
+  pod 'LTMorphingLabel', '0.0.7'
 end
 
 target 'TRARTTests' do
