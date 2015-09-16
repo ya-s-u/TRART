@@ -16,6 +16,15 @@ class TracksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // register notification
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "resetCreatingPlaylist:",
+            name: "resetCreatingPlaylist",
+            object: nil
+        )
+        
         self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
         
         self.loadPlaylistData()
@@ -126,6 +135,11 @@ class TracksTableViewController: UITableViewController {
         // send notification
         var notification = NSNotification(name: "updatePlayingTracks", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
+    }
+    
+    func resetCreatingPlaylist(sender: AnyObject) {
+        checkedTracks.removeAll()
+        playlistPlayer.tracks.removeAll()
     }
     
 }
