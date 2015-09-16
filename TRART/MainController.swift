@@ -16,6 +16,7 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let realm = Realm()
     var playlists: [Playlist] = []
+    var gradationType: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +93,7 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     func scrollViewDidScroll(scrollView: UIScrollView) {
         changeNavbarAlpha(scrollView.contentOffset.y)
         changeHomeBackgroundImage(scrollView.contentOffset.y)
+        changePlaylistBackgroundAlpha(scrollView.contentOffset.y)
     }
     
     func changeNavbarAlpha(offsetY: CGFloat) {
@@ -102,12 +104,37 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.homeNavigationBar.alpha = offsetY / 320
     }
     
+    func changePlaylistBackgroundAlpha(offsetY: CGFloat) {
+        if offsetY > 320 && offsetY < 640 {
+            self.tableView.backgroundView?.alpha = (offsetY - 320) / 320
+            return
+        }
+    }
+    
     func changeHomeBackgroundImage(offsetY: CGFloat) {
-        if offsetY > 320 {
-            self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist"))
+        if offsetY >= 320 {
+            self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist1"))
             return
         }
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-backimg"))
+    }
+    
+    func changeHomeBackgroudImgGradationColor(offsetY: CGFloat) {
+        println(offsetY%320)
+        if (offsetY%320) >= 0.0 && (offsetY%320) <= 50.0 {
+            if self.gradationType == 0{
+                self.gradationType == 1
+                self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist1"))
+            }
+            else if self.gradationType == 1{
+                self.gradationType == 2
+                self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist2"))
+            }
+            else if self.gradationType == 2{
+                self.gradationType == 0
+                self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist3"))
+            }
+        }
     }
     
     //---------------------------
