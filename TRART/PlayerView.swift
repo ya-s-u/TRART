@@ -73,10 +73,9 @@ class PlayerView: UIView, UIScrollViewDelegate {
         
         var width = self.bounds.width
         for (i, track) in enumerate(playlistPlayer.tracks) {
-            var rand = arc4random() % 2;
             var waveform: UIImage
             
-            switch rand {
+            switch i%3 {
             case 0 :
                 waveform = UIImage(named: "wave1")!
             case 1 :
