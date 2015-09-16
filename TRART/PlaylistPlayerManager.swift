@@ -8,11 +8,7 @@ class PlaylistPlayerManager: NSObject {
     var tracks: [Track] = []
     
     var isPlaying = false
-    var currentIndex = 0 {
-        didSet {
-            play()
-        }
-    }
+    var currentIndex = 0
     
     override init() {
         super.init()

@@ -151,5 +151,9 @@ class PlayerView: UIView, UIScrollViewDelegate {
     
     func selectWillPlayTrack(notification: NSNotification) {
         scrollView.contentOffset.x = CGFloat(playlistPlayer.currentIndex * 300)
+        
+        // Play
+        button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
+        playlistPlayer.play()
     }
 }
