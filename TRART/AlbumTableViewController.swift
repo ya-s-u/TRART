@@ -55,6 +55,7 @@ class AlbumTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : AlbumTableViewCell = tableView.dequeueReusableCellWithIdentifier("AlbumTableViewCell") as! AlbumTableViewCell
         cell.track = tracks[indexPath.row]
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     

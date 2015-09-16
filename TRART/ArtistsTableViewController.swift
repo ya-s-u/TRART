@@ -55,6 +55,7 @@ class ArtistsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : ArtistTableViewCell = tableView.dequeueReusableCellWithIdentifier("ArtistTableViewCell") as! ArtistTableViewCell
         cell.track = tracks[indexPath.row]
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     
