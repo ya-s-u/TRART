@@ -47,7 +47,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         myBarButton_Done.tintColor = UIColor.auditionTextColor()
         myBarButton_Cancel.tintColor = UIColor.whiteColor()
         
-        
         self.navigationController?.navigationBar
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
