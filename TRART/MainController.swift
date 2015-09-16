@@ -85,7 +85,7 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 310.0
+        return 290.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -117,8 +117,8 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func changePlaylistBackgroundAlpha(offsetY: CGFloat) {
-        if offsetY > 320 && offsetY < 840 {
-            self.tableView.backgroundView?.alpha = (offsetY - 320) / 520
+        if offsetY > 320 && offsetY < 1040 {
+            self.tableView.backgroundView?.alpha = (offsetY - 320) / 720
             return
         }
     }

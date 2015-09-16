@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-backimg" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-Ry-jlO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-Ry-jlO">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="曲名やアーティスト名で検索" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FqB-d4-ZTr">
@@ -48,6 +48,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Home-backimg" width="375" height="667"/>
+        <image name="bg2" width="375" height="667"/>
     </resources>
 </document>
