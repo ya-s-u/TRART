@@ -5,6 +5,7 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     @IBOutlet weak var collectionView: UICollectionView!
     
     let playlistPlayer = PlaylistPlayerManager.sharedInstance
+    var lastPath: NSIndexPath!
     
     override func awakeFromNib() {
         // receive notification
@@ -35,18 +36,23 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
             cell.image.image = UIImage(named: "track\(indexPath.row+1)")
             cell.name.text = "トラック\(indexPath.row+1)"
         }
-        
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Num: \(indexPath.row)")
-        let cell: SelectedTracksCell = collectionView.dequeueReusableCellWithReuseIdentifier("SelectedTracksCell",
-            forIndexPath: indexPath) as! SelectedTracksCell
-//        cell.select()
+        if indexPath.row >= playlistPlayer.tracks.count {
+            return
+        }
         
-        cell.image.layer.borderColor = UIColor.auditionTextColor().CGColor
-        cell.image.layer.borderWidth = 2
+        if lastPath != nil {
+            let lastCell = collectionView.cellForItemAtIndexPath(lastPath) as! SelectedTracksCell
+            lastCell.unselect()
+        }
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! SelectedTracksCell
+        cell.select()
+        
+        lastPath = indexPath
     }
     
     func updatePlayingTracks(notification: NSNotification) {

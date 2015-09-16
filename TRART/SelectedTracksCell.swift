@@ -24,9 +24,11 @@ class SelectedTracksCell: UICollectionViewCell {
     func select() {
         image.layer.borderColor = UIColor.auditionTextColor().CGColor
         image.layer.borderWidth = 2
+        image.alpha = 0.5
     }
     
-    func diselect() {
+    func unselect() {
         image.layer.borderWidth = 0
+        image.alpha = 1
     }
 }
