@@ -1,11 +1,13 @@
 import UIKit
 import RealmSwift
 
-class MakeConfirmViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
+class MakeConfirmViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UITableViewDelegate {
     
     @IBOutlet var CloseView: UIView!
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListComment: UIPlaceHolderTextView!
+    @IBOutlet weak var tableView: UITableView!
+    
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     var myBarButton_1:UIBarButtonItem!
     let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -13,6 +15,10 @@ class MakeConfirmViewController: UIViewController, UITextFieldDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "プレイリストを編集"
+        
+        //tableView Delegate
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         self.notificationCenter.addObserver(self, selector: "showKeyboard:", name: UIKeyboardDidShowNotification, object: nil)
         self.notificationCenter.addObserver(self, selector: "hideKeyboard:", name: UIKeyboardDidHideNotification, object: nil)
@@ -85,6 +91,31 @@ class MakeConfirmViewController: UIViewController, UITextFieldDelegate, UITableV
             myBarButton_1.enabled = false
         }
     }
+    
+    //---------------------------
+    //# MARK: - TableViewMethod
+    //---------------------------
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.del.playlist.tracks.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 68.0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ConfirmationTableViewCell") as! ConfirmationTableViewCell
+        
+        cell.track = self.del.playlist.tracks[indexPath.row]
+        
+        return cell
+    }
+
     
     
     //---------------------------
