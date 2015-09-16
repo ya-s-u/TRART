@@ -17,8 +17,11 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         self.title = "プレイリストを編集"
         
         // adjust scrollview in device size
-        let scrollSize = CGSizeMake(UIScreen.mainScreen().bounds.height-44, UIScreen.mainScreen().bounds.size.width)
-        scrollView.contentSize = scrollSize
+        scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.height-44, UIScreen.mainScreen().bounds.size.width)
+        
+        // adjust tableview ** disable autolayout **
+        tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        tableView.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height-290, UIScreen.mainScreen().bounds.size.width, 220);
         
         //tableView Delegate
         self.tableView.delegate = self
