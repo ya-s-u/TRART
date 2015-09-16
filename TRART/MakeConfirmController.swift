@@ -84,6 +84,9 @@ class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
         if indexOfArray(viewControllers!, searchObject: self) == nil{
             del.playlist.jackets.removeAll()
             
+            // show player
+            var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
         }
         super.viewWillDisappear(animated)
     }
