@@ -50,10 +50,12 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadPlaylistData(){
         playlists.removeAll()
         
+        var playlistTmp: [Playlist] = []
         let realmResponse = realm.objects(Playlist)
         for playlist in realmResponse {
-            playlists.append(playlist)
+            playlistTmp.append(playlist)
         }
+        self.playlists = playlistTmp.reverse()
                 
         self.tableView.reloadData()
     }
