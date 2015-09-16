@@ -1,6 +1,6 @@
 import UIKit
 
-class PlayerView: UIView {
+class PlayerView: UIView, UIScrollViewDelegate {
     var app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
     let player = PlayerManager.sharedInstance
@@ -11,7 +11,7 @@ class PlayerView: UIView {
     @IBOutlet weak var mask: UIView!
     
     override func awakeFromNib() {
-        // register notification
+        // receive notification
         NSNotificationCenter.defaultCenter().addObserver(
             self,
             selector: "updatePlayingTracks:",
@@ -23,6 +23,8 @@ class PlayerView: UIView {
         
         timer.font = UIFont.systemFontOfSize(13)
         timer.textColor = UIColor.whiteColor()
+        
+        scrollView.delegate = self
         
         mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
         mask.userInteractionEnabled = false
@@ -46,12 +48,12 @@ class PlayerView: UIView {
     func updatePlayingTracks(notification: NSNotification) {
         removeScrollViewSubViews()
         
-        var width = CGFloat(0.0)
+        var width = self.bounds.width
         for (i, track) in enumerate(app.playingTracks) {
             let waveform = UIImage(named: "dummy-pulse")!
             let waveformView = UIImageView()
             waveformView.image = waveform
-            waveformView.frame = CGRectMake(waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
+            waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
             scrollView.addSubview(waveformView)
             
             width += waveform.size.width
@@ -74,4 +76,12 @@ class PlayerView: UIView {
         }
     }
     
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        println(scrollView.contentOffset.x/10)
+        player.pos(Double(scrollView.contentOffset.x/10))
+    }
+    
+    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        scrollView.setContentOffset(scrollView.contentOffset, animated: false)
+    }
 }

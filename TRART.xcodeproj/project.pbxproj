@@ -191,6 +191,7 @@
 		47BD971B1BA2779F00096854 /* TRART */ = {
 			isa = PBXGroup;
 			children = (
+				5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */,
 				47BD971E1BA2779F00096854 /* AppDelegate.swift */,
 				5AF773831BA2E80B008056A7 /* Extensions */,
 				5AE0DCF21BA2B0C900EE2A1B /* Services */,
@@ -200,7 +201,6 @@
 				5AE0DCF61BA2B0EE00EE2A1B /* Layouts */,
 				47BD97251BA2779F00096854 /* Images.xcassets */,
 				47BD971C1BA2779F00096854 /* Supporting Files */,
-				5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */,
 			);
 			path = TRART;
 			sourceTree = "<group>";
