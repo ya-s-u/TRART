@@ -11,6 +11,7 @@ class PlayerManager: NSObject, AVAudioPlayerDelegate {
             let fileUrl = NSURL(string: self.track!.trackSource)
             let soundData = NSData(contentsOfURL: fileUrl!)
             audioPlayer = AVAudioPlayer(data: soundData, error: nil)
+            audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
         }
     }
@@ -22,6 +23,12 @@ class PlayerManager: NSObject, AVAudioPlayerDelegate {
     }
     
     func stop() {
+        if let audioPlayer = audioPlayer {
+            audioPlayer.stop()
+        }
+    }
+    
+    func pause() {
         if let audioPlayer = audioPlayer {
             audioPlayer.pause()
         }

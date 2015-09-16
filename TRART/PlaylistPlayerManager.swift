@@ -5,7 +5,13 @@ class PlaylistPlayerManager: NSObject {
     static let sharedInstance = PlaylistPlayerManager()
     
     let player = PlayerManager.sharedInstance
-    var tracks: [Track] = []
+    var tracks: [Track] = [] {
+        didSet {
+            if tracks.count > 0 {
+                player.track = tracks[currentIndex]
+            }
+        }
+    }
     
     var isPlaying = false
     var currentIndex = 0
@@ -23,13 +29,17 @@ class PlaylistPlayerManager: NSObject {
     }
     
     func play() {
-        player.track = tracks[currentIndex]
         player.play()
         isPlaying = true
     }
     
     func stop() {
         player.stop()
+        isPlaying = false
+    }
+    
+    func pause() {
+        player.pause()
         isPlaying = false
     }
     
@@ -44,9 +54,8 @@ class PlaylistPlayerManager: NSObject {
         } else if oldIndex > currentIndex {
             prev()
             player.pos(offset)
-        } else {
-            player.pos(offset)
         }
+        player.pos(offset)
     }
     
     func next() {
@@ -69,8 +78,15 @@ class PlaylistPlayerManager: NSObject {
         }
     }
     
-    func isPlay() -> Bool {
+    func playing() -> Bool {
         return isPlaying
+    }
+    
+    func isLast() -> Bool {
+        if currentIndex == tracks.count-1 {
+            return true
+        }
+        return false
     }
     
     func currentTimeStr() -> String {
@@ -100,5 +116,9 @@ class PlaylistPlayerManager: NSObject {
 
     func finishPlayer(sender: AnyObject) {
         next()
+        if isPlaying == false {
+            var notification = NSNotification(name: "finishPlaylistPlayer", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        }
     }
 }
