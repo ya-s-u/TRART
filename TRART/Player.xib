@@ -14,7 +14,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="605" height="70"/>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-Yh-er5">
-                    <rect key="frame" x="563" y="47" width="34" height="21"/>
+                    <rect key="frame" x="563" y="48" width="34" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="MIr-jp-gCe" secondAttribute="trailing" constant="-4.5" id="8bM-BK-Q6A"/>
-                <constraint firstAttribute="bottom" secondItem="BuA-6N-fLW" secondAttribute="bottom" constant="3" id="A3z-82-i2p"/>
+                <constraint firstAttribute="bottom" secondItem="BuA-6N-fLW" secondAttribute="bottom" id="A3z-82-i2p"/>
                 <constraint firstItem="MIr-jp-gCe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JdS-LD-U2S"/>
                 <constraint firstAttribute="trailing" secondItem="aBT-Yh-er5" secondAttribute="trailing" constant="4" id="all-gU-aB9"/>
                 <constraint firstItem="aBT-Yh-er5" firstAttribute="leading" secondItem="MIr-jp-gCe" secondAttribute="trailing" constant="-44" id="cox-Jy-gNX"/>
