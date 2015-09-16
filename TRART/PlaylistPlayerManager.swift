@@ -90,6 +90,14 @@ class PlaylistPlayerManager: NSObject {
         return "\(min):\(sec)"
     }
     
+    func totalTimeStr() -> String {
+        var origin = 0
+        for track in tracks {
+            origin += track.playbackTime
+        }
+        return "\(origin/1000/60):\(origin/1000%60)"
+    }
+    
     private func incrCurrentIndex() -> Bool {
         if currentIndex < tracks.count-1 {
             currentIndex++
