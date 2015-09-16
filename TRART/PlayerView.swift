@@ -1,7 +1,7 @@
 import UIKit
 
 class PlayerView: UIView, UIScrollViewDelegate {
-    var app =  UIApplication.sharedApplication().delegate as! AppDelegate
+    let app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
     let player = PlayerManager.sharedInstance
     
@@ -36,10 +36,11 @@ class PlayerView: UIView, UIScrollViewDelegate {
     }
     
     @IBAction func tapButton(sender: AnyObject) {
-        if player.isPlaying() {
+        if (app.playingTracks.count==0 || player.isPlaying()) {
             player.stop()
             button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
         } else {
+            player.track = app.playingTracks[0]
             player.play()
             button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
         }

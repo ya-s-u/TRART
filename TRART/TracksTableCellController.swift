@@ -33,7 +33,12 @@ class TracksTableCellController: UITableViewCell {
     }
     
     @IBAction func tapCover(sender: AnyObject) {
-        player.track = track
+        if player.isPlaying() {
+            player.stop()
+        } else {
+            player.track = track
+            player.play()
+        }
     }
     
 }
