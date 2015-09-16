@@ -239,7 +239,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kTG-iO-rma">
-                                <rect key="frame" x="0.0" y="385" width="600" height="215"/>
+                                <rect key="frame" x="0.0" y="410" width="600" height="190"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="7" id="lfn-wx-Nw0">
                                     <size key="itemSize" width="81" height="98"/>
@@ -455,11 +455,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4h-Bg-WqH">
-                                                    <rect key="frame" x="0.0" y="28" width="172" height="172"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNu-Bt-lgS">
                                                     <rect key="frame" x="171" y="28" width="172" height="172"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4h-Bg-WqH">
+                                                    <rect key="frame" x="0.0" y="28" width="172" height="172"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -553,8 +553,8 @@
                                     <outlet property="delegate" destination="uKh-gm-GNM" id="Xt8-xd-hIX"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
-                                <rect key="frame" x="265" y="308" width="71" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
+                                <rect key="frame" x="249" y="308" width="103" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="kdI-fe-52n"/>
                                 </constraints>
@@ -564,12 +564,22 @@
                                     </mask>
                                 </variation>
                             </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_editor" translatesAutoresizingMaskIntoConstraints="NO" id="LCm-xp-fcQ">
+                                <rect key="frame" x="236" y="380" width="129" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="JSu-Or-8Bj"/>
+                                    <constraint firstAttribute="width" constant="129" id="R1P-Cm-4Tr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="kTG-iO-rma" secondAttribute="centerX" id="36o-Bn-qHQ"/>
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="leading" secondItem="Fvv-A7-CMR" secondAttribute="leading" id="48A-7z-ood"/>
                             <constraint firstAttribute="centerX" secondItem="3ek-5u-4ge" secondAttribute="centerX" id="LeS-r9-RS5"/>
+                            <constraint firstItem="kTG-iO-rma" firstAttribute="top" secondItem="LCm-xp-fcQ" secondAttribute="bottom" constant="18" id="NLe-yc-z05"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kTG-iO-rma" secondAttribute="trailing" constant="-16" id="RTp-gt-9Kl"/>
+                            <constraint firstItem="LCm-xp-fcQ" firstAttribute="top" secondItem="eN3-tT-iM1" secondAttribute="bottom" constant="35" id="Vhx-iV-iiK"/>
                             <constraint firstAttribute="bottomMargin" secondItem="kTG-iO-rma" secondAttribute="bottom" id="W31-0K-R1s"/>
                             <constraint firstAttribute="centerX" secondItem="eN3-tT-iM1" secondAttribute="centerX" id="eRd-BD-B9Y"/>
                             <constraint firstAttribute="trailing" secondItem="rnV-6v-zj7" secondAttribute="trailing" id="fBi-ol-hSL"/>
@@ -578,7 +588,14 @@
                             <constraint firstItem="rnV-6v-zj7" firstAttribute="top" secondItem="Fvv-A7-CMR" secondAttribute="topMargin" constant="72" id="loR-Q8-57o"/>
                             <constraint firstItem="kTG-iO-rma" firstAttribute="top" secondItem="eN3-tT-iM1" secondAttribute="bottom" constant="40" id="pbJ-8i-ZfY"/>
                             <constraint firstItem="eN3-tT-iM1" firstAttribute="top" secondItem="rnV-6v-zj7" secondAttribute="bottom" constant="8" id="rgS-WW-f8L"/>
+                            <constraint firstAttribute="centerX" secondItem="LCm-xp-fcQ" secondAttribute="centerX" id="tss-OM-Xww"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="36o-Bn-qHQ"/>
+                                <exclude reference="pbJ-8i-ZfY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bJo-uE-EUW"/>
                     <connections>
@@ -843,5 +860,6 @@
         <image name="edit" width="44" height="44"/>
         <image name="finish" width="100" height="30"/>
         <image name="share" width="33" height="11"/>
+        <image name="text_editor" width="129" height="12"/>
     </resources>
 </document>
