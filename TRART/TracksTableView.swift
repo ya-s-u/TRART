@@ -15,6 +15,6 @@ class TracksTableView: UITableView {
         self.separatorColor = UIColor.rgbColor(0x404040)
         self.layoutMargins = UIEdgeInsetsZero
 //        self.backgroundColor = UIColor.makeNewTabColorActive()
-        self.backgroundView = UIImageView(image: UIImage(named: "bg"))
+        self.backgroundView = UIImageView(image: UIImage(named: "bg2"))
     }
 }
