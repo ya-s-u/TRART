@@ -29,6 +29,13 @@ class PlayerView: UIView, UIScrollViewDelegate {
             object: nil
         )
         
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "selectWillPlayTrack:",
+            name: "selectWillPlayTrack",
+            object: nil
+        )
+        
         // interval timer
         NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
         
@@ -140,5 +147,9 @@ class PlayerView: UIView, UIScrollViewDelegate {
     
     func finishPlaylistPlayer(notification: NSNotification) {
         button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
+    }
+    
+    func selectWillPlayTrack(notification: NSNotification) {
+        scrollView.contentOffset.x = CGFloat(playlistPlayer.currentIndex * 300)
     }
 }

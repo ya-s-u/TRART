@@ -53,6 +53,13 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         cell.select()
         
         lastPath = indexPath
+        
+        // set track
+        playlistPlayer.currentIndex = indexPath.row
+        
+        // send notification
+        var notification = NSNotification(name: "selectWillPlayTrack", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
     func updatePlayingTracks(notification: NSNotification) {

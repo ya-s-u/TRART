@@ -8,7 +8,11 @@ class PlaylistPlayerManager: NSObject {
     var tracks: [Track] = []
     
     var isPlaying = false
-    var currentIndex = 0
+    var currentIndex = 0 {
+        didSet {
+            play()
+        }
+    }
     
     override init() {
         super.init()
@@ -27,7 +31,6 @@ class PlaylistPlayerManager: NSObject {
         if tracks.count > 0 {
             player.track = tracks[currentIndex]
         }
-        println(player.isPlaying())
         player.play()
         isPlaying = true
     }
@@ -117,6 +120,8 @@ class PlaylistPlayerManager: NSObject {
         next()
         if isPlaying == false {
             currentIndex = 0
+            
+            // send notification
             var notification = NSNotification(name: "finishPlaylistPlayer", object: nil)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
