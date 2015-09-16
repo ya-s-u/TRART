@@ -49,7 +49,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         
         
         self.navigationController?.navigationBar
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
         self.navigationItem.setLeftBarButtonItem(myBarButton_Cancel, animated: true)

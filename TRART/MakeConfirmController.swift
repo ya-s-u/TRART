@@ -39,7 +39,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         myBarButton_1 = UIBarButtonItem(title: "公開", style:.Plain, target: self, action: "onClickMyBarButton:")
         
         self.navigationController?.navigationBar
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_1, animated: true)
         
