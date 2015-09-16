@@ -1,6 +1,8 @@
 import UIKit
 
 class PlayerView: UIView {
+    var app =  UIApplication.sharedApplication().delegate as! AppDelegate
+    
     let player = PlayerManager.sharedInstance
     
     @IBOutlet weak var button: UIButton!
@@ -9,6 +11,14 @@ class PlayerView: UIView {
     @IBOutlet weak var mask: UIView!
     
     override func awakeFromNib() {
+        // register notification
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "updatePlayingTracks:",
+            name: "updatePlayingTracks",
+            object: nil
+        )
+        
         NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
         
         timer.font = UIFont.systemFontOfSize(13)
@@ -19,6 +29,13 @@ class PlayerView: UIView {
         myImageView.image = myImage
         myImageView.frame = CGRectMake(0, 0, myImage.size.width, self.bounds.height)
         scrollView.addSubview(myImageView)
+        
+        let myImage2 = UIImage(named: "dummy-pulse")!
+        let myImageView2 = UIImageView()
+        myImageView2.image = myImage2
+        myImageView2.frame = CGRectMake(myImage.size.width, 0, myImage2.size.width, self.bounds.height)
+        scrollView.addSubview(myImageView2)
+        
         scrollView.contentSize = CGSizeMake(1200, self.bounds.height)
         
         mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
@@ -38,6 +55,10 @@ class PlayerView: UIView {
             player.play()
             button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
         }
+    }
+    
+    func updatePlayingTracks(notification: NSNotification) {
+        println(app.playingTracks)
     }
     
     func updateTimer() {

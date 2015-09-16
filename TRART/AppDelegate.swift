@@ -7,6 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var playlist:Playlist!
+    var playingTracks: [Track] = []
     
     let realm = Realm()
 
