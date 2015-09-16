@@ -19,6 +19,7 @@
 		471EF8F91BA9154F00D21972 /* AlbumTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471EF8F71BA9154F00D21972 /* AlbumTableViewController.xib */; };
 		471EF8FC1BA9157500D21972 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF8FA1BA9157500D21972 /* AlbumTableViewCell.swift */; };
 		471EF8FD1BA9157500D21972 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471EF8FB1BA9157500D21972 /* AlbumTableViewCell.xib */; };
+		471EF9001BA97BD500D21972 /* ConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF8FF1BA97BD500D21972 /* ConfirmationTableViewCell.swift */; };
 		475B335E1BA5C4BE00EC0E6A /* MainTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */; };
 		475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */; };
 		475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33611BA5CBF000EC0E6A /* MainController.swift */; };
@@ -102,6 +103,7 @@
 		471EF8F71BA9154F00D21972 /* AlbumTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumTableViewController.xib; sourceTree = "<group>"; };
 		471EF8FA1BA9157500D21972 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		471EF8FB1BA9157500D21972 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		471EF8FF1BA97BD500D21972 /* ConfirmationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationTableViewCell.swift; sourceTree = "<group>"; };
 		475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableHeaderController.swift; sourceTree = "<group>"; };
 		475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableHeader.xib; sourceTree = "<group>"; };
 		475B33611BA5CBF000EC0E6A /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,19 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		471EF8FE1BA97BB000D21972 /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */,
+				5A7F61501BA5312D00555414 /* MakeConfirmController.swift */,
+				5A7F61521BA5314E00555414 /* MakeJacketController.swift */,
+				986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */,
+				98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */,
+				471EF8FF1BA97BD500D21972 /* ConfirmationTableViewCell.swift */,
+			);
+			name = Confirmation;
+			sourceTree = "<group>";
+		};
 		47BD97101BA2779F00096854 = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +377,7 @@
 				98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */,
 				5A2F4E2D1BA98CBB00CA71D5 /* SelectedTracksController.swift */,
 				5A2F4E311BA98D4200CA71D5 /* SelectedTracksCellController.swift */,
+				471EF8FE1BA97BB000D21972 /* Confirmation */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -626,6 +642,7 @@
 				47CE091B1BA2D4C900168E4D /* MakeNewController.swift in Sources */,
 				988529621BA53775003D5FED /* JaketLayer2View.swift in Sources */,
 				471EF8FC1BA9157500D21972 /* AlbumTableViewCell.swift in Sources */,
+				471EF9001BA97BD500D21972 /* ConfirmationTableViewCell.swift in Sources */,
 				988529601BA532FD003D5FED /* JaketLayer1View.swift in Sources */,
 				5A2F4E321BA98D4200CA71D5 /* SelectedTracksCellController.swift in Sources */,
 				5AF773851BA2E84F008056A7 /* UIColor+.swift in Sources */,
