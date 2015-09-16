@@ -73,10 +73,9 @@ class PlayerView: UIView, UIScrollViewDelegate {
         
         var width = self.bounds.width
         for (i, track) in enumerate(playlistPlayer.tracks) {
-            var rand = arc4random() % 2;
             var waveform: UIImage
             
-            switch rand {
+            switch i%3 {
             case 0 :
                 waveform = UIImage(named: "wave1")!
             case 1 :
@@ -87,7 +86,7 @@ class PlayerView: UIView, UIScrollViewDelegate {
             
             let waveformView = UIImageView()
             waveformView.image = waveform
-            waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
+            waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 5, waveform.size.width, self.bounds.height-10)
             scrollView.addSubview(waveformView)
             
             if (i>0 && i<playlistPlayer.tracks.count) {
