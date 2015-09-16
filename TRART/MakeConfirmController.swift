@@ -35,19 +35,10 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
 
         myBarButton_1 = UIBarButtonItem(title: "公開", style:.Plain, target: self, action: "onClickMyBarButton:")
         
-        //---------------------------
-        //# TODO: - 戻るボタンのデザイン(今はできない:9/16 12:00)
-        //---------------------------
-        //戻るボタンの編集(今はできない:9/16 12:00)
-//        let backButton = UIBarButtonItem(title: "＜", style: .Plain, target: self, action: "popViewControllerAnimated:")
-////
-//        self.navigationItem.leftBarButtonItem = backButton
-        
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_1, animated: true)
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         
         self.enableButton()
     }
