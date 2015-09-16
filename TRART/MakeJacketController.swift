@@ -44,6 +44,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 
         myBarButton_Done = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: "onDoneButton:")
         myBarButton_Cancel = UIBarButtonItem(title: "キャンセル", style: .Plain, target: self, action: "onCancelButton:")
+        myBarButton_Done.tintColor = UIColor.auditionTextColor()
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -51,7 +52,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
         self.navigationItem.setLeftBarButtonItem(myBarButton_Cancel, animated: true)
         
-        pageControl.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        pageControl.transform = CGAffineTransformMakeScale(0.8, 0.8)
         pageControl.currentPageIndicatorTintColor = UIColor.auditionTextColor()
         lview.backgroundColor = UIColor.clearColor()
         sview.backgroundColor = UIColor.clearColor()
