@@ -23,13 +23,22 @@ class PlaylistPlayerManager: NSObject {
     }
     
     func play() {
-        player.track = tracks[currentIndex]
+        // set track on the first time
+        if tracks.count > 0 {
+            player.track = tracks[currentIndex]
+        }
+        println(player.isPlaying())
         player.play()
         isPlaying = true
     }
     
     func stop() {
         player.stop()
+        isPlaying = false
+    }
+    
+    func pause() {
+        player.pause()
         isPlaying = false
     }
     
@@ -44,9 +53,8 @@ class PlaylistPlayerManager: NSObject {
         } else if oldIndex > currentIndex {
             prev()
             player.pos(offset)
-        } else {
-            player.pos(offset)
         }
+        player.pos(offset)
     }
     
     func next() {
@@ -69,7 +77,7 @@ class PlaylistPlayerManager: NSObject {
         }
     }
     
-    func isPlay() -> Bool {
+    func playing() -> Bool {
         return isPlaying
     }
     
@@ -100,5 +108,9 @@ class PlaylistPlayerManager: NSObject {
 
     func finishPlayer(sender: AnyObject) {
         next()
+        if isPlaying == false {
+            var notification = NSNotification(name: "finishPlaylistPlayer", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        }
     }
 }

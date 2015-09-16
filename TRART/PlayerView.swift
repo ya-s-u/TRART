@@ -3,7 +3,6 @@ import UIKit
 class PlayerView: UIView, UIScrollViewDelegate {
     let app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
-//    let player = PlayerManager.sharedInstance
     let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
     @IBOutlet weak var button: UIButton!
@@ -17,6 +16,13 @@ class PlayerView: UIView, UIScrollViewDelegate {
             self,
             selector: "updatePlayingTracks:",
             name: "updatePlayingTracks",
+            object: nil
+        )
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "finishPlaylistPlayer:",
+            name: "finishPlaylistPlayer",
             object: nil
         )
         
@@ -38,10 +44,17 @@ class PlayerView: UIView, UIScrollViewDelegate {
     }
     
     @IBAction func tapButton(sender: AnyObject) {
-        if (playlistPlayer.tracks.count==0 || playlistPlayer.isPlay()) {
-            playlistPlayer.stop()
+        if playlistPlayer.playing() {
+            // Pause
+            playlistPlayer.pause()
             button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
-        } else {
+        } else if playlistPlayer.tracks.count > 0 {
+            // Replay
+            if scrollView.contentOffset.x >= scrollView.contentSize.width-self.bounds.size.width {
+                resetScrollViewOffSet()
+            }
+            
+            // Play
             playlistPlayer.play()
             button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
         }
@@ -79,18 +92,25 @@ class PlayerView: UIView, UIScrollViewDelegate {
     }
     
     func updateTimer() {
-        if playlistPlayer.isPlay() {
+        if playlistPlayer.playing() {
             timer.text = playlistPlayer.currentTimeStr()
             scrollView.contentOffset.x = scrollView.contentOffset.x+1
         }
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        println(scrollView.contentOffset.x/10)
         playlistPlayer.pos(Double(scrollView.contentOffset.x/10))
+    }
+    
+    func resetScrollViewOffSet() {
+        scrollView.contentOffset.x = 0
     }
     
     func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
         scrollView.setContentOffset(scrollView.contentOffset, animated: false)
+    }
+    
+    func finishPlaylistPlayer(notification: NSNotification) {
+        button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
     }
 }
