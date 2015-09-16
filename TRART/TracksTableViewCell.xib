@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -42,7 +42,7 @@
                             <action selector="tapCover:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PSq-Fa-SYu"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="wq5-GE-vov">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="wq5-GE-vov" customClass="SpringImageView" customModule="Spring">
                         <rect key="frame" x="282" y="25" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="1Rd-g0-ugY"/>
@@ -88,7 +88,7 @@
             <connections>
                 <outlet property="artist" destination="SMn-qS-ZM3" id="u3K-68-NSN"/>
                 <outlet property="cover" destination="UmK-zx-b1S" id="CY4-Lj-2BF"/>
-                <outlet property="plusButton" destination="wq5-GE-vov" id="h75-m5-m3Q"/>
+                <outlet property="plusButton" destination="wq5-GE-vov" id="QVj-ol-oRS"/>
                 <outlet property="trackName" destination="kud-2q-Tsy" id="hfM-0x-JGA"/>
             </connections>
             <point key="canvasLocation" x="334" y="353"/>

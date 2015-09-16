@@ -100,7 +100,7 @@ class TracksTableViewController: UITableViewController {
                 var notification : NSNotification = NSNotification(name: "8TracksUnSelected", object: nil)
                 NSNotificationCenter.defaultCenter().postNotification(notification)
             }
-            
+            cell.animation()
             updatePlayingTracks()
             return
         }
@@ -114,6 +114,7 @@ class TracksTableViewController: UITableViewController {
                 self.checkedTracks[self.tracks[indexPath.row].itunesId] = self.tracks[indexPath.row]
             }
             cell.isChecked = !cell.isChecked
+            cell.animation()
         }
         
         if self.checkedTracks.count == 8 {
