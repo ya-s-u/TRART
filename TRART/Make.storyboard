@@ -574,6 +574,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="uAS-mm-9UE" firstAttribute="top" secondItem="EvL-vu-s9u" secondAttribute="bottom" constant="8" id="0wR-3c-8rv"/>
                                     <constraint firstItem="eHd-j5-XNh" firstAttribute="bottom" secondItem="7JM-Dc-9Dq" secondAttribute="bottom" constant="17" id="4hF-tH-5MZ"/>
@@ -634,6 +635,9 @@
                                         <exclude reference="pi6-SM-iih"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hX8-Oi-O5W" appends="YES" id="bnY-6u-ne2"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -654,6 +658,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMp-Qf-TQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hX8-Oi-O5W">
+                    <connections>
+                        <action selector="tapScreen:" destination="C66-NY-jZD" id="yX2-Nk-FQg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="496" y="1188"/>
         </scene>

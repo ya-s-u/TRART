@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
 
-class MakeConfirmViewController: UIViewController {
+class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var PlaylistTitle: UITextField!
@@ -12,6 +12,7 @@ class MakeConfirmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PlaylistTitle.delegate = self
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
         PlaylistTitle.attributedPlaceholder = NSAttributedString(string:"タイトル(必須)",
             attributes:[NSForegroundColorAttributeName: UIColor.placeHolderColor()])
@@ -38,6 +39,14 @@ class MakeConfirmViewController: UIViewController {
         }else{
             myBarButton_1.enabled = false
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     @IBAction func didChange(sender: AnyObject) {
@@ -82,4 +91,7 @@ class MakeConfirmViewController: UIViewController {
         return nil
     }
     
+    @IBAction func tapScreen(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
 }
