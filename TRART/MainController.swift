@@ -9,18 +9,25 @@
 import UIKit
 import RealmSwift
 
-class MainController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var homeNavigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
+    
     let realm = Realm()
     var playlists: [Playlist] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Navbar
+        self.homeNavigationBar.alpha = 0
+        
+        //TableViewHeader
         let header: MainTableHeaderController = UINib(nibName: "MainTableHeader", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MainTableHeaderController
         self.tableView.tableHeaderView = header
         
+        //Nortification
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToMakeNew", name: "CreateButton", object: nil)
         
         //tableView Delegate
@@ -52,6 +59,15 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.reloadData()
     }
     
+    func changeNavbarAlpha(offsetY: CGFloat) {
+        
+        if offsetY < 0 {
+            return
+        }
+        
+        self.homeNavigationBar.alpha = offsetY / 320
+    }
+    
     //---------------------------
     //# MARK: - TableViewMethod
     //---------------------------
@@ -76,6 +92,10 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.commentLabel.text = playlists[indexPath.row].comment
         
         return cell
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        changeNavbarAlpha(scrollView.contentOffset.y)
     }
     
     //---------------------------

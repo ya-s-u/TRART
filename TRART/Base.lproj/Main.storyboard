@@ -106,26 +106,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-Ea-dAF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="bEg-Z9-dcS"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hkj-qr-zKF" secondAttribute="trailing" constant="-16" id="0Pr-Ba-Yhj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iL5-x5-eIf" secondAttribute="trailing" constant="-16" id="65l-F4-Aj8"/>
                             <constraint firstItem="iL5-x5-eIf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="79E-sK-0Fv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e4E-Ea-dAF" secondAttribute="trailing" constant="-16" id="R2z-Ea-GOv"/>
                             <constraint firstItem="iL5-x5-eIf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="SdT-fs-ncX"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="iL5-x5-eIf" secondAttribute="bottom" id="Ulu-OT-wQW"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hkj-qr-zKF" secondAttribute="bottom" id="UyU-vf-69g"/>
                             <constraint firstItem="hkj-qr-zKF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="pnD-93-EUx"/>
+                            <constraint firstItem="e4E-Ea-dAF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="uKB-EE-aq4"/>
                             <constraint firstItem="hkj-qr-zKF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-16" id="umM-y8-BIO"/>
+                            <constraint firstItem="e4E-Ea-dAF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="wei-jU-bQt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="homeNavigationBar" destination="e4E-Ea-dAF" id="pgQ-aJ-qOo"/>
                         <outlet property="tableView" destination="hkj-qr-zKF" id="wv5-uH-R52"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="325"/>
+            <point key="canvasLocation" x="335" y="347"/>
         </scene>
         <!--Make New Controller-->
         <scene sceneID="cMc-yA-6ir">
