@@ -106,10 +106,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-Ea-dAF">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-Ea-dAF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="O1g-GR-EOV"/>
+                                </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="bEg-Z9-dcS"/>
+                                    <navigationItem title="TRART" id="bEg-Z9-dcS"/>
                                 </items>
                             </navigationBar>
                         </subviews>

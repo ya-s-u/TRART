@@ -59,15 +59,6 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.reloadData()
     }
     
-    func changeNavbarAlpha(offsetY: CGFloat) {
-        
-        if offsetY < 0 {
-            return
-        }
-        
-        self.homeNavigationBar.alpha = offsetY / 320
-    }
-    
     //---------------------------
     //# MARK: - TableViewMethod
     //---------------------------
@@ -94,8 +85,29 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    //---------------------------
+    //# MARK: - ScrollViewMethod
+    //---------------------------
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         changeNavbarAlpha(scrollView.contentOffset.y)
+        changeHomeBackgroundImage(scrollView.contentOffset.y)
+    }
+    
+    func changeNavbarAlpha(offsetY: CGFloat) {
+        if offsetY < 0 {
+            self.homeNavigationBar.alpha = 0
+            return
+        }
+        self.homeNavigationBar.alpha = offsetY / 320
+    }
+    
+    func changeHomeBackgroundImage(offsetY: CGFloat) {
+        if offsetY > 320 {
+            self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist"))
+            return
+        }
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-backimg"))
     }
     
     //---------------------------
