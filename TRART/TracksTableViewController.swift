@@ -4,7 +4,7 @@ import SDWebImage
 
 class TracksTableViewController: UITableViewController {
     
-    var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
+    var del =  UIApplication.sharedApplication().delegate as! AppDelegate
     var parentNavigationController : UINavigationController?
     let realm = Realm()
     var tracks: [Track] = []
@@ -16,12 +16,7 @@ class TracksTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
         
-        let realmResponse = realm.objects(Track)
-        
-        for track in realmResponse {
-            tracks.append(track)
-        }
-        tracks.shuffle(tracks.count)
+        self.loadPlaylistData()
         
         self.checkedTracks.removeAll()
         //Receive Nortification from MakeNewController.swift
@@ -34,8 +29,35 @@ class TracksTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.parentNavigationController!.title! = "Favoriteから曲を選択"
     }
+    
+    //---------------------------
+    //# MARK: - LoadDataMethod
+    //---------------------------
+    func loadPlaylistData(){
+        tracks.removeAll()
+        
+        Progress.showProgressWithMessage("")
+        let realmResponse = realm.objects(Track)
+        for track in realmResponse {
+            tracks.append(track)
+        }
+        tracks.shuffle(tracks.count)
+        Progress.stopProgress()
+        
+        self.tableView.reloadData()
+    }
+    
+    func savePlaylist(){
+        for track in checkedTracks{
+            saveTracks.append(track.1)
+        }
+        del.playlist.setTracksArr(saveTracks)
+    }
+    
+    //---------------------------
+    //# MARK: - TableViewMethod
+    //---------------------------
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -69,6 +91,8 @@ class TracksTableViewController: UITableViewController {
                 var notification : NSNotification = NSNotification(name: "8TracksUnSelected", object: nil)
                 NSNotificationCenter.defaultCenter().postNotification(notification)
             }
+            
+            updatePlayingTracks()
             return
         }
         
@@ -83,22 +107,25 @@ class TracksTableViewController: UITableViewController {
             cell.isChecked = !cell.isChecked
         }
         
-        println(self.checkedTracks.count)
-        
         if self.checkedTracks.count == 8 {
             //Send a Nortification to MakeNewController.swift
             var notification : NSNotification = NSNotification(name: "8TracksSelected", object: nil)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
+        
+        updatePlayingTracks()
     }
     
-    func savePlaylist(){
+    func updatePlayingTracks() {
+        del.playingTracks.removeAll()
+        
         for track in checkedTracks{
-            saveTracks.append(track.1)
+            del.playingTracks.append(track.1)
         }
-        del.playlist.setTracksArr(saveTracks)
+        
+        // send notification
+        var notification = NSNotification(name: "updatePlayingTracks", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
-    
-    
     
 }
