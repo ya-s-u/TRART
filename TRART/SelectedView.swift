@@ -4,7 +4,6 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-//    var app =  UIApplication.sharedApplication().delegate as! AppDelegate
     let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
     override func awakeFromNib() {
@@ -16,21 +15,27 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
             object: nil
         )
         
-        collectionView.registerClass(SelectedTracksCell.self, forCellWithReuseIdentifier: "SelectedTracksCell")
+        collectionView.registerNib(UINib(nibName: "SelectedTracksCell", bundle: nil), forCellWithReuseIdentifier: "SelectedTracksCell")
         collectionView.backgroundColor = UIColor.textViewColor()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return playlistPlayer.tracks.count
+        return 8
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: SelectedTracksCell = collectionView.dequeueReusableCellWithReuseIdentifier("SelectedTracksCell",
             forIndexPath: indexPath) as! SelectedTracksCell
-        cell.track = playlistPlayer.tracks[indexPath.row]
-        cell.backgroundColor = UIColor.redColor()
+        
+        if indexPath.row < playlistPlayer.tracks.count {
+            cell.track = playlistPlayer.tracks[indexPath.row]
+        } else {
+            cell.image.image = UIImage(named: "track\(indexPath.row+1)")
+            cell.name.text = "トラック\(indexPath.row+1)"
+        }
+        
         return cell
     }
     

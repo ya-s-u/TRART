@@ -13,7 +13,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-zH-q0D">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="76"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="23q-TJ-3iE">
-                        <size key="itemSize" width="60" height="70"/>
+                        <size key="itemSize" width="54" height="70"/>
                         <size key="headerReferenceSize" width="10" height="0.0"/>
                         <size key="footerReferenceSize" width="10" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
