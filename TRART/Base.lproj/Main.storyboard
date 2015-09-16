@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="height" constant="64" id="O1g-GR-EOV"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="TRART" id="bEg-Z9-dcS"/>
+                                    <navigationItem title="Title" id="76f-p4-Bpz"/>
                                 </items>
                             </navigationBar>
                         </subviews>

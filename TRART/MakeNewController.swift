@@ -22,8 +22,6 @@ class MakeNewController: UIViewController {
         // init Playlist
         del.playlist = Playlist()
         
-        navigationController?.hidesBarsOnSwipe = true
-        
         self.nextButton.enabled = false
         //Receive Nortification from MakeNewController.swift
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "enableNextButton", name: "8TracksSelected", object: nil)
