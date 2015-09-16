@@ -5,13 +5,7 @@ class PlaylistPlayerManager: NSObject {
     static let sharedInstance = PlaylistPlayerManager()
     
     let player = PlayerManager.sharedInstance
-    var tracks: [Track] = [] {
-        didSet {
-            if tracks.count > 0 {
-                player.track = tracks[currentIndex]
-            }
-        }
-    }
+    var tracks: [Track] = []
     
     var isPlaying = false
     var currentIndex = 0
@@ -29,6 +23,11 @@ class PlaylistPlayerManager: NSObject {
     }
     
     func play() {
+        // set track on the first time
+        if tracks.count > 0 {
+            player.track = tracks[currentIndex]
+        }
+        println(player.isPlaying())
         player.play()
         isPlaying = true
     }
@@ -80,13 +79,6 @@ class PlaylistPlayerManager: NSObject {
     
     func playing() -> Bool {
         return isPlaying
-    }
-    
-    func isLast() -> Bool {
-        if currentIndex == tracks.count-1 {
-            return true
-        }
-        return false
     }
     
     func currentTimeStr() -> String {

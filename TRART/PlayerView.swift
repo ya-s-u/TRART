@@ -50,7 +50,7 @@ class PlayerView: UIView, UIScrollViewDelegate {
             button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
         } else if playlistPlayer.tracks.count > 0 {
             // Replay
-            if playlistPlayer.isLast() {
+            if scrollView.contentOffset.x >= scrollView.contentSize.width-self.bounds.size.width {
                 resetScrollViewOffSet()
             }
             
