@@ -3,6 +3,7 @@ import RealmSwift
 
 class MakeConfirmViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UITableViewDelegate {
 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListComment: UIPlaceHolderTextView!
     @IBOutlet weak var tableView: UITableView!
@@ -15,14 +16,16 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         super.viewDidLoad()
         self.title = "プレイリストを編集"
         
+        // adjust scrollview in device size
+        let scrollSize = CGSizeMake(UIScreen.mainScreen().bounds.height-44, UIScreen.mainScreen().bounds.size.width)
+        scrollView.contentSize = scrollSize
+        
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorColor = UIColor.rgbColor(0x404040)
         self.tableView.layoutMargins = UIEdgeInsetsZero
         self.tableView.editing = true
-        
-        //Nortification
         
         PlaylistTitle.delegate = self
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
