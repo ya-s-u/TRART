@@ -1,6 +1,8 @@
 import UIKit
 
-class PlayerView: UIView {
+class PlayerView: UIView, UIScrollViewDelegate {
+    var app =  UIApplication.sharedApplication().delegate as! AppDelegate
+    
     let player = PlayerManager.sharedInstance
     
     @IBOutlet weak var button: UIButton!
@@ -9,22 +11,26 @@ class PlayerView: UIView {
     @IBOutlet weak var mask: UIView!
     
     override func awakeFromNib() {
+        // receive notification
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "updatePlayingTracks:",
+            name: "updatePlayingTracks",
+            object: nil
+        )
+        
         NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
         
         timer.font = UIFont.systemFontOfSize(13)
         timer.textColor = UIColor.whiteColor()
         
-        let myImage = UIImage(named: "dummy-pulse")!
-        let myImageView = UIImageView()
-        myImageView.image = myImage
-        myImageView.frame = CGRectMake(0, 0, myImage.size.width, 70)
-        scrollView.addSubview(myImageView)
-        scrollView.contentSize = CGSizeMake(1200, 70)
+        scrollView.delegate = self
         
         mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        mask.userInteractionEnabled = false
         
         let separator = UIView()
-        separator.frame = CGRectMake(UIScreen.mainScreen().bounds.size.width/2, 0, 1, 70)
+        separator.frame = CGRectMake(UIScreen.mainScreen().bounds.size.width/2, 0, 1, self.bounds.height)
         separator.backgroundColor = UIColor.auditionTextColor()
         self.addSubview(separator)
     }
@@ -39,10 +45,50 @@ class PlayerView: UIView {
         }
     }
     
+    func updatePlayingTracks(notification: NSNotification) {
+        removeScrollViewSubViews()
+        
+        var width = self.bounds.width
+        for (i, track) in enumerate(app.playingTracks) {
+            let waveform = UIImage(named: "dummy-pulse")!
+            let waveformView = UIImageView()
+            waveformView.image = waveform
+            waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
+            scrollView.addSubview(waveformView)
+            
+            if (i>0 && i<app.playingTracks.count) {
+                let separator = UIView()
+                separator.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, 1, self.bounds.height)
+                separator.backgroundColor = UIColor(white: 1, alpha: 0.5)
+                scrollView.addSubview(separator)
+            }
+            
+            width += waveform.size.width
+        }
+        
+        scrollView.contentSize = CGSizeMake(width, self.bounds.height)
+    }
+    
+    func removeScrollViewSubViews() {
+        var subviews = self.scrollView.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+    }
+    
     func updateTimer() {
         if player.isPlaying() {
             timer.text = player.currentTimeStr()
             scrollView.contentOffset.x = scrollView.contentOffset.x+1
         }
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        println(scrollView.contentOffset.x/10)
+        player.pos(Double(scrollView.contentOffset.x/10))
+    }
+    
+    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        scrollView.setContentOffset(scrollView.contentOffset, animated: false)
     }
 }

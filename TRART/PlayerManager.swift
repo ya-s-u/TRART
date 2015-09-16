@@ -26,6 +26,12 @@ class PlayerManager {
         }
     }
     
+    func pos(time: Double) {
+        if let audioPlayer = audioPlayer {
+            audioPlayer.currentTime = time
+        }
+    }
+    
     func currentTime() -> Double {
         if let audioPlayer = audioPlayer {
             return audioPlayer.currentTime

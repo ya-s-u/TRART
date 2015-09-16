@@ -53,6 +53,7 @@
 		983B3F861BA5515100A24393 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B3F851BA5515100A24393 /* CustomCell.swift */; };
 		983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B3F871BA5515B00A24393 /* LayerCell.swift */; };
 		986E7DC11BA6AFCF00503400 /* LayoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */; };
+		987CC5141BA8FA5000F869EC /* UIPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CC5131BA8FA5000F869EC /* UIPlaceHolderTextView.swift */; };
 		9885294F1BA52D37003D5FED /* Layer1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9885294E1BA52D37003D5FED /* Layer1.xib */; };
 		988529521BA5300D003D5FED /* Layer2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 988529511BA5300D003D5FED /* Layer2.xib */; };
 		988529541BA530CA003D5FED /* Layer3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 988529531BA530CA003D5FED /* Layer3.xib */; };
@@ -135,6 +136,7 @@
 		983B3F851BA5515100A24393 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		983B3F871BA5515B00A24393 /* LayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerCell.swift; sourceTree = "<group>"; };
 		986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutTableViewController.swift; sourceTree = "<group>"; };
+		987CC5131BA8FA5000F869EC /* UIPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		9885294E1BA52D37003D5FED /* Layer1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer1.xib; sourceTree = "<group>"; };
 		988529511BA5300D003D5FED /* Layer2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer2.xib; sourceTree = "<group>"; };
 		988529531BA530CA003D5FED /* Layer3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layer3.xib; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		47BD971B1BA2779F00096854 /* TRART */ = {
 			isa = PBXGroup;
 			children = (
+				5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */,
 				47BD971E1BA2779F00096854 /* AppDelegate.swift */,
 				5AF773831BA2E80B008056A7 /* Extensions */,
 				5AE0DCF21BA2B0C900EE2A1B /* Services */,
@@ -266,7 +269,6 @@
 				5AE0DCF61BA2B0EE00EE2A1B /* Layouts */,
 				47BD97251BA2779F00096854 /* Images.xcassets */,
 				47BD971C1BA2779F00096854 /* Supporting Files */,
-				5A2F4E181BA8295900CA71D5 /* TRART-Bridging-Header.h */,
 			);
 			path = TRART;
 			sourceTree = "<group>";
@@ -319,6 +321,7 @@
 			children = (
 				5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */,
 				5AD276191BA59FAF0074B49C /* PlayerManager.swift */,
+				987CC5131BA8FA5000F869EC /* UIPlaceHolderTextView.swift */,
 				471EF8DC1BA8F8FF00D21972 /* Progress.swift */,
 			);
 			name = Services;
@@ -360,9 +363,9 @@
 				9885296D1BA537C4003D5FED /* JaketLayer8View.swift */,
 				983B3F851BA5515100A24393 /* CustomCell.swift */,
 				983B3F871BA5515B00A24393 /* LayerCell.swift */,
+				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5AD276161BA572270074B49C /* MakeNew */,
-				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				983B3F881BA5515B00A24393 /* LayerCell.swift in Sources */,
 				5A2F4E1C1BA8323000CA71D5 /* Array+.swift in Sources */,
 				98DF433C1BA71B1C0009FB34 /* LayoutLastViewController.swift in Sources */,
+				987CC5141BA8FA5000F869EC /* UIPlaceHolderTextView.swift in Sources */,
 				986E7DC11BA6AFCF00503400 /* LayoutTableViewController.swift in Sources */,
 				5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */,
 				471EF8E41BA909B400D21972 /* ArtistTableViewCell.swift in Sources */,
@@ -756,13 +760,13 @@
 			baseConfigurationReference = 4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TRART/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TRART/TRART-Bridging-Header.h";
 			};
 			name = Debug;
@@ -772,13 +776,13 @@
 			baseConfigurationReference = EC91779C21E5C5E2FDE0A015 /* Pods-TRART.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TRART/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TRART/TRART-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
