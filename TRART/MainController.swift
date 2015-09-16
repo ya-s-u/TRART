@@ -9,18 +9,26 @@
 import UIKit
 import RealmSwift
 
-class MainController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var homeNavigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
+    
     let realm = Realm()
     var playlists: [Playlist] = []
+    var gradationType: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Navbar
+        self.homeNavigationBar.alpha = 0
+        
+        //TableViewHeader
         let header: MainTableHeaderController = UINib(nibName: "MainTableHeader", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MainTableHeaderController
         self.tableView.tableHeaderView = header
         
+        //Nortification
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToMakeNew", name: "CreateButton", object: nil)
         
         //tableView Delegate
@@ -42,13 +50,13 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadPlaylistData(){
         playlists.removeAll()
         
-        Progress.showProgressWithMessage("")
+        var playlistTmp: [Playlist] = []
         let realmResponse = realm.objects(Playlist)
         for playlist in realmResponse {
-            playlists.append(playlist)
+            playlistTmp.append(playlist)
         }
-        Progress.stopProgress()
-        
+        self.playlists = playlistTmp.reverse()
+                
         self.tableView.reloadData()
     }
     
@@ -65,7 +73,7 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 330.0
+        return 310.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -76,6 +84,57 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.commentLabel.text = playlists[indexPath.row].comment
         
         return cell
+    }
+    
+    //---------------------------
+    //# MARK: - ScrollViewMethod
+    //---------------------------
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        changeNavbarAlpha(scrollView.contentOffset.y)
+        changeHomeBackgroundImage(scrollView.contentOffset.y)
+        changePlaylistBackgroundAlpha(scrollView.contentOffset.y)
+    }
+    
+    func changeNavbarAlpha(offsetY: CGFloat) {
+        if offsetY < 0 {
+            self.homeNavigationBar.alpha = 0
+            return
+        }
+        self.homeNavigationBar.alpha = offsetY / 320
+    }
+    
+    func changePlaylistBackgroundAlpha(offsetY: CGFloat) {
+        if offsetY > 320 && offsetY < 840 {
+            self.tableView.backgroundView?.alpha = (offsetY - 320) / 520
+            return
+        }
+    }
+    
+    func changeHomeBackgroundImage(offsetY: CGFloat) {
+        if offsetY >= 320 {
+            self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist1"))
+            return
+        }
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-backimg"))
+    }
+    
+    func changeHomeBackgroudImgGradationColor(offsetY: CGFloat) {
+        println(offsetY%320)
+        if (offsetY%320) >= 0.0 && (offsetY%320) <= 50.0 {
+            if self.gradationType == 0{
+                self.gradationType == 1
+                self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist1"))
+            }
+            else if self.gradationType == 1{
+                self.gradationType == 2
+                self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist2"))
+            }
+            else if self.gradationType == 2{
+                self.gradationType == 0
+                self.tableView.backgroundView = UIImageView(image: UIImage(named: "Home-back-playlist3"))
+            }
+        }
     }
     
     //---------------------------

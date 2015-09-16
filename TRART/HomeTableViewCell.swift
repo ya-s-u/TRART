@@ -18,25 +18,14 @@ class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //グラデーションの開始色
+
         let topColor = UIColorFromRGB(0x000000, aValue: 0)
-        //グラデーションの終了色
         let bottomColor = UIColorFromRGB(0x000000, aValue: 1.0)
-        
-        //グラデーションの色を配列で管理
         let gradientColors: [CGColor] = [topColor.CGColor, bottomColor.CGColor]
-        
-        //グラデーションレイヤーを作成
         let gradientLayer: CAGradientLayer = CAGradientLayer()
-        
-        //グラデーションの色をレイヤーに割り当てる
         gradientLayer.colors = gradientColors
-        //グラデーションレイヤーをスクリーンサイズにする
         gradientLayer.frame = self.titleView.bounds
-        
-        //グラデーションレイヤーをビューの一番下に配置
         self.titleView.layer.insertSublayer(gradientLayer, atIndex: 0)
-        
         self.commentView.backgroundColor = UIColorFromRGB(0x282828, aValue: 1.0)
     }
 
