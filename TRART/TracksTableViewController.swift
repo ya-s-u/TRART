@@ -39,13 +39,11 @@ class TracksTableViewController: UITableViewController {
     func loadPlaylistData(){
         tracks.removeAll()
         
-        Progress.showProgressWithMessage("")
         let realmResponse = realm.objects(Track)
         for track in realmResponse {
             tracks.append(track)
         }
         tracks.shuffle(tracks.count)
-        Progress.stopProgress()
         
         self.tableView.reloadData()
     }

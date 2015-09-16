@@ -50,13 +50,11 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadPlaylistData(){
         playlists.removeAll()
         
-        Progress.showProgressWithMessage("")
         let realmResponse = realm.objects(Playlist)
         for playlist in realmResponse {
             playlists.append(playlist)
         }
-        Progress.stopProgress()
-        
+                
         self.tableView.reloadData()
     }
     
