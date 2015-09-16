@@ -7,13 +7,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectedTracksCell" id="gTV-IL-0wX" customClass="SelectedTracksCell" customModule="TRART" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="60" height="68"/>
+            <rect key="frame" x="0.0" y="0.0" width="58" height="65.5"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="60" height="68"/>
+                <rect key="frame" x="0.0" y="0.0" width="58" height="65.5"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-l3-bSH">
-                        <rect key="frame" x="2" y="4" width="56" height="50"/>
+                        <rect key="frame" x="1" y="2" width="56" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="sQA-p9-CEz"/>
                             <constraint firstAttribute="height" constant="50" id="yD6-8c-EUc"/>
@@ -25,8 +25,8 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トラック名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-qw-5tl">
-                        <rect key="frame" x="2" y="51" width="56" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="0.0" y="52.5" width="58" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -34,19 +34,19 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="JdB-qw-5tl" secondAttribute="trailing" constant="2" id="3xp-oa-wZ7"/>
-                <constraint firstItem="tn5-l3-bSH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Etf-Gu-6n0"/>
-                <constraint firstItem="JdB-qw-5tl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Ie5-Xf-oZs"/>
-                <constraint firstItem="tn5-l3-bSH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="KeQ-g0-SSf"/>
-                <constraint firstAttribute="trailing" secondItem="tn5-l3-bSH" secondAttribute="trailing" constant="2" id="nq3-Ir-ouB"/>
-                <constraint firstAttribute="bottom" secondItem="JdB-qw-5tl" secondAttribute="bottom" constant="2" id="u9z-At-OEL"/>
+                <constraint firstAttribute="trailing" secondItem="JdB-qw-5tl" secondAttribute="trailing" id="3xp-oa-wZ7"/>
+                <constraint firstItem="tn5-l3-bSH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="Etf-Gu-6n0"/>
+                <constraint firstItem="JdB-qw-5tl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ie5-Xf-oZs"/>
+                <constraint firstItem="tn5-l3-bSH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="KeQ-g0-SSf"/>
+                <constraint firstAttribute="trailing" secondItem="tn5-l3-bSH" secondAttribute="trailing" constant="1" id="nq3-Ir-ouB"/>
+                <constraint firstAttribute="bottom" secondItem="JdB-qw-5tl" secondAttribute="bottom" constant="1" id="u9z-At-OEL"/>
             </constraints>
-            <size key="customSize" width="60" height="68"/>
+            <size key="customSize" width="58" height="65.5"/>
             <connections>
                 <outlet property="image" destination="tn5-l3-bSH" id="WKM-04-hcd"/>
                 <outlet property="name" destination="JdB-qw-5tl" id="xO7-fn-YEM"/>
             </connections>
-            <point key="canvasLocation" x="415" y="296"/>
+            <point key="canvasLocation" x="414" y="294.75"/>
         </collectionViewCell>
     </objects>
 </document>
