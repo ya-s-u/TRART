@@ -31,9 +31,9 @@ class TracksTableViewController: UITableViewController {
         super.viewDidAppear(animated)
     }
     
-    //----------------------
-    //# MARK: - LoadData
-    //----------------------
+    //---------------------------
+    //# MARK: - LoadDataMethod
+    //---------------------------
     func loadPlaylistData(){
         tracks.removeAll()
         
@@ -55,9 +55,9 @@ class TracksTableViewController: UITableViewController {
         del.playlist.setTracksArr(saveTracks)
     }
     
-    //----------------------
-    //# MARK: - TableView
-    //----------------------
+    //---------------------------
+    //# MARK: - TableViewMethod
+    //---------------------------
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

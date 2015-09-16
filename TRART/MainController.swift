@@ -52,15 +52,6 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.reloadData()
     }
     
-    func segueToMakeNew() {
-        var storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var makeNewViewController = storyboard.instantiateViewControllerWithIdentifier("MakeNew") as! UIViewController
-        self.presentViewController(makeNewViewController, animated: true, completion: nil)
-    }
-    
-    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
-    }
-    
     //---------------------------
     //# MARK: - TableViewMethod
     //---------------------------
@@ -85,5 +76,18 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.commentLabel.text = playlists[indexPath.row].comment
         
         return cell
+    }
+    
+    //---------------------------
+    //# MARK: - Segue
+    //---------------------------
+    
+    func segueToMakeNew() {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var makeNewViewController = storyboard.instantiateViewControllerWithIdentifier("MakeNew") as! UIViewController
+        self.presentViewController(makeNewViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
     }
 }
