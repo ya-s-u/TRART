@@ -11,6 +11,7 @@ target 'TRART' do
   pod 'AMWaveTransition'
   pod 'PageMenu'
   pod 'APIKit'
+  pod 'Spring', '~> 1.0.3'
 end
 
 target 'TRARTTests' do
