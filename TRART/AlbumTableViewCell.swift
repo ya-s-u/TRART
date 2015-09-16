@@ -1,5 +1,5 @@
 //
-//  ArtistTableViewCell.swift
+//  AlbumTableViewCell.swift
 //  TRART
 //
 //  Created by Yohei Fusayasu on 9/16/15.
@@ -8,32 +8,32 @@
 
 import UIKit
 
-class ArtistTableViewCell: UITableViewCell {
+class AlbumTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var coverImage: UIImageView!
-    @IBOutlet weak var artistName: UILabel!
-    @IBOutlet weak var albumNum: UILabel!
+    @IBOutlet weak var albumName: UILabel!
+    @IBOutlet weak var trackNum: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = UITableViewCellSelectionStyle.None
+        albumName.font = UIFont.boldSystemFontOfSize(14)
+        albumName.textColor = UIColor.whiteColor()
         
-        artistName.font = UIFont.boldSystemFontOfSize(14)
-        artistName.textColor = UIColor.whiteColor()
-        
-        albumNum.font = UIFont.systemFontOfSize(11)
-        albumNum.textColor = UIColor.whiteColor()
-        albumNum.text = "8 Albums"
+        trackNum.font = UIFont.systemFontOfSize(11)
+        trackNum.textColor = UIColor.whiteColor()
+        trackNum.text = "8 Tracks"
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
     var track: Track? {
         didSet {
-            self.artistName.text = self.track!.artist
+            self.albumName.text = self.track!.album
             
             var url = NSURL(string: self.track!.cover as String!)
             self.coverImage.sd_setImageWithURL(url!)

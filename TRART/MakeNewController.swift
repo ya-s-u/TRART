@@ -35,7 +35,7 @@ class MakeNewController: UIViewController {
         tracksController.parentNavigationController = self.navigationController
         controllerArray.append(tracksController)
         
-        var albumController : TracksTableViewController = TracksTableViewController(nibName: "TracksTableViewController", bundle: nil)
+        var albumController : AlbumTableViewController = AlbumTableViewController(nibName: "AlbumTableViewController", bundle: nil)
         albumController.title = "Album"
         albumController.parentNavigationController = self.navigationController
         controllerArray.append(albumController)
