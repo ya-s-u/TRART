@@ -56,6 +56,13 @@ class PlayerView: UIView, UIScrollViewDelegate {
             waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
             scrollView.addSubview(waveformView)
             
+            if (i>0 && i<app.playingTracks.count) {
+                let separator = UIView()
+                separator.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, 1, self.bounds.height)
+                separator.backgroundColor = UIColor.whiteColor()
+                scrollView.addSubview(separator)
+            }
+            
             width += waveform.size.width
         }
         
