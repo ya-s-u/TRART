@@ -39,7 +39,7 @@
                         <constraint firstAttribute="height" constant="70" id="TDX-Wn-6rc"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-iG-qfi">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-iG-qfi" customClass="SpringButton" customModule="Spring">
                     <rect key="frame" x="10" y="16" width="37" height="37"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="37" id="GNo-dv-z7Q"/>
@@ -49,7 +49,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="tapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="DCx-L4-pfl"/>
+                        <action selector="tapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="uPA-du-wmn"/>
                     </connections>
                 </button>
             </subviews>
@@ -79,7 +79,7 @@
                 </mask>
             </variation>
             <connections>
-                <outlet property="button" destination="WeF-iG-qfi" id="Z6L-Zm-MvN"/>
+                <outlet property="button" destination="WeF-iG-qfi" id="hgb-Gr-g4p"/>
                 <outlet property="mask" destination="BuA-6N-fLW" id="eI0-tI-FCb"/>
                 <outlet property="scrollView" destination="MIr-jp-gCe" id="tVS-nv-wr1"/>
                 <outlet property="timeSeparator" destination="xe2-fK-afr" id="m64-96-bQW"/>
