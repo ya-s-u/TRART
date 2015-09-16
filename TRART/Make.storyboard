@@ -677,7 +677,7 @@
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y0I-Rp-seT">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y0I-Rp-seT">
                                         <rect key="frame" x="0.0" y="380" width="600" height="569"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -685,6 +685,53 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="KbJ-nX-Dt8"/>
                                             <constraint firstAttribute="width" constant="375" id="wZk-yi-l6w"/>
                                         </constraints>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConfirmationTableViewCell" rowHeight="94" id="XB9-Mh-ODV" customClass="ConfirmationTableViewCell" customModule="TRART" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XB9-Mh-ODV" id="u2t-Jp-n0k">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-Cm-Iif">
+                                                            <rect key="frame" x="8" y="13" width="68" height="68"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="68" id="gMQ-4O-7JA"/>
+                                                                <constraint firstAttribute="width" constant="68" id="zOX-KZ-3cd"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVO-z3-zcP">
+                                                            <rect key="frame" x="86" y="49" width="476" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuG-VI-cQt">
+                                                            <rect key="frame" x="86" y="26" width="476" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="centerY" secondItem="4Gj-Cm-Iif" secondAttribute="centerY" id="3xv-tr-Baa"/>
+                                                        <constraint firstItem="4Gj-Cm-Iif" firstAttribute="leading" secondItem="u2t-Jp-n0k" secondAttribute="leadingMargin" id="8SU-0g-E5I"/>
+                                                        <constraint firstItem="FuG-VI-cQt" firstAttribute="leading" secondItem="4Gj-Cm-Iif" secondAttribute="trailing" constant="10" id="P35-Rj-Xv6"/>
+                                                        <constraint firstAttribute="centerY" secondItem="aVO-z3-zcP" secondAttribute="centerY" constant="-10" id="T6N-h0-g3S"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="FuG-VI-cQt" secondAttribute="trailing" constant="30" id="cG0-4M-GXp"/>
+                                                        <constraint firstItem="aVO-z3-zcP" firstAttribute="leading" secondItem="4Gj-Cm-Iif" secondAttribute="trailing" constant="10" id="g1x-PF-b6u"/>
+                                                        <constraint firstAttribute="centerY" secondItem="FuG-VI-cQt" secondAttribute="centerY" constant="10" id="oys-3s-dJc"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="aVO-z3-zcP" secondAttribute="trailing" constant="30" id="uRS-cd-Ivg"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="artistLabel" destination="aVO-z3-zcP" id="JIm-Mv-Bmc"/>
+                                                    <outlet property="coverImage" destination="4Gj-Cm-Iif" id="Uen-Eb-S7I"/>
+                                                    <outlet property="trackName" destination="FuG-VI-cQt" id="mUZ-2U-dyJ"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="KbJ-nX-Dt8"/>
@@ -818,6 +865,7 @@
                         <outlet property="CloseView" destination="1W3-7s-gu8" id="Vvu-zI-ciX"/>
                         <outlet property="PlayListComment" destination="DRn-de-vEd" id="TJK-gc-I2T"/>
                         <outlet property="PlaylistTitle" destination="uAS-mm-9UE" id="pee-2J-mGy"/>
+                        <outlet property="tableView" destination="Y0I-Rp-seT" id="2sF-hC-2Bf"/>
                         <segue destination="Z4C-UU-93b" kind="show" identifier="confirm2finish" id="Zoe-Hp-Oce"/>
                     </connections>
                 </viewController>
