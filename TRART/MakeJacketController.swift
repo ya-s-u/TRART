@@ -45,6 +45,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         myBarButton_Done = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: "onDoneButton:")
         myBarButton_Cancel = UIBarButtonItem(title: "キャンセル", style: .Plain, target: self, action: "onCancelButton:")
         myBarButton_Done.tintColor = UIColor.auditionTextColor()
+        myBarButton_Cancel.tintColor = UIColor.whiteColor()
+        
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
