@@ -133,6 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="homeNavigationBar" destination="e4E-Ea-dAF" id="pgQ-aJ-qOo"/>
+                        <outlet property="homeNavigationItem" destination="76f-p4-Bpz" id="VpD-uU-xfN"/>
                         <outlet property="tableView" destination="hkj-qr-zKF" id="wv5-uH-R52"/>
                     </connections>
                 </viewController>

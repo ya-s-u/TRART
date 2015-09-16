@@ -13,6 +13,7 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var homeNavigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var homeNavigationItem: UINavigationItem!
     
     let realm = Realm()
     var playlists: [Playlist] = []
@@ -23,6 +24,17 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //Navbar
         self.homeNavigationBar.alpha = 0
+        
+        let homeNavCreate:UIBarButtonItem!
+        homeNavCreate = UIBarButtonItem(title: "", style: .Plain, target: self, action: "segueToMakeNew")
+        homeNavCreate.image = UIImage(named: "homeNavCreate")
+        homeNavCreate.tintColor = UIColor.whiteColor()
+        
+        let imageViewTmp = UIImageView(image: UIImage(named: "homeNavTitle"))
+        imageViewTmp.frame = CGRectMake(0, 0, 85, 30)
+
+        self.homeNavigationItem.titleView = imageViewTmp
+        self.homeNavigationItem.setRightBarButtonItem(homeNavCreate, animated: true)
         
         //TableViewHeader
         let header: MainTableHeaderController = UINib(nibName: "MainTableHeader", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MainTableHeaderController
