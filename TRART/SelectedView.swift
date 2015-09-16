@@ -41,6 +41,12 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         println("Num: \(indexPath.row)")
+        let cell: SelectedTracksCell = collectionView.dequeueReusableCellWithReuseIdentifier("SelectedTracksCell",
+            forIndexPath: indexPath) as! SelectedTracksCell
+//        cell.select()
+        
+        cell.image.layer.borderColor = UIColor.auditionTextColor().CGColor
+        cell.image.layer.borderWidth = 2
     }
     
     func updatePlayingTracks(notification: NSNotification) {

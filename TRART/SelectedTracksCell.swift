@@ -20,4 +20,13 @@ class SelectedTracksCell: UICollectionViewCell {
         name.font = UIFont.systemFontOfSize(9)
         name.textColor = UIColor.whiteColor()
     }
+    
+    func select() {
+        image.layer.borderColor = UIColor.auditionTextColor().CGColor
+        image.layer.borderWidth = 2
+    }
+    
+    func diselect() {
+        image.layer.borderWidth = 0
+    }
 }
