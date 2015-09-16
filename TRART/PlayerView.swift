@@ -1,11 +1,12 @@
 import UIKit
+import Spring
 
 class PlayerView: UIView, UIScrollViewDelegate {
     let app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
     let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button: SpringButton!
     @IBOutlet weak var timer: UILabel!
     @IBOutlet weak var timeSeparator: UILabel!
     @IBOutlet weak var total: UILabel!
@@ -54,8 +55,8 @@ class PlayerView: UIView, UIScrollViewDelegate {
     @IBAction func tapButton(sender: AnyObject) {
         if playlistPlayer.playing() {
             // Pause
-            playlistPlayer.pause()
             button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
+            playlistPlayer.pause()
         } else if playlistPlayer.tracks.count > 0 {
             // Replay
             if scrollView.contentOffset.x >= scrollView.contentSize.width-self.bounds.size.width {
@@ -63,9 +64,14 @@ class PlayerView: UIView, UIScrollViewDelegate {
             }
             
             // Play
-            playlistPlayer.play()
             button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
+            playlistPlayer.play()
         }
+        
+        // animation
+        button.animation = "pop"
+        button.duration = 0.5
+        button.animate()
     }
     
     func updatePlayingTracks(notification: NSNotification) {

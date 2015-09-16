@@ -4,8 +4,9 @@ PODS:
   - APIKit (0.8.0):
     - Result (~> 0.4)
   - Box (1.2.2)
-  - KDEAudioPlayer (0.2.6):
+  - KDEAudioPlayer (0.2.7):
     - ReachabilitySwift (~> 1.1)
+  - LTMorphingLabel (0.0.7)
   - PageMenu (1.2.8)
   - ReachabilitySwift (1.1)
   - Realm (0.95.0):
@@ -18,6 +19,7 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - Spring (1.0.3)
   - SVProgressHUD (1.1.3)
   - SwiftyJSON (2.2.1)
 
@@ -26,9 +28,11 @@ DEPENDENCIES:
   - AMWaveTransition
   - APIKit
   - KDEAudioPlayer
+  - LTMorphingLabel (= 0.0.7)
   - PageMenu
   - RealmSwift
   - SDWebImage (~> 3.7)
+  - Spring (~> 1.0.3)
   - SVProgressHUD
   - SwiftyJSON
 
@@ -37,14 +41,16 @@ SPEC CHECKSUMS:
   AMWaveTransition: a00588006f144d289a390aabcfa1fa1e16bb9296
   APIKit: 82c21586bca23e67711d2dd4a3b6658c0bf8076a
   Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
-  KDEAudioPlayer: 949a8fbc97bbd6fa1652e1bd21aa4b7c374caa46
+  KDEAudioPlayer: 5a95159d560b7c20975b5d092a875d28021725db
+  LTMorphingLabel: aef64d2adb1c659869a8fe22cf2dc7bbad2e28e5
   PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
   ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
   Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
   RealmSwift: 35eeb642bf0b43dedfe363451ba3288d0e72ebb9
   Result: b44f6bc8762bbffaf2c5df58f2c7d12c3496ced8
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.37.2
