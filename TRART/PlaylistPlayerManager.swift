@@ -116,6 +116,7 @@ class PlaylistPlayerManager: NSObject {
     func finishPlayer(sender: AnyObject) {
         next()
         if isPlaying == false {
+            currentIndex = 0
             var notification = NSNotification(name: "finishPlaylistPlayer", object: nil)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }

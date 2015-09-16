@@ -73,7 +73,18 @@ class PlayerView: UIView, UIScrollViewDelegate {
         
         var width = self.bounds.width
         for (i, track) in enumerate(playlistPlayer.tracks) {
-            let waveform = UIImage(named: "dummy-pulse")!
+            var rand = arc4random() % 2;
+            var waveform: UIImage
+            
+            switch rand {
+            case 0 :
+                waveform = UIImage(named: "wave1")!
+            case 1 :
+                waveform = UIImage(named: "wave2")!
+            default :
+                waveform = UIImage(named: "wave3")!
+            }
+            
             let waveformView = UIImageView()
             waveformView.image = waveform
             waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
