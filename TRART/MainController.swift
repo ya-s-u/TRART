@@ -105,8 +105,8 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func changePlaylistBackgroundAlpha(offsetY: CGFloat) {
-        if offsetY > 320 && offsetY < 640 {
-            self.tableView.backgroundView?.alpha = (offsetY - 320) / 320
+        if offsetY > 320 && offsetY < 840 {
+            self.tableView.backgroundView?.alpha = (offsetY - 320) / 520
             return
         }
     }
