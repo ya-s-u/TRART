@@ -7,6 +7,8 @@ class PlayerView: UIView, UIScrollViewDelegate {
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var timeSeparator: UILabel!
+    @IBOutlet weak var total: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mask: UIView!
     
@@ -31,6 +33,12 @@ class PlayerView: UIView, UIScrollViewDelegate {
         
         timer.font = UIFont.systemFontOfSize(13)
         timer.textColor = UIColor.whiteColor()
+        
+        timeSeparator.font = UIFont.systemFontOfSize(13)
+        timeSeparator.textColor = UIColor.whiteColor()
+        
+        total.font = UIFont.systemFontOfSize(13)
+        total.textColor = UIColor.whiteColor()
         
         scrollView.delegate = self
         
@@ -82,6 +90,8 @@ class PlayerView: UIView, UIScrollViewDelegate {
         }
         
         scrollView.contentSize = CGSizeMake(width, self.bounds.height)
+        
+        total.text = playlistPlayer.totalTimeStr()
     }
     
     func removeScrollViewSubViews() {
