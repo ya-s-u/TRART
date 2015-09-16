@@ -95,6 +95,8 @@ class TracksTableViewController: UITableViewController {
     }
     
     func updatePlayingTracks() {
+        del.playingTracks.removeAll()
+        
         for track in checkedTracks{
             del.playingTracks.append(track.1)
         }

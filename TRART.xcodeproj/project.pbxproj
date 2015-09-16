@@ -293,9 +293,9 @@
 				9885296D1BA537C4003D5FED /* JaketLayer8View.swift */,
 				983B3F851BA5515100A24393 /* CustomCell.swift */,
 				983B3F871BA5515B00A24393 /* LayerCell.swift */,
+				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
 				5A7F61561BA5467F00555414 /* Jackets */,
 				5AD276161BA572270074B49C /* MakeNew */,
-				5A2F4E231BA85EBC00CA71D5 /* PlayerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";

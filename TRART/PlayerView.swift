@@ -24,20 +24,6 @@ class PlayerView: UIView {
         timer.font = UIFont.systemFontOfSize(13)
         timer.textColor = UIColor.whiteColor()
         
-        let myImage = UIImage(named: "dummy-pulse")!
-        let myImageView = UIImageView()
-        myImageView.image = myImage
-        myImageView.frame = CGRectMake(0, 0, myImage.size.width, self.bounds.height)
-        scrollView.addSubview(myImageView)
-        
-        let myImage2 = UIImage(named: "dummy-pulse")!
-        let myImageView2 = UIImageView()
-        myImageView2.image = myImage2
-        myImageView2.frame = CGRectMake(myImage.size.width, 0, myImage2.size.width, self.bounds.height)
-        scrollView.addSubview(myImageView2)
-        
-        scrollView.contentSize = CGSizeMake(1200, self.bounds.height)
-        
         mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
         mask.userInteractionEnabled = false
         
@@ -58,7 +44,27 @@ class PlayerView: UIView {
     }
     
     func updatePlayingTracks(notification: NSNotification) {
-        println(app.playingTracks)
+        removeScrollViewSubViews()
+        
+        var width = CGFloat(0.0)
+        for (i, track) in enumerate(app.playingTracks) {
+            let waveform = UIImage(named: "dummy-pulse")!
+            let waveformView = UIImageView()
+            waveformView.image = waveform
+            waveformView.frame = CGRectMake(waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
+            scrollView.addSubview(waveformView)
+            
+            width += waveform.size.width
+        }
+        
+        scrollView.contentSize = CGSizeMake(width, self.bounds.height)
+    }
+    
+    func removeScrollViewSubViews() {
+        var subviews = self.scrollView.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
     }
     
     func updateTimer() {
@@ -67,4 +73,5 @@ class PlayerView: UIView {
             scrollView.contentOffset.x = scrollView.contentOffset.x+1
         }
     }
+    
 }
