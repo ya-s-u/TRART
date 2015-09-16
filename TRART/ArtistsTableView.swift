@@ -13,7 +13,7 @@ class ArtistsTableView: UITableView {
     override func awakeFromNib() {
         self.separatorColor = UIColor.rgbColor(0x404040)
         self.layoutMargins = UIEdgeInsetsZero
-        self.backgroundView = UIImageView(image: UIImage(named: "Home-backimg"))
+        self.backgroundView = UIImageView(image: UIImage(named: "bg3"))
     }
 
 }

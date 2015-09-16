@@ -2,8 +2,7 @@ import UIKit
 import RealmSwift
 
 class MakeConfirmViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UITableViewDelegate {
-    
-    @IBOutlet var CloseView: UIView!
+
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListComment: UIPlaceHolderTextView!
     @IBOutlet weak var tableView: UITableView!
@@ -24,8 +23,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         self.tableView.editing = true
         
         //Nortification
-        self.notificationCenter.addObserver(self, selector: "showKeyboard:", name: UIKeyboardDidShowNotification, object: nil)
-        self.notificationCenter.addObserver(self, selector: "hideKeyboard:", name: UIKeyboardDidHideNotification, object: nil)
         
         PlaylistTitle.delegate = self
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
@@ -42,14 +39,15 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         //# TODO: - 戻るボタンのデザイン(今はできない:9/16 12:00)
         //---------------------------
         //戻るボタンの編集(今はできない:9/16 12:00)
-//        let backButton = UIBarButtonItem(title: "キャンセル", style: .Plain, target: self, action: "popViewControllerAnimated:")
-//        
-//        self.navigationItem.backBarButtonItem = backButton
+//        let backButton = UIBarButtonItem(title: "＜", style: .Plain, target: self, action: "popViewControllerAnimated:")
+////
+//        self.navigationItem.leftBarButtonItem = backButton
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_1, animated: true)
+//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         
         self.enableButton()
     }
@@ -165,26 +163,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
     //# MARK: - Keyboard
     //---------------------------
     
-    // 2.送られてきたNSNotificationを処理して、
-    func showKeyboard(notification:NSNotification){
-        
-        let rect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        let duration:NSTimeInterval = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! Double
-        UIView.animateWithDuration(duration, animations: {
-            let transform = CGAffineTransformMakeTranslation(0, -rect.size.height)
-            self.CloseView.transform = transform
-            },completion:nil)
-        
-    }
-    
-    func hideKeyboard(notification: NSNotification?) {
-        // キーボード消滅時の動作をここに記述する
-        let duration = (notification?.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! Double)
-        UIView.animateWithDuration(duration, animations:{
-            self.CloseView.transform = CGAffineTransformIdentity
-            },
-            completion:nil)
-    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool{
         

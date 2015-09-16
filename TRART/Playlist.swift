@@ -26,9 +26,11 @@ class Playlist: Object {
             self.tracks.append(track)
         }
         self.jackets.removeAll()
-        self.jackets.append(tracks[0])
-        self.jackets.append(tracks[1])
-        self.jackets.append(tracks[2])
+        for var i=0; i<tracks.count; i++ {
+            if i < 3 {
+                self.jackets.append(tracks[i])
+            }
+        }
     }
     
     func setJackets(#layout: Int, jackets: [Track]) {
