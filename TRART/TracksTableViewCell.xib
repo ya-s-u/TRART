@@ -74,6 +74,7 @@
                     <constraint firstItem="IeM-cw-Ob0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="18" id="hq3-HZ-gVA"/>
                     <constraint firstAttribute="centerY" secondItem="UmK-zx-b1S" secondAttribute="centerY" id="lJ4-de-vbL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wq5-GE-vov" secondAttribute="trailing" id="qC8-uR-zJb"/>
+                    <constraint firstItem="wq5-GE-vov" firstAttribute="leading" secondItem="SMn-qS-ZM3" secondAttribute="trailing" constant="30" id="vnD-CA-VGH"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">

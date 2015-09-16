@@ -155,7 +155,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="s75-Jl-rSq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tqD-IV-0PZ">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="tqD-IV-0PZ">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backToTop:" destination="fma-TK-OMn" id="dCV-CU-YlU"/>

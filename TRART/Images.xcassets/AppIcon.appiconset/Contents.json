@@ -18,13 +18,13 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon.png",
+      "filename" : "icon_re.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon-1.png",
+      "filename" : "icon_re-1.png",
       "scale" : "2x"
     },
     {
