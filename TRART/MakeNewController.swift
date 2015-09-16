@@ -1,15 +1,7 @@
-//
-//  MakeNewViewController.swift
-//  TRART
-//
-//  Created by Yohei Fusayasu on 9/11/15.
-//  Copyright (c) 2015 yohei2323. All rights reserved.
-//
-
 import UIKit
 import PageMenu
 
-class MakeNewController: UIViewController {
+class MakeNewController: UIViewController, UINavigationControllerDelegate {
     var pageMenu : CAPSPageMenu?
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
@@ -18,6 +10,10 @@ class MakeNewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favoriteから曲を選択"
+        
+        // hide backbutton text
+        let backButton = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
         
         // init Playlist
         del.playlist = Playlist()
