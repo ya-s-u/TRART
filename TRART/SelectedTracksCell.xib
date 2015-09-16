@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="58" height="65.5"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-l3-bSH">
-                        <rect key="frame" x="1" y="2" width="56" height="50"/>
+                        <rect key="frame" x="1" y="2" width="56" height="48.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="sQA-p9-CEz"/>
                             <constraint firstAttribute="height" constant="50" id="yD6-8c-EUc"/>
@@ -21,11 +21,12 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="sQA-p9-CEz"/>
+                                <exclude reference="yD6-8c-EUc"/>
                             </mask>
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トラック名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-qw-5tl">
-                        <rect key="frame" x="0.0" y="52.5" width="58" height="12"/>
+                        <rect key="frame" x="0.0" y="52" width="58" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -38,6 +39,7 @@
                 <constraint firstItem="tn5-l3-bSH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="Etf-Gu-6n0"/>
                 <constraint firstItem="JdB-qw-5tl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ie5-Xf-oZs"/>
                 <constraint firstItem="tn5-l3-bSH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="KeQ-g0-SSf"/>
+                <constraint firstItem="JdB-qw-5tl" firstAttribute="top" secondItem="tn5-l3-bSH" secondAttribute="bottom" constant="2" id="nR4-kD-Ax4"/>
                 <constraint firstAttribute="trailing" secondItem="tn5-l3-bSH" secondAttribute="trailing" constant="1" id="nq3-Ir-ouB"/>
                 <constraint firstAttribute="bottom" secondItem="JdB-qw-5tl" secondAttribute="bottom" constant="1" id="u9z-At-OEL"/>
             </constraints>
