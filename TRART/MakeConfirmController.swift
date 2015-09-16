@@ -5,7 +5,7 @@ class MakeConfirmViewController: UIViewController {
     
     
     @IBOutlet var PlaylistTitle: UITextField!
-    @IBOutlet var PlayListSummary: UITextView!
+    @IBOutlet var PlayListComment: UIPlaceHolderTextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     var myBarButton_1:UIBarButtonItem!
     
@@ -13,9 +13,13 @@ class MakeConfirmViewController: UIViewController {
         super.viewDidLoad()
         
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
+        PlaylistTitle.attributedPlaceholder = NSAttributedString(string:"タイトル(必須)",
+            attributes:[NSForegroundColorAttributeName: UIColor.placeHolderColor()])
         
-        PlayListSummary.layer.cornerRadius = 4
-        PlayListSummary.backgroundColor = UIColor.textViewColor()
+        PlayListComment.layer.cornerRadius = 4
+        PlayListComment.backgroundColor = UIColor.textViewColor()
+        PlayListComment.placeHolderColor = UIColor.placeHolderColor()
+        PlayListComment.placeHolderLabel.text = "プレイリストの説明"
 
         // BarButtonItemを作成する.
         
@@ -44,7 +48,7 @@ class MakeConfirmViewController: UIViewController {
     }
     internal func onClickMyBarButton(sender: UIButton){
 
-        del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListSummary.text, mood: "HAPPY")
+        del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListComment.text, mood: "HAPPY")
         
         let realm = Realm()
         realm.write{
