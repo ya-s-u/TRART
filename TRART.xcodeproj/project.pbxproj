@@ -234,6 +234,7 @@
 			children = (
 				47BD97221BA2779F00096854 /* Main.storyboard */,
 				98DF433D1BA723C40009FB34 /* Make.storyboard */,
+				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -378,7 +379,6 @@
 			children = (
 				471EF8E71BA90A4A00D21972 /* Storyboard */,
 				471EF8E61BA90A3D00D21972 /* TableView */,
-				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 				47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */,
 				475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */,
 				5A2F4E211BA85E8800CA71D5 /* Player.xib */,
@@ -472,7 +472,7 @@
 				TargetAttributes = {
 					47BD97181BA2779F00096854 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = Z2M8H95Q7Z;
+						DevelopmentTeam = S2QVPRJ4JH;
 					};
 					47BD972D1BA277A000096854 = {
 						CreatedOnToolsVersion = 6.4;

@@ -10,7 +10,7 @@ import UIKit
 
 class LayerCell: UICollectionViewCell {
     
-    @IBOutlet var image:[UIImageView] = Array(count: 6, repeatedValue: UIImageView())
+    @IBOutlet var image:[UIImageView] = Array(count: 8, repeatedValue: UIImageView())
     
     override init(frame: CGRect){
         super.init(frame: frame)

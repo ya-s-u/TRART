@@ -6,11 +6,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JaketLayer6View" customModule="TRART" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-1V-rJh">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Il6-SB-wQ1">
+                    <rect key="frame" x="0.0" y="158" width="70" height="70"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtO-qr-elb">
+                    <rect key="frame" x="273" y="158" width="70" height="70"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GwC-Vo-Op3">
+                    <rect key="frame" x="273" y="0.0" width="70" height="70"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chL-7Y-mpn">
+                    <rect key="frame" x="70" y="12" width="203" height="203"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="image" destination="chL-7Y-mpn" collectionClass="NSMutableArray" id="sRh-PQ-Lvj"/>
+                <outletCollection property="image" destination="HD0-1V-rJh" collectionClass="NSMutableArray" id="M7k-Cp-FKx"/>
+                <outletCollection property="image" destination="Il6-SB-wQ1" collectionClass="NSMutableArray" id="hXr-sy-55k"/>
+                <outletCollection property="image" destination="GwC-Vo-Op3" collectionClass="NSMutableArray" id="vah-Az-Jq4"/>
+                <outletCollection property="image" destination="AtO-qr-elb" collectionClass="NSMutableArray" id="Pfz-BO-3cl"/>
+            </connections>
         </view>
     </objects>
 </document>
