@@ -132,7 +132,6 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func changeHomeBackgroudImgGradationColor(offsetY: CGFloat) {
-        println(offsetY%320)
         if (offsetY%320) >= 0.0 && (offsetY%320) <= 50.0 {
             if self.gradationType == 0{
                 self.gradationType == 1
