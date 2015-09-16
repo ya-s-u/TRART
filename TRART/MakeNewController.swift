@@ -90,6 +90,9 @@ class MakeNewController: UIViewController, UINavigationControllerDelegate {
         var notification = NSNotification(name: "resetCreatingPlaylist", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
         
+        // stop playing
+        PlayerManager.sharedInstance.stop()
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -104,6 +107,9 @@ class MakeNewController: UIViewController, UINavigationControllerDelegate {
         // remove player
         notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
+        
+        // stop playing
+        PlayerManager.sharedInstance.stop()
     }
     
     func enableNextButton() {
