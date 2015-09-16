@@ -41,7 +41,7 @@ class MakeNewNavigationController: UINavigationController {
     }
     
     func hidePlaylistPlayer(sender: AnyObject) {
-        selectedTracks.removeFromSuperview()
+//        selectedTracks.removeFromSuperview()
         player.removeFromSuperview()
     }
 }

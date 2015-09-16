@@ -3,6 +3,9 @@ import UIKit
 class MakeFinishViewController: UIViewController {
     
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    @IBOutlet weak var maintitle: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
 
     @IBOutlet var pTitle: UILabel!
     @IBOutlet var pSummary: UILabel!
@@ -13,6 +16,9 @@ class MakeFinishViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "公開"
+        
+        maintitle.font = UIFont(name: "Avenir-Book", size: 36)
+        subtitle.font = UIFont.systemFontOfSize(13)
         
         pTitle.text = del.playlist.title
         pSummary.text = del.playlist.comment
