@@ -706,7 +706,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuG-VI-cQt">
-                                                            <rect key="frame" x="86" y="26" width="476" height="20.5"/>
+                                                            <rect key="frame" x="86" y="26" width="476" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -833,36 +833,22 @@
                                     <outletCollection property="gestureRecognizers" destination="hX8-Oi-O5W" appends="YES" id="bnY-6u-ne2"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W3-7s-gu8">
-                                <rect key="frame" x="0.0" y="926" width="600" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="o3p-LB-Nep"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9bb-8W-pqz" firstAttribute="top" secondItem="A2k-Bz-Prb" secondAttribute="top" id="1ss-5I-Z4M"/>
-                            <constraint firstItem="Dke-mh-qhx" firstAttribute="top" secondItem="1W3-7s-gu8" secondAttribute="bottom" id="EmS-ko-keL"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="1W3-7s-gu8" secondAttribute="bottom" id="IKJ-Le-y9H"/>
                             <constraint firstAttribute="bottom" secondItem="9bb-8W-pqz" secondAttribute="bottom" id="RKC-3V-10d"/>
-                            <constraint firstItem="1W3-7s-gu8" firstAttribute="leading" secondItem="A2k-Bz-Prb" secondAttribute="leadingMargin" constant="-16" id="V0C-F2-3z5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1W3-7s-gu8" secondAttribute="trailing" constant="-16" id="WaQ-CP-Mt3"/>
                             <constraint firstAttribute="width" secondItem="9bb-8W-pqz" secondAttribute="width" id="iVf-f7-h7n"/>
                             <constraint firstItem="9bb-8W-pqz" firstAttribute="leading" secondItem="A2k-Bz-Prb" secondAttribute="leading" id="iiy-qL-myH"/>
                             <constraint firstAttribute="trailing" secondItem="9bb-8W-pqz" secondAttribute="trailing" id="qw2-n5-ASM"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="IKJ-Le-y9H"/>
-                            </mask>
-                        </variation>
+                        <connections>
+                            <outlet property="delegate" destination="C66-NY-jZD" id="4uY-s5-xhn"/>
+                        </connections>
                     </scrollView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="970"/>
                     <connections>
-                        <outlet property="CloseView" destination="1W3-7s-gu8" id="Vvu-zI-ciX"/>
                         <outlet property="PlayListComment" destination="DRn-de-vEd" id="TJK-gc-I2T"/>
                         <outlet property="PlaylistTitle" destination="uAS-mm-9UE" id="pee-2J-mGy"/>
                         <outlet property="tableView" destination="Y0I-Rp-seT" id="2sF-hC-2Bf"/>

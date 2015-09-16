@@ -193,4 +193,10 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         
         return true
     }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        PlaylistTitle.resignFirstResponder()
+        PlayListComment.resignFirstResponder()
+    }
+    
 }
