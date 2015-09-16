@@ -564,16 +564,25 @@
                                             <segue destination="5dl-G6-jxB" kind="presentation" identifier="confirm2jacket" id="ClP-GK-XSS"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="7JM-Dc-9Dq">
+                                        <rect key="frame" x="525" y="177" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="e0b-gU-42Z"/>
+                                            <constraint firstAttribute="height" constant="44" id="iE5-xA-rtU"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="uAS-mm-9UE" firstAttribute="top" secondItem="EvL-vu-s9u" secondAttribute="bottom" constant="8" id="0wR-3c-8rv"/>
+                                    <constraint firstItem="eHd-j5-XNh" firstAttribute="bottom" secondItem="7JM-Dc-9Dq" secondAttribute="bottom" constant="17" id="4hF-tH-5MZ"/>
                                     <constraint firstItem="uAS-mm-9UE" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leadingMargin" id="5mP-T7-u7q"/>
                                     <constraint firstItem="uAS-mm-9UE" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leadingMargin" constant="8" id="8ww-Y5-swj"/>
                                     <constraint firstItem="4FX-Ns-Agd" firstAttribute="top" secondItem="9bb-8W-pqz" secondAttribute="top" id="9yy-NM-ylI"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="uAS-mm-9UE" secondAttribute="trailing" id="Aqf-Rj-tSM"/>
                                     <constraint firstAttribute="trailing" secondItem="4FX-Ns-Agd" secondAttribute="trailing" id="Boc-MK-yPw"/>
                                     <constraint firstAttribute="centerX" secondItem="4FX-Ns-Agd" secondAttribute="centerX" id="C2W-xF-ubv"/>
+                                    <constraint firstItem="EvL-vu-s9u" firstAttribute="bottom" secondItem="7JM-Dc-9Dq" secondAttribute="bottom" constant="15" id="GxS-ce-d1B"/>
                                     <constraint firstAttribute="centerX" secondItem="EvL-vu-s9u" secondAttribute="centerX" id="HOR-4w-iRL"/>
                                     <constraint firstAttribute="centerX" secondItem="eHd-j5-XNh" secondAttribute="centerX" id="I5b-Bg-aGf"/>
                                     <constraint firstItem="EvL-vu-s9u" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leading" constant="16" id="JB7-ok-BRd"/>
@@ -586,6 +595,7 @@
                                     <constraint firstAttribute="bottom" secondItem="4FX-Ns-Agd" secondAttribute="bottom" id="R0K-ir-SgP"/>
                                     <constraint firstItem="Y0I-Rp-seT" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leading" id="RQ4-vy-eJq"/>
                                     <constraint firstItem="EvL-vu-s9u" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leadingMargin" id="Svr-da-3ic"/>
+                                    <constraint firstItem="EvL-vu-s9u" firstAttribute="trailing" secondItem="7JM-Dc-9Dq" secondAttribute="trailing" constant="15" id="Z8V-mH-Td2"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="EvL-vu-s9u" secondAttribute="trailing" id="aPo-8u-BfB"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="DRn-de-vEd" secondAttribute="trailing" constant="8" id="bKg-MV-blJ"/>
                                     <constraint firstItem="uAS-mm-9UE" firstAttribute="trailing" secondItem="9bb-8W-pqz" secondAttribute="trailingMargin" constant="8" id="bNF-E5-2U8"/>
@@ -613,6 +623,7 @@
                                         <exclude reference="HOR-4w-iRL"/>
                                         <exclude reference="Svr-da-3ic"/>
                                         <exclude reference="aPo-8u-BfB"/>
+                                        <exclude reference="4hF-tH-5MZ"/>
                                         <exclude reference="I5b-Bg-aGf"/>
                                         <exclude reference="5mP-T7-u7q"/>
                                         <exclude reference="Aqf-Rj-tSM"/>
@@ -671,6 +682,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="acO-YA-Ud9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -689,6 +701,7 @@
         <image name="Twitter" width="44" height="44"/>
         <image name="bg" width="375" height="667"/>
         <image name="complete" width="208" height="53"/>
+        <image name="edit" width="44" height="44"/>
         <image name="share" width="33" height="11"/>
     </resources>
 </document>

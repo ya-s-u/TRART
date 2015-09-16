@@ -36,8 +36,10 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 //    var playlist: Playlist?
     
     override func viewDidLoad() {
-        
+        print(del.tempJackets.count)
+
         super.viewDidLoad()
+
         self.title = "ラベルを編集"
 
         myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
@@ -66,7 +68,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     internal func onDoneButton(sender: UIButton){
-        
+        del.playlist.jackets.removeAll()
         for i in 0..<jaket[layout_type].count{
             var track:Track = del.playlist!.tracks[jaket[layout_type][i] - 1]
             sendJacket.append(track)
@@ -81,7 +83,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     internal func onCancelButton(sender: UIButton){
-        del.playlist?.jackets.removeAll()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 

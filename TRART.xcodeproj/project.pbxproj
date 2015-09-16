@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		471EF8DD1BA8F8FF00D21972 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF8DC1BA8F8FF00D21972 /* Progress.swift */; };
 		475B335E1BA5C4BE00EC0E6A /* MainTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */; };
 		475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */; };
 		475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33611BA5CBF000EC0E6A /* MainController.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		471EF8DC1BA8F8FF00D21972 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableHeaderController.swift; sourceTree = "<group>"; };
 		475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableHeader.xib; sourceTree = "<group>"; };
 		475B33611BA5CBF000EC0E6A /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				5AF7737D1BA2CE11008056A7 /* iTunesApiClient.swift */,
 				5AD276191BA59FAF0074B49C /* PlayerManager.swift */,
+				471EF8DC1BA8F8FF00D21972 /* Progress.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				47CE091D1BA2D4F200168E4D /* MakeNewNavigationController.swift in Sources */,
 				47CE09241BA2E71700168E4D /* TracksTableViewController.swift in Sources */,
 				47F291A41BA8194A00BC8DD0 /* SearchViewController.swift in Sources */,
+				471EF8DD1BA8F8FF00D21972 /* Progress.swift in Sources */,
 				47BD971F1BA2779F00096854 /* AppDelegate.swift in Sources */,
 				5AD2761A1BA59FAF0074B49C /* PlayerManager.swift in Sources */,
 				988529641BA5378B003D5FED /* JaketLayer3View.swift in Sources */,

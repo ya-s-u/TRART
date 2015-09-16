@@ -16,12 +16,7 @@ class TracksTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: "TracksTableCellController")
         
-        let realmResponse = realm.objects(Track)
-        
-        for track in realmResponse {
-            tracks.append(track)
-        }
-        tracks.shuffle(tracks.count)
+        self.loadPlaylistData()
         
         self.checkedTracks.removeAll()
         //Receive Nortification from MakeNewController.swift
@@ -34,8 +29,35 @@ class TracksTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.parentNavigationController!.title! = "Favoriteから曲を選択"
     }
+    
+    //---------------------------
+    //# MARK: - LoadDataMethod
+    //---------------------------
+    func loadPlaylistData(){
+        tracks.removeAll()
+        
+        Progress.showProgressWithMessage("")
+        let realmResponse = realm.objects(Track)
+        for track in realmResponse {
+            tracks.append(track)
+        }
+        tracks.shuffle(tracks.count)
+        Progress.stopProgress()
+        
+        self.tableView.reloadData()
+    }
+    
+    func savePlaylist(){
+        for track in checkedTracks{
+            saveTracks.append(track.1)
+        }
+        del.playlist.setTracksArr(saveTracks)
+    }
+    
+    //---------------------------
+    //# MARK: - TableViewMethod
+    //---------------------------
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -105,14 +127,5 @@ class TracksTableViewController: UITableViewController {
         var notification = NSNotification(name: "updatePlayingTracks", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }
-    
-    func savePlaylist(){
-        for track in checkedTracks{
-            saveTracks.append(track.1)
-        }
-        del.playlist.setTracksArr(saveTracks)
-    }
-    
-    
     
 }
