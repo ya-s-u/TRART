@@ -86,7 +86,7 @@ class PlayerView: UIView, UIScrollViewDelegate {
             
             let waveformView = UIImageView()
             waveformView.image = waveform
-            waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
+            waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 5, waveform.size.width, self.bounds.height-10)
             scrollView.addSubview(waveformView)
             
             if (i>0 && i<playlistPlayer.tracks.count) {
