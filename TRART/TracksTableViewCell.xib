@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -14,14 +14,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kud-2q-Tsy">
-                        <rect key="frame" x="87" y="19" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kud-2q-Tsy">
+                        <rect key="frame" x="87" y="19" width="165" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-qS-ZM3">
-                        <rect key="frame" x="87" y="41" width="32" height="16"/>
+                        <rect key="frame" x="87" y="41" width="165" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
@@ -70,6 +70,7 @@
                     <constraint firstItem="UmK-zx-b1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Vma-25-yPK"/>
                     <constraint firstAttribute="centerY" secondItem="kud-2q-Tsy" secondAttribute="centerY" constant="10" id="Xs4-uB-gc0"/>
                     <constraint firstItem="wq5-GE-vov" firstAttribute="leading" secondItem="kud-2q-Tsy" secondAttribute="trailing" constant="30" id="eEK-qF-pG8"/>
+                    <constraint firstItem="wq5-GE-vov" firstAttribute="leading" secondItem="SMn-qS-ZM3" secondAttribute="trailing" constant="30" id="hW1-de-V2i"/>
                     <constraint firstItem="IeM-cw-Ob0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="18" id="hq3-HZ-gVA"/>
                     <constraint firstAttribute="centerY" secondItem="UmK-zx-b1S" secondAttribute="centerY" id="lJ4-de-vbL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wq5-GE-vov" secondAttribute="trailing" id="qC8-uR-zJb"/>
