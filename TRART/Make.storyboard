@@ -124,7 +124,7 @@
                                     <action selector="TouchFinish:" destination="Z4C-UU-93b" eventType="touchUpInside" id="jgs-z3-cnq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-gl-mcS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-gl-mcS" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="16" y="84" width="145" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,7 +174,7 @@
                     <connections>
                         <outlet property="CommentView" destination="VjG-7D-BiW" id="LJH-QP-8rs"/>
                         <outlet property="TitleView" destination="MhT-Z2-TIy" id="6hq-U4-NmD"/>
-                        <outlet property="maintitle" destination="j8s-gl-mcS" id="b2W-Zd-fAM"/>
+                        <outlet property="maintitle" destination="j8s-gl-mcS" id="i27-0O-wog"/>
                         <outlet property="pSummary" destination="eJd-tV-EpL" id="3Jo-k3-pcU"/>
                         <outlet property="pTitle" destination="Z27-UF-YDy" id="JtV-bf-bn5"/>
                         <outlet property="subtitle" destination="kzy-ma-lsj" id="G9S-37-ggl"/>

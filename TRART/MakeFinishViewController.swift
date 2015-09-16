@@ -1,10 +1,11 @@
 import UIKit
+import LTMorphingLabel
 
-class MakeFinishViewController: UIViewController {
+class MakeFinishViewController: UIViewController, LTMorphingLabelDelegate {
     
-    var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
+    var del = UIApplication.sharedApplication().delegate as! AppDelegate
     
-    @IBOutlet weak var maintitle: UILabel!
+    @IBOutlet weak var maintitle: LTMorphingLabel!
     @IBOutlet weak var subtitle: UILabel!
 
     @IBOutlet var pTitle: UILabel!
@@ -17,7 +18,10 @@ class MakeFinishViewController: UIViewController {
         
         self.title = "公開"
         
+        maintitle.delegate = self
+        maintitle.text = ""
         maintitle.font = UIFont(name: "Avenir-Book", size: 36)
+        
         subtitle.font = UIFont.systemFontOfSize(13)
         
         pTitle.text = del.playlist.title
@@ -45,6 +49,12 @@ class MakeFinishViewController: UIViewController {
         
         self.CommentView.backgroundColor = UIColorFromRGB(0x282828, aValue: 1.0)
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        maintitle.morphingEffect = .Scale
+        maintitle.morphingDuration = 1.4
+        maintitle.text = "Complete"
     }
     
     @IBAction func TouchFinish(sender: AnyObject) {
