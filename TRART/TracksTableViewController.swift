@@ -4,7 +4,7 @@ import SDWebImage
 
 class TracksTableViewController: UITableViewController {
     
-    var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
+    var del =  UIApplication.sharedApplication().delegate as! AppDelegate
     var parentNavigationController : UINavigationController?
     let realm = Realm()
     var tracks: [Track] = []
@@ -91,6 +91,8 @@ class TracksTableViewController: UITableViewController {
                 var notification : NSNotification = NSNotification(name: "8TracksUnSelected", object: nil)
                 NSNotificationCenter.defaultCenter().postNotification(notification)
             }
+            
+            updatePlayingTracks()
             return
         }
         
@@ -110,6 +112,20 @@ class TracksTableViewController: UITableViewController {
             var notification : NSNotification = NSNotification(name: "8TracksSelected", object: nil)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
+        
+        updatePlayingTracks()
+    }
+    
+    func updatePlayingTracks() {
+        del.playingTracks.removeAll()
+        
+        for track in checkedTracks{
+            del.playingTracks.append(track.1)
+        }
+        
+        // send notification
+        var notification = NSNotification(name: "updatePlayingTracks", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
 }
