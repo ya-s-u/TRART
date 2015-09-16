@@ -6,6 +6,7 @@ PODS:
   - Box (1.2.2)
   - KDEAudioPlayer (0.2.7):
     - ReachabilitySwift (~> 1.1)
+  - LTMorphingLabel (0.0.8)
   - PageMenu (1.2.8)
   - ReachabilitySwift (1.1)
   - Realm (0.95.0):
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - AMWaveTransition
   - APIKit
   - KDEAudioPlayer
+  - LTMorphingLabel (~> 0.0.8)
   - PageMenu
   - RealmSwift
   - SDWebImage (~> 3.7)
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   APIKit: 82c21586bca23e67711d2dd4a3b6658c0bf8076a
   Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
   KDEAudioPlayer: 5a95159d560b7c20975b5d092a875d28021725db
+  LTMorphingLabel: 0d2c981d47bb3b57dd03b37c5c13d8d71fc1e97e
   PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
   ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
   Realm: bbb171b96728ea136ed5cd354dca2a3d6529923c
