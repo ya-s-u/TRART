@@ -12,6 +12,8 @@ class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "プレイリストを編集"
+        
         PlaylistTitle.delegate = self
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
         PlaylistTitle.attributedPlaceholder = NSAttributedString(string:"タイトル(必須)",
