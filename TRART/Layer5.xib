@@ -6,11 +6,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JaketLayer5View" customModule="TRART" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oxe-gi-QKo">
+                    <rect key="frame" x="0.0" y="28" width="172" height="172"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCz-Qs-VBD">
+                    <rect key="frame" x="171" y="28" width="172" height="172"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="image" destination="oxe-gi-QKo" collectionClass="NSMutableArray" id="qs4-nB-94k"/>
+                <outletCollection property="image" destination="qCz-Qs-VBD" collectionClass="NSMutableArray" id="6uG-sw-7MR"/>
+            </connections>
         </view>
     </objects>
 </document>

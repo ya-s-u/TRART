@@ -11,6 +11,9 @@ class MakeFinishViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "公開"
+        
         pTitle.text = del.playlist.title
         pSummary.text = del.playlist.comment
         self.navigationItem.setHidesBackButton(true, animated: false)
@@ -35,16 +38,10 @@ class MakeFinishViewController: UIViewController {
         self.TitleView.layer.insertSublayer(gradientLayer, atIndex: 0)
         
         self.CommentView.backgroundColor = UIColorFromRGB(0x282828, aValue: 1.0)
-        
-        let myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
-        self.navigationController?.navigationBar
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.navigationItem
-        self.navigationItem.setRightBarButtonItem(myBarButton_Done, animated: true)
 
     }
     
-    internal func onDoneButton(sender: UIButton){
+    @IBAction func TouchFinish(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

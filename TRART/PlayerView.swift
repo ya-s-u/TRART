@@ -1,9 +1,10 @@
 import UIKit
 
 class PlayerView: UIView, UIScrollViewDelegate {
-    var app =  UIApplication.sharedApplication().delegate as! AppDelegate
+    let app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
-    let player = PlayerManager.sharedInstance
+//    let player = PlayerManager.sharedInstance
+    let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var timer: UILabel!
@@ -19,6 +20,7 @@ class PlayerView: UIView, UIScrollViewDelegate {
             object: nil
         )
         
+        // interval timer
         NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
         
         timer.font = UIFont.systemFontOfSize(13)
@@ -36,11 +38,11 @@ class PlayerView: UIView, UIScrollViewDelegate {
     }
     
     @IBAction func tapButton(sender: AnyObject) {
-        if player.isPlaying() {
-            player.stop()
+        if (playlistPlayer.tracks.count==0 || playlistPlayer.isPlay()) {
+            playlistPlayer.stop()
             button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
         } else {
-            player.play()
+            playlistPlayer.play()
             button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
         }
     }
@@ -49,14 +51,14 @@ class PlayerView: UIView, UIScrollViewDelegate {
         removeScrollViewSubViews()
         
         var width = self.bounds.width
-        for (i, track) in enumerate(app.playingTracks) {
+        for (i, track) in enumerate(playlistPlayer.tracks) {
             let waveform = UIImage(named: "dummy-pulse")!
             let waveformView = UIImageView()
             waveformView.image = waveform
             waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
             scrollView.addSubview(waveformView)
             
-            if (i>0 && i<app.playingTracks.count) {
+            if (i>0 && i<playlistPlayer.tracks.count) {
                 let separator = UIView()
                 separator.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, 1, self.bounds.height)
                 separator.backgroundColor = UIColor(white: 1, alpha: 0.5)
@@ -77,15 +79,15 @@ class PlayerView: UIView, UIScrollViewDelegate {
     }
     
     func updateTimer() {
-        if player.isPlaying() {
-            timer.text = player.currentTimeStr()
+        if playlistPlayer.isPlay() {
+            timer.text = playlistPlayer.currentTimeStr()
             scrollView.contentOffset.x = scrollView.contentOffset.x+1
         }
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         println(scrollView.contentOffset.x/10)
-        player.pos(Double(scrollView.contentOffset.x/10))
+        playlistPlayer.pos(Double(scrollView.contentOffset.x/10))
     }
     
     func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {

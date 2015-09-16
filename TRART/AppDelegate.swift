@@ -7,7 +7,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var playlist:Playlist!
-    var playingTracks: [Track] = []
     var tempJackets:List<Track>!
     
     let realm = Realm()

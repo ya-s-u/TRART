@@ -12,7 +12,7 @@ import SDWebImage
 
 class JaketLayer7View: UIView {
     
-    @IBOutlet var image:[UIImageView] = Array(count: 3, repeatedValue: UIImageView())
+    @IBOutlet var image:[UIImageView] = Array(count: 8, repeatedValue: UIImageView())
     
     var playlist: Playlist? {
         didSet{
