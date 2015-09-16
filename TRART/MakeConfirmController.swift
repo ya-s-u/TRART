@@ -19,7 +19,11 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorColor = UIColor.rgbColor(0x404040)
+        self.tableView.layoutMargins = UIEdgeInsetsZero
+        self.tableView.editing = true
         
+        //Nortification
         self.notificationCenter.addObserver(self, selector: "showKeyboard:", name: UIKeyboardDidShowNotification, object: nil)
         self.notificationCenter.addObserver(self, selector: "hideKeyboard:", name: UIKeyboardDidHideNotification, object: nil)
         
@@ -115,8 +119,29 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         
         return cell
     }
-
     
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        var itemToMove = self.del.playlist.tracks[sourceIndexPath.row]
+        self.del.playlist.tracks.removeAtIndex(sourceIndexPath.row)
+        self.del.playlist.tracks.insert(itemToMove, atIndex: destinationIndexPath.row)
+        self.tableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .None
+    }
+    
+    func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
     
     //---------------------------
     //# MARK: - IBAction
