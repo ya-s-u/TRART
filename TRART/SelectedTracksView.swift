@@ -1,6 +1,6 @@
 import UIKit
 
-class SelectedTracksView: UIView {
+class SelectedTracksView: UICollectionView {
     let app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
     let playlistPlayer = PlaylistPlayerManager.sharedInstance
