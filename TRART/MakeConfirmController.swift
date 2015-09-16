@@ -23,8 +23,12 @@ class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
         PlayListComment.placeHolderLabel.text = "プレイリストの説明"
 
         // BarButtonItemを作成する.
-        
-        myBarButton_1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onClickMyBarButton:")
+        myBarButton_1 = UIBarButtonItem(title: "公開", style:.Plain, target: self, action: "onClickMyBarButton:")
+
+        //戻るボタンの編集(今はできない:9/16 12:00)
+//        let backButton = UIBarButtonItem(title: "キャンセル", style: .Plain, target: self, action: "popViewControllerAnimated:")
+//        
+//        self.navigationItem.backBarButtonItem = backButton
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)

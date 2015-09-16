@@ -407,15 +407,130 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-B0-PCA">
-                                                    <rect key="frame" x="193" y="0.0" width="150" height="150"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTw-Le-iYU">
-                                                    <rect key="frame" x="0.0" y="78" width="150" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqA-QB-oJY">
+                                                    <rect key="frame" x="92" y="35" width="158" height="158"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EI1-gL-LWP">
+                                                    <rect key="frame" x="0.0" y="157" width="71" height="71"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uF4-i5-cof">
+                                                    <rect key="frame" x="272" y="0.0" width="71" height="71"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-B0-PCA">
+                                                    <rect key="frame" x="185" y="70" width="158" height="158"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outletCollection property="image" destination="eTw-Le-iYU" collectionClass="NSMutableArray" id="iV3-Ja-df4"/>
+                                            <outletCollection property="image" destination="qqA-QB-oJY" collectionClass="NSMutableArray" id="xsG-YS-aBn"/>
+                                            <outletCollection property="image" destination="CFA-B0-PCA" collectionClass="NSMutableArray" id="kIv-qw-D2m"/>
+                                            <outletCollection property="image" destination="EI1-gL-LWP" collectionClass="NSMutableArray" id="gDK-LP-WYh"/>
+                                            <outletCollection property="image" destination="uF4-i5-cof" collectionClass="NSMutableArray" id="DIs-Q8-6jB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="laycell5" id="YIk-i1-tqe" customClass="LayerCell" customModule="TRART" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4h-Bg-WqH">
+                                                    <rect key="frame" x="0.0" y="28" width="172" height="172"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNu-Bt-lgS">
+                                                    <rect key="frame" x="171" y="28" width="172" height="172"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outletCollection property="image" destination="h4h-Bg-WqH" collectionClass="NSMutableArray" id="PDj-hC-LKG"/>
+                                            <outletCollection property="image" destination="QNu-Bt-lgS" collectionClass="NSMutableArray" id="0cf-vO-UpP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="laycell6" id="lxf-Un-3Cm" customClass="LayerCell" customModule="TRART" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-Aj-EFv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oxg-Js-Ac8">
+                                                    <rect key="frame" x="0.0" y="158" width="70" height="70"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-jH-OGd">
+                                                    <rect key="frame" x="273" y="158" width="70" height="70"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAh-0o-ujc">
+                                                    <rect key="frame" x="273" y="0.0" width="70" height="70"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANJ-lJ-oGl">
+                                                    <rect key="frame" x="70" y="12" width="203" height="203"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outletCollection property="image" destination="ANJ-lJ-oGl" collectionClass="NSMutableArray" id="9PX-Vs-OIW"/>
+                                            <outletCollection property="image" destination="aBz-Aj-EFv" collectionClass="NSMutableArray" id="63s-p9-InE"/>
+                                            <outletCollection property="image" destination="oxg-Js-Ac8" collectionClass="NSMutableArray" id="cHj-cH-IG9"/>
+                                            <outletCollection property="image" destination="KAh-0o-ujc" collectionClass="NSMutableArray" id="qBL-Wo-Rrb"/>
+                                            <outletCollection property="image" destination="SOD-jH-OGd" collectionClass="NSMutableArray" id="l5Y-mF-aSz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="laycell7" id="bbK-hs-MOZ" customClass="LayerCell" customModule="TRART" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-8g-MK0">
+                                                    <rect key="frame" x="0.0" y="56" width="172" height="172"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXH-l7-pV5">
+                                                    <rect key="frame" x="171" y="0.0" width="172" height="172"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIi-9Y-Ll2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVA-Tp-V6C">
+                                                    <rect key="frame" x="57" y="0.0" width="57" height="57"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amH-Lr-DRx">
+                                                    <rect key="frame" x="114" y="0.0" width="57" height="57"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CW5-Y4-4WZ">
+                                                    <rect key="frame" x="286" y="171" width="57" height="57"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGR-x3-vjq">
+                                                    <rect key="frame" x="229" y="171" width="57" height="57"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-Hb-2AI">
+                                                    <rect key="frame" x="172" y="171" width="57" height="57"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outletCollection property="image" destination="ARU-8g-MK0" collectionClass="NSMutableArray" id="vC0-PA-NsM"/>
+                                            <outletCollection property="image" destination="tXH-l7-pV5" collectionClass="NSMutableArray" id="cam-Xg-sXP"/>
+                                            <outletCollection property="image" destination="tIi-9Y-Ll2" collectionClass="NSMutableArray" id="VaP-Nj-9Ad"/>
+                                            <outletCollection property="image" destination="iVA-Tp-V6C" collectionClass="NSMutableArray" id="mVW-FR-czc"/>
+                                            <outletCollection property="image" destination="amH-Lr-DRx" collectionClass="NSMutableArray" id="Pp0-WM-TDh"/>
+                                            <outletCollection property="image" destination="UgD-Hb-2AI" collectionClass="NSMutableArray" id="t5l-Zi-IzK"/>
+                                            <outletCollection property="image" destination="yGR-x3-vjq" collectionClass="NSMutableArray" id="uOq-Di-JIa"/>
+                                            <outletCollection property="image" destination="CW5-Y4-4WZ" collectionClass="NSMutableArray" id="NMs-Q9-m37"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -423,8 +538,8 @@
                                     <outlet property="delegate" destination="uKh-gm-GNM" id="Xt8-xd-hIX"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
-                                <rect key="frame" x="281" y="308" width="39" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="eN3-tT-iM1">
+                                <rect key="frame" x="265" y="308" width="71" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="kdI-fe-52n"/>
                                 </constraints>
