@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class MainController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     let realm = Realm()
     var playlists: [Playlist] = []
@@ -21,25 +21,35 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         let header: MainTableHeaderController = UINib(nibName: "MainTableHeader", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! MainTableHeaderController
         self.tableView.tableHeaderView = header
         
-        let realmResponse = realm.objects(Playlist)
-        for playlist in realmResponse {
-            playlists.append(playlist)
-        }
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToMakeNew", name: "CreateButton", object: nil)
+        
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
-    
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.tableView.reloadData()
+        
+        self.loadPlaylistData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func loadPlaylistData(){
+        playlists.removeAll()
+        
+        Progress.showProgressWithMessage("")
+        let realmResponse = realm.objects(Playlist)
+        for playlist in realmResponse {
+            playlists.append(playlist)
+        }
+        Progress.stopProgress()
+        
+        self.tableView.reloadData()
     }
     
     func segueToMakeNew() {
@@ -47,6 +57,13 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         var makeNewViewController = storyboard.instantiateViewControllerWithIdentifier("MakeNew") as! UIViewController
         self.presentViewController(makeNewViewController, animated: true, completion: nil)
     }
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+    }
+    
+    //---------------------------
+    //# MARK: - TableViewMethod
+    //---------------------------
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -69,8 +86,4 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
-    
-    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
-    }
-
 }
