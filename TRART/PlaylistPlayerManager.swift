@@ -74,7 +74,12 @@ class PlaylistPlayerManager: NSObject {
     }
     
     func currentTimeStr() -> String {
-        return player.currentTimeStr()
+        let trackTime = player.currentTime()
+        
+        let origin = trackTime + Double(currentIndex*30)
+        let min = Int(origin/60)
+        let sec = NSString(format: "%02d", Int(origin%60))
+        return "\(min):\(sec)"
     }
     
     private func incrCurrentIndex() -> Bool {
