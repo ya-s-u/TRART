@@ -107,6 +107,9 @@ class MakeNewController: UIViewController, UINavigationControllerDelegate {
         // remove player
         notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
+        
+        // stop playing
+        PlayerManager.sharedInstance.stop()
     }
     
     func enableNextButton() {
