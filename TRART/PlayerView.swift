@@ -20,6 +20,7 @@ class PlayerView: UIView, UIScrollViewDelegate {
             object: nil
         )
         
+        // interval timer
         NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
         
         timer.font = UIFont.systemFontOfSize(13)
