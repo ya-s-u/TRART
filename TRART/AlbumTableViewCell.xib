@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlbumName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-2B-0yd">
-                        <rect key="frame" x="84" y="24" width="94.5" height="20.5"/>
+                        <rect key="frame" x="84" y="24" width="198" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
@@ -47,6 +47,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="yAP-2B-0yd" secondAttribute="centerY" constant="10" id="8mz-JV-EQo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yAP-2B-0yd" secondAttribute="trailing" constant="30" id="Hgw-f3-eIj"/>
                     <constraint firstItem="alI-pe-8rT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Kzf-wj-czd"/>
                     <constraint firstAttribute="centerY" secondItem="alI-pe-8rT" secondAttribute="centerY" id="afT-2N-9Nu"/>
                     <constraint firstAttribute="centerY" secondItem="oF3-NL-UbX" secondAttribute="centerY" constant="-10" id="qW5-bN-sDL"/>

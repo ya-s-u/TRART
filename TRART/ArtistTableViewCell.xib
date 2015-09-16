@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlE-vb-uaW">
-                        <rect key="frame" x="86" y="15" width="40.5" height="20.5"/>
+                        <rect key="frame" x="86" y="15" width="196" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
@@ -42,6 +42,7 @@
                     <constraint firstAttribute="centerY" secondItem="PlE-vb-uaW" secondAttribute="centerY" constant="10" id="HKt-sw-5BH"/>
                     <constraint firstItem="PlE-vb-uaW" firstAttribute="leading" secondItem="tiq-EG-5DS" secondAttribute="trailing" constant="10" id="csb-tg-sTs"/>
                     <constraint firstAttribute="centerY" secondItem="tiq-EG-5DS" secondAttribute="centerY" id="jfX-Ga-fh6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PlE-vb-uaW" secondAttribute="trailing" constant="30" id="meT-oM-FJV"/>
                     <constraint firstItem="tiq-EG-5DS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="obk-zX-eA4"/>
                     <constraint firstAttribute="centerY" secondItem="gac-gW-MTw" secondAttribute="centerY" constant="-10" id="vzt-Oi-rfG"/>
                 </constraints>
