@@ -4,13 +4,19 @@ import RealmSwift
 class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet var CloseView: UIView!
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListComment: UIPlaceHolderTextView!
     var del:AppDelegate =  UIApplication.sharedApplication().delegate as! AppDelegate
     var myBarButton_1:UIBarButtonItem!
+    let notificationCenter = NSNotificationCenter.defaultCenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.notificationCenter.addObserver(self, selector: "showKeyboard:", name: UIKeyboardDidShowNotification, object: nil)
+
+        self.notificationCenter.addObserver(self, selector: "hideKeyboard:", name: UIKeyboardDidHideNotification, object: nil)
         
         self.title = "プレイリストを編集"
         
@@ -102,5 +108,26 @@ class MakeConfirmViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func tapScreen(sender: AnyObject) {
         self.view.endEditing(true)
+    }
+    
+    // 2.送られてきたNSNotificationを処理して、
+    func showKeyboard(notification:NSNotification){
+        
+        let rect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let duration:NSTimeInterval = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! Double
+        UIView.animateWithDuration(duration, animations: {
+            let transform = CGAffineTransformMakeTranslation(0, -rect.size.height)
+            self.CloseView.transform = transform
+            },completion:nil)
+        
+    }
+    
+    func hideKeyboard(notification: NSNotification?) {
+        // キーボード消滅時の動作をここに記述する
+        let duration = (notification?.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! Double)
+        UIView.animateWithDuration(duration, animations:{
+            self.CloseView.transform = CGAffineTransformIdentity
+            },
+            completion:nil)
     }
 }
