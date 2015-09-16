@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		12E6BAE23399F2641DB4CC75 /* Pods_TRART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C154B7778607281D564FC65E /* Pods_TRART.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		471EF8DD1BA8F8FF00D21972 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF8DC1BA8F8FF00D21972 /* Progress.swift */; };
+		471EF8E11BA9097600D21972 /* ArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF8E01BA9097600D21972 /* ArtistTableViewController.swift */; };
+		471EF8E41BA909B400D21972 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF8E21BA909B400D21972 /* ArtistTableViewCell.swift */; };
+		471EF8E51BA909B400D21972 /* ArtistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471EF8E31BA909B400D21972 /* ArtistTableViewCell.xib */; };
 		475B335E1BA5C4BE00EC0E6A /* MainTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */; };
 		475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */; };
 		475B33621BA5CBF000EC0E6A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B33611BA5CBF000EC0E6A /* MainController.swift */; };
@@ -75,6 +78,9 @@
 
 /* Begin PBXFileReference section */
 		471EF8DC1BA8F8FF00D21972 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		471EF8E01BA9097600D21972 /* ArtistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewController.swift; sourceTree = "<group>"; };
+		471EF8E21BA909B400D21972 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		471EF8E31BA909B400D21972 /* ArtistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistTableViewCell.xib; sourceTree = "<group>"; };
 		475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableHeaderController.swift; sourceTree = "<group>"; };
 		475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableHeader.xib; sourceTree = "<group>"; };
 		475B33611BA5CBF000EC0E6A /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -164,6 +170,48 @@
 				C154B7778607281D564FC65E /* Pods_TRART.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		471EF8DE1BA9083900D21972 /* MakeNew */ = {
+			isa = PBXGroup;
+			children = (
+				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
+				47CE091A1BA2D4C900168E4D /* MakeNewController.swift */,
+				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
+				47CE09261BA2E91000168E4D /* TracksTableCellController.swift */,
+				47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */,
+				471EF8E01BA9097600D21972 /* ArtistTableViewController.swift */,
+				471EF8E21BA909B400D21972 /* ArtistTableViewCell.swift */,
+			);
+			name = MakeNew;
+			sourceTree = "<group>";
+		};
+		471EF8DF1BA9093600D21972 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				475B33611BA5CBF000EC0E6A /* MainController.swift */,
+				475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */,
+				47F291A61BA860D700BC8DD0 /* HomeTableViewCell.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		471EF8E61BA90A3D00D21972 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
+				471EF8E31BA909B400D21972 /* ArtistTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		471EF8E71BA90A4A00D21972 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				47BD97221BA2779F00096854 /* Main.storyboard */,
+				98DF433D1BA723C40009FB34 /* Make.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		47BD97101BA2779F00096854 = {
@@ -266,19 +314,13 @@
 		5AE0DCF41BA2B0DB00EE2A1B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				475B33611BA5CBF000EC0E6A /* MainController.swift */,
-				47CE091A1BA2D4C900168E4D /* MakeNewController.swift */,
-				47CE091C1BA2D4F200168E4D /* MakeNewNavigationController.swift */,
-				47CE09221BA2E71700168E4D /* TracksTableViewController.swift */,
+				471EF8DF1BA9093600D21972 /* Home */,
+				471EF8DE1BA9083900D21972 /* MakeNew */,
 				5A7F614E1BA51D0100555414 /* MakeFinishViewController.swift */,
 				5A7F61501BA5312D00555414 /* MakeConfirmController.swift */,
 				5A7F61521BA5314E00555414 /* MakeJacketController.swift */,
-				47CE09261BA2E91000168E4D /* TracksTableCellController.swift */,
-				475B335D1BA5C4BE00EC0E6A /* MainTableHeaderController.swift */,
 				986E7DC01BA6AFCF00503400 /* LayoutTableViewController.swift */,
 				98DF433B1BA71B1C0009FB34 /* LayoutLastViewController.swift */,
-				47F291A21BA8194A00BC8DD0 /* SearchViewController.swift */,
-				47F291A61BA860D700BC8DD0 /* HomeTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -306,12 +348,11 @@
 		5AE0DCF61BA2B0EE00EE2A1B /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				471EF8E71BA90A4A00D21972 /* Storyboard */,
+				471EF8E61BA90A3D00D21972 /* Cell */,
 				47BD97271BA2779F00096854 /* LaunchScreen.xib */,
 				47F291A31BA8194A00BC8DD0 /* SearchViewController.xib */,
-				47BD97221BA2779F00096854 /* Main.storyboard */,
-				98DF433D1BA723C40009FB34 /* Make.storyboard */,
 				47CE09231BA2E71700168E4D /* TracksTableViewController.xib */,
-				47CE09271BA2E91000168E4D /* TracksTableViewCell.xib */,
 				475B335F1BA5C4DC00EC0E6A /* MainTableHeader.xib */,
 				5A2F4E211BA85E8800CA71D5 /* Player.xib */,
 				988529501BA52F21003D5FED /* LayerSet */,
@@ -449,6 +490,7 @@
 				47BD97291BA2779F00096854 /* LaunchScreen.xib in Resources */,
 				475B33601BA5C4DC00EC0E6A /* MainTableHeader.xib in Resources */,
 				5A2F4E221BA85E8800CA71D5 /* Player.xib in Resources */,
+				471EF8E51BA909B400D21972 /* ArtistTableViewCell.xib in Resources */,
 				47BD97261BA2779F00096854 /* Images.xcassets in Resources */,
 				9885295A1BA53114003D5FED /* Layer6.xib in Resources */,
 				47CE09291BA2E91100168E4D /* TracksTableViewCell.xib in Resources */,
@@ -541,6 +583,7 @@
 				98DF433C1BA71B1C0009FB34 /* LayoutLastViewController.swift in Sources */,
 				986E7DC11BA6AFCF00503400 /* LayoutTableViewController.swift in Sources */,
 				5A2F4E241BA85EBC00CA71D5 /* PlayerView.swift in Sources */,
+				471EF8E41BA909B400D21972 /* ArtistTableViewCell.swift in Sources */,
 				9885296C1BA537B9003D5FED /* JaketLayer7View.swift in Sources */,
 				5AF7737E1BA2CE11008056A7 /* iTunesApiClient.swift in Sources */,
 				988529681BA537A4003D5FED /* JaketLayer5View.swift in Sources */,
@@ -550,6 +593,7 @@
 				47F291A71BA860D700BC8DD0 /* HomeTableViewCell.swift in Sources */,
 				9885296A1BA537AF003D5FED /* JaketLayer6View.swift in Sources */,
 				9885296E1BA537C4003D5FED /* JaketLayer8View.swift in Sources */,
+				471EF8E11BA9097600D21972 /* ArtistTableViewController.swift in Sources */,
 				5AF773821BA2E302008056A7 /* Playlist.swift in Sources */,
 				5A7F614F1BA51D0100555414 /* MakeFinishViewController.swift in Sources */,
 				5A7F61511BA5312E00555414 /* MakeConfirmController.swift in Sources */,

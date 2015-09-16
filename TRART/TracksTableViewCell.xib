@@ -26,13 +26,6 @@
                         <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmK-zx-b1S" userLabel="Cover">
-                        <rect key="frame" x="8" y="6" width="68" height="68"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="68" id="LHN-b4-0dL"/>
-                            <constraint firstAttribute="height" constant="68" id="rBt-bZ-vVz"/>
-                        </constraints>
-                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeM-cw-Ob0">
                         <rect key="frame" x="26" y="25" width="30" height="30"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -54,6 +47,13 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="1Rd-g0-ugY"/>
                             <constraint firstAttribute="width" constant="30" id="WiL-9R-ywv"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmK-zx-b1S" userLabel="Cover">
+                        <rect key="frame" x="8" y="6" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="LHN-b4-0dL"/>
+                            <constraint firstAttribute="height" constant="68" id="rBt-bZ-vVz"/>
                         </constraints>
                     </imageView>
                 </subviews>
