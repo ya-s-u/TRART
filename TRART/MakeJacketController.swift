@@ -16,13 +16,13 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     var layout_type:Int = 0
     var temp:[Int] = []
     var jaket:[[Int]] = Array(count: 8, repeatedValue: [])
-    let jcnt:[Int] = [3,5,6]
+    let jcnt:[Int] = [3,5,6,5,2,5,8]
     var selectFlag:[[Bool]] = Array(count: 8, repeatedValue: Array(count: 8, repeatedValue: false))
     var layoutView:UICollectionView!
     var selectView:UICollectionView!
     var scrollFlag:Bool = false
-    var autoselect:[Int] = [0,1,0]
-    var rastarize:[Int] = [0,4,0]
+    var autoselect:[Int] = [0,1,0,0,0,0,0]
+    var rastarize:[Int] = [0,4,0,0,0,0,0]
     var sendJacket:[Track] = []
     let MyNotification = "MyNotification"
     var myBarButton_Done:UIBarButtonItem!
@@ -42,8 +42,8 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
 
         self.title = "ラベルを編集"
 
-        myBarButton_Done = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onDoneButton:")
-        myBarButton_Cancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancelButton:")
+        myBarButton_Done = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: "onDoneButton:")
+        myBarButton_Cancel = UIBarButtonItem(title: "キャンセル", style: .Plain, target: self, action: "onCancelButton:")
         
         self.navigationController?.navigationBar
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -209,7 +209,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0{
-            return 3
+            return 7
         }else{
             return 8
         }

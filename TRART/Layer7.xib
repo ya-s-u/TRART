@@ -6,11 +6,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JaketLayer7View" customModule="TRART" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="228"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VSA-7p-vV4">
+                    <rect key="frame" x="0.0" y="56" width="172" height="172"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RqH-e4-OAq">
+                    <rect key="frame" x="171" y="0.0" width="172" height="172"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLM-4Z-abm">
+                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cY6-vU-RZR">
+                    <rect key="frame" x="57" y="0.0" width="57" height="57"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1XQ-j0-anT">
+                    <rect key="frame" x="114" y="0.0" width="57" height="57"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itM-02-r4X">
+                    <rect key="frame" x="286" y="171" width="57" height="57"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7g9-mp-aIE">
+                    <rect key="frame" x="229" y="171" width="57" height="57"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-xR-SyG">
+                    <rect key="frame" x="172" y="171" width="57" height="57"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="image" destination="VSA-7p-vV4" collectionClass="NSMutableArray" id="ebb-bm-vGJ"/>
+                <outletCollection property="image" destination="RqH-e4-OAq" collectionClass="NSMutableArray" id="s3R-BS-ljJ"/>
+                <outletCollection property="image" destination="iLM-4Z-abm" collectionClass="NSMutableArray" id="uHD-1o-ejX"/>
+                <outletCollection property="image" destination="cY6-vU-RZR" collectionClass="NSMutableArray" id="ojc-Xt-c8m"/>
+                <outletCollection property="image" destination="1XQ-j0-anT" collectionClass="NSMutableArray" id="Wxc-dy-aAp"/>
+                <outletCollection property="image" destination="TaU-xR-SyG" collectionClass="NSMutableArray" id="WPw-ay-kC8"/>
+                <outletCollection property="image" destination="7g9-mp-aIE" collectionClass="NSMutableArray" id="tG0-X8-ZOv"/>
+                <outletCollection property="image" destination="itM-02-r4X" collectionClass="NSMutableArray" id="Wme-yp-S9h"/>
+            </connections>
         </view>
     </objects>
 </document>
