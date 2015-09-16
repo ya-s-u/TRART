@@ -1,30 +1,99 @@
 import Foundation
 
-class PlaylistPlayerManager {
+class PlaylistPlayerManager: NSObject {
     // singleton
     static let sharedInstance = PlaylistPlayerManager()
     
     let player = PlayerManager.sharedInstance
     var tracks: [Track] = []
     
-    func play() {
+    var isPlaying = false
+    var currentIndex = 0
+    
+    override init() {
+        super.init()
         
+        // receive notification
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "finishPlayer:",
+            name: "finishPlayer",
+            object: nil
+        )
+    }
+    
+    func play() {
+        player.track = tracks[currentIndex]
+        player.play()
+        isPlaying = true
     }
     
     func stop() {
-        
+        player.stop()
+        isPlaying = false
     }
     
-    func pos() {
+    func pos(timer: Double) {
+        let oldIndex = currentIndex
+        currentIndex = Int(timer/30)
+        let offset = timer%30
         
+        if oldIndex < currentIndex {
+            next()
+            player.pos(offset)
+        } else if oldIndex > currentIndex {
+            prev()
+            player.pos(offset)
+        } else {
+            player.pos(offset)
+        }
     }
     
     func next() {
-        
+        player.stop()
+        if incrCurrentIndex() {
+            player.track = tracks[currentIndex]
+            player.play()
+        } else {
+            isPlaying = false
+        }
     }
     
     func prev() {
-        
+        player.stop()
+        if decrCurrentIndex() {
+            player.track = tracks[currentIndex]
+            player.play()
+        } else {
+            isPlaying = false
+        }
     }
     
+    func isPlay() -> Bool {
+        return isPlaying
+    }
+    
+    func currentTimeStr() -> String {
+        return player.currentTimeStr()
+    }
+    
+    private func incrCurrentIndex() -> Bool {
+        if currentIndex < tracks.count-1 {
+            currentIndex++
+            return true
+        }
+        return false
+    }
+    
+    private func decrCurrentIndex() -> Bool {
+        if currentIndex > 0 {
+            currentIndex--
+            return true
+        }
+        return false
+    }
+
+    func finishPlayer(sender: AnyObject) {
+        next()
+    }
 }
