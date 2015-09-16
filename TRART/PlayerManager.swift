@@ -1,6 +1,6 @@
 import AVFoundation
 
-class PlayerManager {
+class PlayerManager: NSObject, AVAudioPlayerDelegate {
     // singleton
     static let sharedInstance = PlayerManager()
     
@@ -11,6 +11,7 @@ class PlayerManager {
             let fileUrl = NSURL(string: self.track!.trackSource)
             let soundData = NSData(contentsOfURL: fileUrl!)
             audioPlayer = AVAudioPlayer(data: soundData, error: nil)
+            audioPlayer.delegate = self
         }
     }
     
@@ -54,5 +55,12 @@ class PlayerManager {
             return audioPlayer.playing
         }
         return false
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+        audioPlayer.stop()
+        
+        var notification = NSNotification(name: "finishPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
 }
