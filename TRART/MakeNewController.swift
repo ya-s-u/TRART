@@ -17,7 +17,6 @@ class MakeNewController: UIViewController, UINavigationControllerDelegate {
         
         // init Playlist
         del.playlist = Playlist()
-        navigationController?.hidesBarsOnSwipe = true
         
         self.nextButton.enabled = false
         //Receive Nortification from MakeNewController.swift

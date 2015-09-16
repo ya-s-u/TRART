@@ -3,6 +3,7 @@ import RealmSwift
 
 class MakeConfirmViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UITableViewDelegate {
 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var PlaylistTitle: UITextField!
     @IBOutlet var PlayListComment: UIPlaceHolderTextView!
     @IBOutlet weak var tableView: UITableView!
@@ -15,14 +16,19 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         super.viewDidLoad()
         self.title = "プレイリストを編集"
         
+        // adjust scrollview in device size
+        scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.height-44, UIScreen.mainScreen().bounds.size.width)
+        
+        // adjust tableview ** disable autolayout **
+        tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        tableView.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height-290, UIScreen.mainScreen().bounds.size.width, 220);
+        
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorColor = UIColor.rgbColor(0x404040)
         self.tableView.layoutMargins = UIEdgeInsetsZero
         self.tableView.editing = true
-        
-        //Nortification
         
         PlaylistTitle.delegate = self
         PlaylistTitle.backgroundColor = UIColor.textViewColor()
@@ -36,7 +42,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         myBarButton_1 = UIBarButtonItem(title: "公開", style:.Plain, target: self, action: "onClickMyBarButton:")
         
         self.navigationController?.navigationBar
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationItem
         self.navigationItem.setRightBarButtonItem(myBarButton_1, animated: true)
         
