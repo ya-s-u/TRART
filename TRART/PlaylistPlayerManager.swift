@@ -1,11 +1,11 @@
 import Foundation
 
 class PlaylistPlayerManager {
-    let app =  UIApplication.sharedApplication().delegate as! AppDelegate
+    // singleton
+    static let sharedInstance = PlaylistPlayerManager()
     
-    init() {
-        
-    }
+    let player = PlayerManager.sharedInstance
+    var tracks: [Track] = []
     
     func play() {
         
@@ -16,6 +16,14 @@ class PlaylistPlayerManager {
     }
     
     func pos() {
+        
+    }
+    
+    func next() {
+        
+    }
+    
+    func prev() {
         
     }
     

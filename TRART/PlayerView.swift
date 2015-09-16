@@ -4,6 +4,7 @@ class PlayerView: UIView, UIScrollViewDelegate {
     let app =  UIApplication.sharedApplication().delegate as! AppDelegate
     
     let player = PlayerManager.sharedInstance
+    let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var timer: UILabel!
@@ -36,11 +37,11 @@ class PlayerView: UIView, UIScrollViewDelegate {
     }
     
     @IBAction func tapButton(sender: AnyObject) {
-        if (app.playingTracks.count==0 || player.isPlaying()) {
+        if (playlistPlayer.tracks.count==0 || player.isPlaying()) {
             player.stop()
             button.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
         } else {
-            player.track = app.playingTracks[0]
+            player.track = playlistPlayer.tracks[0]
             player.play()
             button.setImage(UIImage(named: "stop-button"), forState: UIControlState.Normal)
         }
@@ -50,14 +51,14 @@ class PlayerView: UIView, UIScrollViewDelegate {
         removeScrollViewSubViews()
         
         var width = self.bounds.width
-        for (i, track) in enumerate(app.playingTracks) {
+        for (i, track) in enumerate(playlistPlayer.tracks) {
             let waveform = UIImage(named: "dummy-pulse")!
             let waveformView = UIImageView()
             waveformView.image = waveform
             waveformView.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, waveform.size.width, self.bounds.height)
             scrollView.addSubview(waveformView)
             
-            if (i>0 && i<app.playingTracks.count) {
+            if (i>0 && i<playlistPlayer.tracks.count) {
                 let separator = UIView()
                 separator.frame = CGRectMake(self.bounds.width/2 + waveform.size.width * CGFloat(i), 0, 1, self.bounds.height)
                 separator.backgroundColor = UIColor(white: 1, alpha: 0.5)

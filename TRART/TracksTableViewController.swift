@@ -5,6 +5,8 @@ import SDWebImage
 class TracksTableViewController: UITableViewController {
     
     var del =  UIApplication.sharedApplication().delegate as! AppDelegate
+    let playlistPlayer = PlaylistPlayerManager.sharedInstance
+    
     var parentNavigationController : UINavigationController?
     let realm = Realm()
     var tracks: [Track] = []
@@ -117,10 +119,10 @@ class TracksTableViewController: UITableViewController {
     }
     
     func updatePlayingTracks() {
-        del.playingTracks.removeAll()
+        playlistPlayer.tracks.removeAll()
         
         for track in checkedTracks{
-            del.playingTracks.append(track.1)
+            playlistPlayer.tracks.append(track.1)
         }
         
         // send notification
