@@ -150,8 +150,10 @@ class TracksTableViewController: UITableViewController {
         }
         
         // send notification
-        var notification = NSNotification(name: "updatePlayingTracks", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
+        if playlistPlayer.tracks.count <= 8 {
+            var notification = NSNotification(name: "updatePlayingTracks", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        }
     }
     
     func resetCreatingPlaylist(sender: AnyObject) {

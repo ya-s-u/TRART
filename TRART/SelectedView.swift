@@ -63,6 +63,7 @@ class SelectedView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func updatePlayingTracks(notification: NSNotification) {
+        println(self.collectionView)
         self.collectionView.reloadData()
     }
 

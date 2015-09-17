@@ -3,6 +3,7 @@ import UIKit
 class MakeNewNavigationController: UINavigationController {
     var selectedTracks: SelectedView!
     var player: PlayerView!
+    let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
