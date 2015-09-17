@@ -8,8 +8,9 @@
 
 import UIKit
 import RealmSwift
+import SASecretCommandViewController
 
-class MainController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
+class MainController: SASecretCommandViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var homeNavigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
@@ -47,6 +48,27 @@ class MainController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        // set secret command
+        let commandList: [SASecretCommandType] = [
+            .Left,
+            .Right,
+            .Left,
+            .Right,
+            .Left,
+            .Right,
+            .A,
+            .B
+        ]
+        self.registerSecretCommand(commandList)
+    }
+    
+    override func secretCommandPassed() {
+        super.secretCommandPassed()
+        
+        // clean realm data
+        realm.write {
+            self.realm.deleteAll()
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
