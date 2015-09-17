@@ -59,13 +59,21 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         enableButton()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        // remove player
+        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+        
+        // stop playing
+        PlayerManager.sharedInstance.stop()
+    }
+    
     func enableButton(){
         if self.jaket[layout_type].count != jcnt[layout_type]{
             myBarButton_Done.enabled = false
         }else{
             myBarButton_Done.enabled = true
         }
-        
     }
     
     internal func onDoneButton(sender: UIButton){
@@ -84,10 +92,16 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     internal func onCancelButton(sender: UIButton){
+        // remove player
+        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+        
+        // stop playing
+        PlayerManager.sharedInstance.stop()
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         page = (UInt32)(scrollView.contentOffset.x / scrollView.bounds.size.width)
         pageControl.currentPage = Int(page)
@@ -96,7 +110,6 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         selectView.reloadData()
         
     }
-    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         

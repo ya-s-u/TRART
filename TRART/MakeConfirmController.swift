@@ -16,13 +16,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         super.viewDidLoad()
         self.title = "プレイリストを編集"
         
-        // adjust scrollview in device size
-        scrollView.contentSize = CGSizeMake(UIScreen.mainScreen().bounds.height-44, UIScreen.mainScreen().bounds.size.width)
-        
-        // adjust tableview ** disable autolayout **
-        tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
-        tableView.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height-290, UIScreen.mainScreen().bounds.size.width, 220);
-        
         //tableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -48,17 +41,23 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         self.enableButton()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
+        // remove player
+        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
         
-        let viewControllers = self.navigationController?.viewControllers!
-        if indexOfArray(viewControllers!, searchObject: self) == nil{
-            del.playlist.jackets.removeAll()
-            
-            // show player
-            var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
-            NSNotificationCenter.defaultCenter().postNotification(notification)
-        }
-        super.viewWillDisappear(animated)
+        // stop playing
+        PlayerManager.sharedInstance.stop()
+        
+//        let viewControllers = self.navigationController?.viewControllers!
+//        if indexOfArray(viewControllers!, searchObject: self) == nil{
+//            del.playlist.jackets.removeAll()
+//            
+//            // show player
+//            var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
+//            NSNotificationCenter.defaultCenter().postNotification(notification)
+//        }
+//        super.viewWillDisappear(animated)
     }
     
     internal func onClickMyBarButton(sender: UIButton){
@@ -114,7 +113,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         return cell
     }
     
-    
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         var itemToMove = self.del.playlist.tracks[sourceIndexPath.row]
         self.del.playlist.tracks.removeAtIndex(sourceIndexPath.row)
@@ -159,12 +157,9 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
     //# MARK: - Keyboard
     //---------------------------
     
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool{
-        
         // キーボードを閉じる
         textField.resignFirstResponder()
-        
         return true
     }
     

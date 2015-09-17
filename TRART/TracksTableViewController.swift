@@ -127,6 +127,10 @@ class TracksTableViewController: UITableViewController {
     }
     
     func updatePlayingTracks() {
+        if checkedTracks.count > 8 {
+            return
+        }
+        
         playlistPlayer.tracks.removeAll()
         
         for track in checkedTracks{
