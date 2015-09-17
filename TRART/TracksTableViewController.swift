@@ -127,7 +127,7 @@ class TracksTableViewController: UITableViewController {
     }
     
     func updatePlayingTracks() {
-        if checkedTracks.count > 7 {
+        if checkedTracks.count > 8 {
             return
         }
         
