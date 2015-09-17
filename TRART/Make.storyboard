@@ -303,6 +303,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="XXk-uO-ZUt" secondAttribute="trailing" constant="-8" id="21O-hu-Rw5"/>
                                             <constraint firstItem="XXk-uO-ZUt" firstAttribute="top" secondItem="Vvg-Tc-9vB" secondAttribute="topMargin" constant="-8" id="6jR-93-qIk"/>
