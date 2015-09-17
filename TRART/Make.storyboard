@@ -111,8 +111,8 @@
                                     <constraint firstAttribute="width" constant="44" id="fIG-zR-9B5"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-1z-rWe">
-                                <rect key="frame" x="250" y="554" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-1z-rWe">
+                                <rect key="frame" x="424" y="566" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5v0-Vt-cXc"/>
                                     <constraint firstAttribute="width" constant="100" id="IUH-pu-5Tb"/>
@@ -124,6 +124,27 @@
                                     <action selector="TouchFinish:" destination="Z4C-UU-93b" eventType="touchUpInside" id="jgs-z3-cnq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-kQ-GyH">
+                                <rect key="frame" x="60" y="566" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TUl-A1-tKy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="fv5-vJ-Qto"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gZ0-or-fgC"/>
+                                    <constraint firstAttribute="height" constant="30" id="mzB-Cb-6B5"/>
+                                </constraints>
+                                <state key="normal" image="awa_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fv5-vJ-Qto"/>
+                                        <exclude reference="gZ0-or-fgC"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="TouchFinish:" destination="Z4C-UU-93b" eventType="touchUpInside" id="Zb2-Tv-LVO"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-gl-mcS" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="16" y="84" width="145" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -131,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プレイリストがAWAに公開されました" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzy-ma-lsj">
-                                <rect key="frame" x="16" y="131" width="259" height="18"/>
+                                <rect key="frame" x="16" y="131" width="258.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -168,7 +189,15 @@
                             <constraint firstAttribute="trailing" secondItem="FqR-v1-B5u" secondAttribute="trailing" id="kCA-Sy-HeK"/>
                             <constraint firstItem="kzy-ma-lsj" firstAttribute="top" secondItem="j8s-gl-mcS" secondAttribute="bottom" constant="6" id="ltu-Vj-Apm"/>
                             <constraint firstItem="MhT-Z2-TIy" firstAttribute="bottom" secondItem="mQG-78-hFe" secondAttribute="bottom" id="o66-FO-Jqe"/>
+                            <constraint firstItem="zQP-kQ-GyH" firstAttribute="leading" secondItem="Z2J-B0-if8" secondAttribute="leading" constant="60" id="oa3-W7-Otv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tw9-1z-rWe" secondAttribute="trailing" constant="60" id="pzf-Dy-d0W"/>
+                            <constraint firstItem="tw9-1z-rWe" firstAttribute="top" secondItem="zQP-kQ-GyH" secondAttribute="top" id="ukJ-YV-dVz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="I2E-bz-nRB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="IQs-5i-fgs"/>
                     <connections>
@@ -911,6 +940,7 @@
         <image name="Other" width="44" height="44"/>
         <image name="Twitter" width="44" height="44"/>
         <image name="bg2" width="375" height="667"/>
+        <image name="awa_button" width="100" height="30"/>
         <image name="edit" width="44" height="44"/>
         <image name="finish" width="100" height="30"/>
         <image name="share" width="33" height="11"/>

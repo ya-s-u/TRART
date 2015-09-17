@@ -13,6 +13,7 @@ target 'TRART' do
   pod 'APIKit'
   pod 'Spring', '~> 1.0.3'
   pod 'LTMorphingLabel', '0.0.7'
+  pod 'SASecretCommandViewController'
 end
 
 target 'TRARTTests' do
