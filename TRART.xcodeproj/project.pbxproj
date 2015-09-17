@@ -511,7 +511,7 @@
 				TargetAttributes = {
 					47BD97181BA2779F00096854 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = S2QVPRJ4JH;
+						DevelopmentTeam = Z2M8H95Q7Z;
 					};
 					47BD972D1BA277A000096854 = {
 						CreatedOnToolsVersion = 6.4;
@@ -808,7 +808,7 @@
 			baseConfigurationReference = 4EB130E953F113C9719472F8 /* Pods-TRART.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Itsuki Tanaka (UAV6J88U94)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TRART/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -824,7 +824,7 @@
 			baseConfigurationReference = EC91779C21E5C5E2FDE0A015 /* Pods-TRART.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Itsuki Tanaka (UAV6J88U94)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TRART/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -840,7 +840,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -853,7 +853,7 @@
 				INFOPLIST_FILE = TRARTTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRART.app/TRART";
 			};
 			name = Debug;
@@ -862,7 +862,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -871,7 +871,7 @@
 				INFOPLIST_FILE = TRARTTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRART.app/TRART";
 			};
 			name = Release;
