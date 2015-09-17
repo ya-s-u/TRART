@@ -66,6 +66,10 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
             // show player
             var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
             NSNotificationCenter.defaultCenter().postNotification(notification)
+            
+            // send notification
+            notification = NSNotification(name: "updatePlayingTracks", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
         }
         super.viewWillDisappear(animated)
     }
