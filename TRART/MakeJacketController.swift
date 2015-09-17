@@ -59,14 +59,14 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         enableButton()
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        // remove player
-        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
-        
-        // stop playing
-        PlayerManager.sharedInstance.stop()
-    }
+//    override func viewWillDisappear(animated: Bool) {
+//        // remove player
+//        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
+//        NSNotificationCenter.defaultCenter().postNotification(notification)
+//        
+//        // stop playing
+//        PlayerManager.sharedInstance.stop()
+//    }
     
     func enableButton(){
         if self.jaket[layout_type].count != jcnt[layout_type]{

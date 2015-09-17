@@ -60,6 +60,16 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
 //        super.viewWillDisappear(animated)
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        let viewControllers = self.navigationController?.viewControllers!
+        if indexOfArray(viewControllers!, searchObject: self) == nil {
+            // show player
+            var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        }
+        super.viewWillDisappear(animated)
+    }
+    
     internal func onClickMyBarButton(sender: UIButton){
 
         del.playlist.setMeta(title: PlaylistTitle.text, userName: "GUEST", comment: PlayListComment.text, mood: "HAPPY")
