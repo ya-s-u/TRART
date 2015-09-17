@@ -21,9 +21,7 @@ class MakeNewNavigationController: UINavigationController {
             name: "hidePlaylistPlayer",
             object: nil
         )
-    }
-    
-    override func viewWillAppear(animated: Bool) {
+        
         var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
     }

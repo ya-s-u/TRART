@@ -89,6 +89,13 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
         // Post Notification（送信）
         let ns = NSNotificationCenter.defaultCenter()
         ns.postNotificationName(MyNotification, object: nil)
+        
+        // remove player
+        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+
+        // stop playing
+        PlayerManager.sharedInstance.stop()
     }
     
     internal func onCancelButton(sender: UIButton){
