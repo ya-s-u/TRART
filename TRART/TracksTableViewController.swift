@@ -123,10 +123,14 @@ class TracksTableViewController: UITableViewController {
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
         
-        updatePlayingTracks()
+        updatePlayingTracks()s
     }
     
     func updatePlayingTracks() {
+        if checkedTracks.count > 7 {
+            return
+        }
+        
         playlistPlayer.tracks.removeAll()
         
         for track in checkedTracks{
