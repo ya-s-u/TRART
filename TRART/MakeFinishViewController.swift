@@ -4,6 +4,7 @@ import LTMorphingLabel
 class MakeFinishViewController: UIViewController, LTMorphingLabelDelegate {
     
     var del = UIApplication.sharedApplication().delegate as! AppDelegate
+    let playlistPlayer = PlaylistPlayerManager.sharedInstance
     
     @IBOutlet weak var maintitle: LTMorphingLabel!
     @IBOutlet weak var subtitle: UILabel!
