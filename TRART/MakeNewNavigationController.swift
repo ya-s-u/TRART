@@ -37,6 +37,10 @@ class MakeNewNavigationController: UINavigationController {
         player.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height - 35.0)
         self.view.addSubview(player)
         println("+1")
+        
+//        // send notification
+//        var notification = NSNotification(name: "updatePlayingTracks", object: nil)
+//        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
     func hidePlaylistPlayer(sender: AnyObject) {
