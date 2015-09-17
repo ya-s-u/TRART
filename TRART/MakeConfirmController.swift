@@ -41,17 +41,23 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         self.enableButton()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
+        // remove player
+        var notification  = NSNotification(name: "hidePlaylistPlayer", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
         
-        let viewControllers = self.navigationController?.viewControllers!
-        if indexOfArray(viewControllers!, searchObject: self) == nil{
-            del.playlist.jackets.removeAll()
-            
-            // show player
-            var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
-            NSNotificationCenter.defaultCenter().postNotification(notification)
-        }
-        super.viewWillDisappear(animated)
+        // stop playing
+        PlayerManager.sharedInstance.stop()
+        
+//        let viewControllers = self.navigationController?.viewControllers!
+//        if indexOfArray(viewControllers!, searchObject: self) == nil{
+//            del.playlist.jackets.removeAll()
+//            
+//            // show player
+//            var notification = NSNotification(name: "showPlaylistPlayer", object: nil)
+//            NSNotificationCenter.defaultCenter().postNotification(notification)
+//        }
+//        super.viewWillDisappear(animated)
     }
     
     internal func onClickMyBarButton(sender: UIButton){
@@ -107,7 +113,6 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
         return cell
     }
     
-    
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         var itemToMove = self.del.playlist.tracks[sourceIndexPath.row]
         self.del.playlist.tracks.removeAtIndex(sourceIndexPath.row)
@@ -152,12 +157,9 @@ class MakeConfirmViewController: UIViewController, UITableViewDataSource, UIText
     //# MARK: - Keyboard
     //---------------------------
     
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool{
-        
         // キーボードを閉じる
         textField.resignFirstResponder()
-        
         return true
     }
     
