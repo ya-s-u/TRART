@@ -27,6 +27,7 @@ class HomeTableViewCell: UITableViewCell {
         gradientLayer.frame = self.titleView.bounds
         self.titleView.layer.insertSublayer(gradientLayer, atIndex: 0)
         self.commentView.backgroundColor = UIColorFromRGB(0x282828, aValue: 1.0)
+        self.selectionStyle = UITableViewCellSelectionStyle.None
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

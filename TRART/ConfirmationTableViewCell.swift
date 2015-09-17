@@ -32,6 +32,8 @@ class ConfirmationTableViewCell: UITableViewCell {
         
         artistLabel.font = UIFont.systemFontOfSize(11)
         artistLabel.textColor = UIColor.whiteColor()
+        
+        self.selectionStyle = UITableViewCellSelectionStyle.None
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

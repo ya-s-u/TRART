@@ -120,6 +120,17 @@ class MainController: SASecretCommandViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    //選択したCellをdetailViewControllerにデータを渡す
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "homeDetail") {
+            let detailViewContoroller = segue.destinationViewController as! HomeDetailViewController
+            var ip: NSIndexPath! = self.tableView.indexPathForSelectedRow()
+            detailViewContoroller.param = self.playlists[ip.row]
+        }else{
+            println("nothing to do")
+        }
+    }
+    
     //---------------------------
     //# MARK: - ScrollViewMethod
     //---------------------------
