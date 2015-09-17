@@ -11,7 +11,7 @@ class TracksTableViewController: UITableViewController {
     let realm = Realm()
     var tracks: [Track] = []
     var saveTracks: [Track] = []
-    var checkedTracks: [Int: Track] = [0: Track()]
+    var checkedTracks: [Track] = []
     var playlist = Playlist()
     
     override func viewDidLoad() {
@@ -58,8 +58,8 @@ class TracksTableViewController: UITableViewController {
     }
     
     func savePlaylist(){
-        for track in checkedTracks{
-            saveTracks.append(track.1)
+        for track in checkedTracks {
+            saveTracks.append(track)
         }
         del.playlist.setTracksArr(saveTracks)
     }
@@ -93,7 +93,13 @@ class TracksTableViewController: UITableViewController {
         if self.checkedTracks.count == 8 {
             if cell.isChecked{
                 cell.plusButton.image = UIImage(named: "plus-button")
-                self.checkedTracks.removeValueForKey(self.tracks[indexPath.row].itunesId)
+                
+                for (i, track) in enumerate(checkedTracks) {
+                    if track.itunesId == self.tracks[indexPath.row].itunesId {
+                        checkedTracks.removeAtIndex(i)
+                    }
+                }
+                
                 cell.isChecked = !cell.isChecked
                 
                 //Send a Nortification to MakeNewController.swift
@@ -108,10 +114,16 @@ class TracksTableViewController: UITableViewController {
         if self.checkedTracks.count < 8 {
             if cell.isChecked{
                 cell.plusButton.image = UIImage(named: "plus-button")
-                self.checkedTracks.removeValueForKey(self.tracks[indexPath.row].itunesId)
+                
+                for (i, track) in enumerate(checkedTracks) {
+                    if track.itunesId == self.tracks[indexPath.row].itunesId {
+                        checkedTracks.removeAtIndex(i)
+                    }
+                }
+                
             } else {
                 cell.plusButton.image = UIImage(named: "plus-button-checked")
-                self.checkedTracks[self.tracks[indexPath.row].itunesId] = self.tracks[indexPath.row]
+                checkedTracks.append(self.tracks[indexPath.row])
             }
             cell.isChecked = !cell.isChecked
             cell.animation()
@@ -134,7 +146,7 @@ class TracksTableViewController: UITableViewController {
         playlistPlayer.tracks.removeAll()
         
         for track in checkedTracks{
-            playlistPlayer.tracks.append(track.1)
+            playlistPlayer.tracks.append(track)
         }
         
         // send notification
