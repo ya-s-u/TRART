@@ -712,7 +712,7 @@
                                         </variation>
                                     </textView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y0I-Rp-seT">
-                                        <rect key="frame" x="18" y="380" width="566" height="569"/>
+                                        <rect key="frame" x="8" y="380" width="584" height="569"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="569" id="5BT-Yq-YQy"/>
@@ -727,20 +727,20 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-Cm-Iif">
-                                                            <rect key="frame" x="16" y="13" width="68" height="68"/>
+                                                            <rect key="frame" x="8" y="13" width="68" height="68"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="68" id="gMQ-4O-7JA"/>
                                                                 <constraint firstAttribute="width" constant="68" id="zOX-KZ-3cd"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVO-z3-zcP">
-                                                            <rect key="frame" x="94" y="49" width="434" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVO-z3-zcP">
+                                                            <rect key="frame" x="86" y="49" width="442" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuG-VI-cQt">
-                                                            <rect key="frame" x="94" y="26" width="434" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuG-VI-cQt">
+                                                            <rect key="frame" x="86" y="26" width="442" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="deviceRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -749,7 +749,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="centerY" secondItem="4Gj-Cm-Iif" secondAttribute="centerY" id="3xv-tr-Baa"/>
-                                                        <constraint firstItem="4Gj-Cm-Iif" firstAttribute="leading" secondItem="u2t-Jp-n0k" secondAttribute="leadingMargin" constant="8" id="8SU-0g-E5I"/>
+                                                        <constraint firstItem="4Gj-Cm-Iif" firstAttribute="leading" secondItem="u2t-Jp-n0k" secondAttribute="leadingMargin" id="8SU-0g-E5I"/>
                                                         <constraint firstItem="FuG-VI-cQt" firstAttribute="leading" secondItem="4Gj-Cm-Iif" secondAttribute="trailing" constant="10" id="P35-Rj-Xv6"/>
                                                         <constraint firstAttribute="centerY" secondItem="aVO-z3-zcP" secondAttribute="centerY" constant="-10" id="T6N-h0-g3S"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="FuG-VI-cQt" secondAttribute="trailing" constant="30" id="cG0-4M-GXp"/>
@@ -819,11 +819,11 @@
                                     <constraint firstItem="4FX-Ns-Agd" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leading" id="JIu-9N-aI0"/>
                                     <constraint firstItem="DRn-de-vEd" firstAttribute="top" secondItem="uAS-mm-9UE" secondAttribute="bottom" constant="4" id="Meo-FF-cx6"/>
                                     <constraint firstAttribute="trailing" secondItem="4FX-Ns-Agd" secondAttribute="trailing" id="NUk-dq-DBH"/>
-                                    <constraint firstAttribute="trailing" secondItem="Y0I-Rp-seT" secondAttribute="trailing" constant="16" id="OOU-Xj-Fn2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y0I-Rp-seT" secondAttribute="trailing" constant="8" id="OOU-Xj-Fn2"/>
                                     <constraint firstAttribute="trailing" secondItem="EvL-vu-s9u" secondAttribute="trailing" constant="16" id="PZO-ax-OrB"/>
                                     <constraint firstAttribute="centerX" secondItem="DRn-de-vEd" secondAttribute="centerX" id="QgD-4z-WZY"/>
                                     <constraint firstAttribute="bottom" secondItem="4FX-Ns-Agd" secondAttribute="bottom" id="R0K-ir-SgP"/>
-                                    <constraint firstItem="Y0I-Rp-seT" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leading" constant="18" id="RQ4-vy-eJq"/>
+                                    <constraint firstItem="Y0I-Rp-seT" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leading" constant="8" id="RQ4-vy-eJq"/>
                                     <constraint firstItem="EvL-vu-s9u" firstAttribute="leading" secondItem="9bb-8W-pqz" secondAttribute="leadingMargin" id="Svr-da-3ic"/>
                                     <constraint firstItem="EvL-vu-s9u" firstAttribute="trailing" secondItem="7JM-Dc-9Dq" secondAttribute="trailing" constant="15" id="Z8V-mH-Td2"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="EvL-vu-s9u" secondAttribute="trailing" id="aPo-8u-BfB"/>
