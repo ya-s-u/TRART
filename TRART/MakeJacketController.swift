@@ -177,7 +177,7 @@ class MakeJacketViewController: UIViewController, UICollectionViewDelegate, UICo
                 cell.select.alpha = 0
             }
             
-            cell.backgroundColor = UIColor.blackColor()
+            cell.backgroundColor = UIColor.clearColor()
             return cell
         }
     }
