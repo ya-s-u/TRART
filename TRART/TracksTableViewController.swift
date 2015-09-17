@@ -123,7 +123,7 @@ class TracksTableViewController: UITableViewController {
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
         
-        updatePlayingTracks()s
+        updatePlayingTracks()
     }
     
     func updatePlayingTracks() {
