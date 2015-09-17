@@ -58,6 +58,10 @@ class MakeFinishViewController: UIViewController, LTMorphingLabelDelegate {
     }
     
     @IBAction func TouchFinish(sender: AnyObject) {
+        // send notification
+        var notification = NSNotification(name: "resetCreatingPlaylist", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
