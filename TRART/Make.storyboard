@@ -111,8 +111,8 @@
                                     <constraint firstAttribute="width" constant="44" id="fIG-zR-9B5"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-1z-rWe">
-                                <rect key="frame" x="250" y="554" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw9-1z-rWe">
+                                <rect key="frame" x="250" y="566" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5v0-Vt-cXc"/>
                                     <constraint firstAttribute="width" constant="100" id="IUH-pu-5Tb"/>
@@ -131,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プレイリストがAWAに公開されました" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzy-ma-lsj">
-                                <rect key="frame" x="16" y="131" width="259" height="18"/>
+                                <rect key="frame" x="16" y="131" width="258.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
