@@ -1,7 +1,7 @@
 # TRART
 
-My Music Playlist creating app in Swift.  
-サイバーエージェント2015インターンシップ「[TechDesignCAMP](https://www.cyberagent.co.jp/recruit/fresh/program_detail/id=10494)」で作ったプロダクトの開発を、個人的に継続しているものです。
+A Music Playlist creating app in Swift.  
+サイバーエージェント2015インターンシップ「[TechDesignCAMP](https://www.cyberagent.co.jp/recruit/fresh/program_detail/id=10494)」で作ったプロダクトを、個人的に継続して開発しているものです。
 
 Original → [techcampman/techdesign_kyoto_a](https://github.com/techcampman/techdesign_kyoto_a)
 
